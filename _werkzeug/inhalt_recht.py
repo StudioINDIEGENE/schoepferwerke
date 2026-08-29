@@ -181,6 +181,21 @@ DATENSCHUTZ = [
         "deaktivieren. Sofern ein Cookie-Banner eingesetzt wird, erfolgt die Nutzung nicht "
         "technisch notwendiger Cookies ausschließlich auf Grundlage Ihrer Einwilligung."),
  ]),
+ ("Schriften, Bilder und externe Dienste", [
+  ("p", "Diese Website lädt keine Inhalte von fremden Servern. Schriften, Bilder, Stilblätter "
+        "und Skripte liegen ausschließlich auf dem Server dieser Website."),
+  ("ul", [
+    "Es werden keine Google Fonts oder vergleichbare Schriftdienste eingebunden.",
+    "Es wird kein Auslieferungsnetz (CDN) verwendet.",
+    "Es sind keine Karten, Videos oder Anmeldefenster Dritter eingebettet.",
+    "Es findet keine Reichweitenmessung und kein Nutzerverhalten-Tracking statt.",
+  ]),
+  ("p", "Beim Aufruf der Seite wird deshalb keine Verbindung zu Dritten hergestellt und Ihre "
+        "IP-Adresse an niemanden außerhalb dieser Website übermittelt."),
+  ("lead", "Verweise auf soziale Netzwerke:", "Die Symbole in der Fußzeile sind einfache Links. "
+           "Es werden keine Inhalte dieser Netzwerke geladen, eine Datenübertragung findet erst "
+           "statt, wenn Sie einen Link anklicken und die fremde Seite öffnen."),
+ ]),
  ("Datensicherheit", [
   ("p", "Zum Schutz Ihrer Daten setzen wir geeignete technische und organisatorische Maßnahmen "
         "ein. Die Übertragung Ihrer Daten erfolgt verschlüsselt (SSL-/TLS-Verbindung), sodass "
@@ -215,7 +230,7 @@ DATENSCHUTZ = [
 
 DS_KURZ = ["Verantwortliche Stelle", "Umgang mit Daten", "Erhebung der Daten",
            "Zweck der Verarbeitung", "Rechtsgrundlagen", "Sensible Inhalte",
-           "Weitergabe von Daten", "Speicherdauer", "Cookies", "Datensicherheit",
+           "Weitergabe von Daten", "Speicherdauer", "Cookies", "Externe Dienste", "Datensicherheit",
            "Ihre Rechte", "Beschwerderecht", "Änderungen", "Kontakt"]
 
 # ---------------------------------------------------------------- Impressum
@@ -256,6 +271,27 @@ IMPRESSUM = [
         "unterliegen dem Urheberrecht. Jede Art der Verwertung außerhalb der Grenzen des "
         "Urheberrechts bedarf der vorherigen schriftlichen Zustimmung."),
  ]),
+ ("Bildnachweis", [
+  ("p", "Die auf dieser Website verwendeten Landschaftsaufnahmen stammen von Unsplash und "
+        "stehen unter der Unsplash-Lizenz, die eine kommerzielle Nutzung ausdrücklich erlaubt. "
+        "Die Nennung der Urheber ist nicht verpflichtend, erfolgt hier aber aus Respekt vor "
+        "ihrer Arbeit."),
+  ("ul", [
+    "Seebensee (Startseite): Daniel Jacob",
+    "Bachlauf zwischen moosbewachsenen Felsen: Gary Yost",
+    "Goldenes Morgenlicht über einem Bergwald: Mateusz Kamieniarz",
+    "Gipfel über dem Wolkenmeer: Dominik Mattern",
+    "Bergkette über dem Nebelmeer: Radomir Moysia",
+    "Drei Zinnen unter der Milchstraße: Jan Valečka",
+    "Waldweg zum lichtdurchfluteten Tor: Michael Held",
+  ]),
+  ("p", "Lizenztext: <a href=\"https://unsplash.com/de/lizenz\" rel=\"noopener noreferrer\" "
+        "target=\"_blank\">unsplash.com/de/lizenz</a>"),
+  ("lead", "Porträt:", "Das Bild von Agnes Aichholzer ist eine private Aufnahme und darf nicht "
+                       "ohne schriftliche Zustimmung verwendet werden."),
+  ("lead", "Wortmarke und Symbol:", "Die Zeichen der Schöpferwerke sind geschützte "
+                                    "Kennzeichen der Anbieterin."),
+ ]),
  ("Hinweis zu den angebotenen Leistungen", [
   ("p", "Die angebotenen Leistungen dienen der persönlichen Weiterentwicklung, energetischen "
         "Balance sowie der Aktivierung der Selbstwahrnehmung und inneren Ressourcen."),
@@ -272,5 +308,5 @@ IMPRESSUM = [
 ]
 
 IMP_KURZ = ["Diensteanbieter", "Kontakt", "Steuerliche Angaben", "Verantwortlich für den Inhalt",
-            "Haftung für Inhalte", "Haftung für Links", "Urheberrecht",
+            "Haftung für Inhalte", "Haftung für Links", "Urheberrecht", "Bildnachweis",
             "Hinweis zu den Leistungen", "Haftungsausschluss"]

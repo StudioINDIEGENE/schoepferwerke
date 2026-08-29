@@ -118,8 +118,8 @@ def baue_startseite():
         bausteine.aufruf(st.AUFRUF_TITEL, st.AUFRUF_TEXT, *st.AUFRUF_KNOPF),
         bausteine.ornament(),
         bausteine.preise(st.PREISE_LABEL, st.PREISE_TITEL, st.PREISE_UNTERZEILE, st.PREISE),
-        bausteine.breitbild(st.BREITBILD, st.BREITBILD_ALT, st.BREITBILD_TITEL, st.BREITBILD_TEXT),
-        bausteine.grosses_zitat(st.ZITAT, st.ZITAT_QUELLE),
+        bausteine.breitbild(st.BREITBILD, st.BREITBILD_ALT, st.BREITBILD_TITEL,
+                            st.BREITBILD_TEXT, zitat=st.ZITAT, quelle=st.ZITAT_QUELLE),
         bausteine.zahlen(st.ZAHLEN_TITEL, st.ZAHLEN_UNTERZEILE, st.ZAHLEN),
         bausteine.stimmen(st.STIMMEN_LABEL, st.STIMMEN_TITEL, st.STIMMEN),
     )

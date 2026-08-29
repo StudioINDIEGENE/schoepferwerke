@@ -550,7 +550,7 @@ html[data-js="ja"] .fenster.auftritt[data-sichtbar] { clip-path: inset(0); }
 .kaufleiste.da { transform: translate(-50%, 0); }
 .kaufleiste__text { color: var(--grau-dunkel); white-space: nowrap; }
 
-@media (max-width: 700px) {
+@media (max-width: 809px) {   /* Haltepunkt des Projekts, war 700px */
   .kaufleiste { gap: 0; padding: 8px; }
   .kaufleiste__text { display: none; }
 }
@@ -592,7 +592,22 @@ html[data-js="ja"] .fenster.auftritt[data-sichtbar] { clip-path: inset(0); }
   .angebot__bild img   { aspect-ratio: 21 / 9; }
   .breitbild__bild img { aspect-ratio: 21 / 9; }
   .bildkopf__bild img  { aspect-ratio: 16 / 7; }
-  .akademie__bild img  { aspect-ratio: 16 / 7; }
+}
+
+/* Auf dem Tablet standen die Bilder noch im Hochformat der Vorlage, das
+   Nebelmeer war dort 1124 Pixel hoch. Auch hier ruhigere Bänder. */
+@media (min-width: 810px) and (max-width: 1199px) {
+  .angebot__bild img   { aspect-ratio: 16 / 9; }
+  .breitbild__bild img { aspect-ratio: 16 / 9; }
+  .bildkopf__bild img  { aspect-ratio: 3 / 2; }
+}
+
+/* Auf dem Telefon darf das Bild wieder etwas höher stehen, sonst wird
+   das Motiv zu schmal. Aber nicht so hoch wie in der Vorlage. */
+@media (max-width: 809px) {
+  .angebot__bild img   { aspect-ratio: 4 / 3; }
+  .breitbild__bild img { aspect-ratio: 5 / 6; }
+  .bildkopf__bild img  { aspect-ratio: 4 / 5; }
 }
 
 /* Weicher Übergang: das Bild löst sich unten im Papier auf */
@@ -838,3 +853,247 @@ html, body { overflow-x: clip; }
   .koennen__feld-raster { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .koennen__kopf { padding-right: 32px; }
 }
+
+/* ------------------------------------------- Das Zitat liegt im Bild
+   Statt eines eigenen dunklen Blocks trägt die Nebelmeer-Aufnahme den
+   Satz selbst. Ein Schleier von unten nach oben hält ihn lesbar, ohne
+   das Foto zuzudecken. */
+.breitbild__bild--spruch { position: relative; }
+
+.breitbild__bild--spruch::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 78% 62% at 50% 56%, rgba(12, 22, 20, .58), transparent 72%),
+    linear-gradient(to top, rgba(12, 22, 20, .60) 0%, rgba(12, 22, 20, .20) 46%, rgba(12, 22, 20, .34) 100%);
+}
+
+.breitbild__spruch {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  margin: 0;
+  padding: clamp(28px, 6vw, 90px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(14px, 2vw, 26px);
+  text-align: center;
+  color: #fff;
+}
+
+.breitbild__spruch blockquote { margin: 0; max-width: min(92%, 760px); }
+
+.breitbild__spruch .t-h2 {
+  color: #fff;
+  text-wrap: balance;
+  text-shadow: 0 2px 28px rgba(8, 16, 15, .5);
+}
+
+.breitbild__quelle {
+  color: rgba(255, 255, 255, .88);
+  text-shadow: 0 1px 16px rgba(8, 16, 15, .6);
+}
+
+/* Auf schmalen Schirmen wird das Bild hoch und der Satz braucht Luft. */
+@media (max-width: 809px) {
+  .breitbild__spruch blockquote { max-width: 100%; }
+  .breitbild__spruch .t-h2 { font-size: 26px; line-height: 1.25; }
+}
+
+
+/* ============================ Die Schöpferwerke: Berge, Titel, Kernsatz
+   Die Quelle ist hochformatig (1800 auf 2700). Die Drei Zinnen liegen
+   zwischen 42 und 62 Prozent der Bildhöhe. Ein 16:7-Ausschnitt zeigte
+   fast nur Himmel, die Berge waren abgeschnitten. Der Ausschnitt ist
+   jetzt so gewählt, dass die Gipfel bei gut der halben Fensterhöhe
+   stehen und die Bergfüße nach unten ins Papier auslaufen, dorthin, wo
+   die Überschrift steht. */
+
+.akademie__bild img {
+  aspect-ratio: 3 / 2;
+  object-position: 50% 40%;
+}
+
+.akademie__bild {
+  -webkit-mask-image: linear-gradient(to bottom, #000 58%, rgba(0,0,0,.55) 80%, transparent 100%);
+          mask-image: linear-gradient(to bottom, #000 58%, rgba(0,0,0,.55) 80%, transparent 100%);
+}
+
+@media (max-width: 809px) {
+  .akademie__bild img { aspect-ratio: 4 / 5; object-position: 50% 42%; }
+}
+
+/* ------------------------------------------- Gliederung des Fließtextes */
+
+/* Der Auftakt sagt, was die Schöpferwerke sind, und steht darum größer. */
+.akademie__auftakt {
+  font-size: clamp(20px, 2.1vw, 26px);
+  line-height: 1.5;
+  color: var(--dunkel);
+  text-wrap: pretty;
+}
+
+/* Der Kernsatz wird aus dem Fließtext gehoben: die größte, festeste
+   Stimme der Seite nach der Überschrift. */
+.akademie__kern {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(20px, 3vw, 34px);
+  margin: clamp(56px, 8vw, 104px) 0;
+  text-align: center;
+}
+
+.akademie__kern p {
+  margin: 0;
+  max-width: 18em;
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(32px, 5.2vw, 64px);
+  line-height: 1.15;
+  letter-spacing: -.01em;
+  color: var(--gruen-tief);
+  text-wrap: balance;
+}
+
+/* Zwei feine Linien mit goldenem Punkt, oben und unten. */
+.akademie__kern-zier {
+  display: block;
+  width: min(240px, 60%);
+  height: 7px;
+  position: relative;
+}
+
+.akademie__kern-zier::before {
+  content: "";
+  position: absolute;
+  inset: 3px 0 auto 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(104, 184, 176, .5), transparent);
+}
+
+.akademie__kern-zier::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 7px;
+  height: 7px;
+  margin-left: -3.5px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #ecdfa8, var(--gold) 55%, #b8983f);
+}
+
+/* Etwas mehr Luft zwischen den Absätzen, damit der Block atmet. */
+.akademie__text p + p { margin-top: 1.15em; }
+
+/* ===================== Der Hero fließt ins Papier, wie die Schöpferwerke
+   Derselbe Griff wie beim Bergbild: Das Foto endet nicht an einer Kante,
+   sondern löst sich nach unten im Papier auf. Der Inhalt rückt dafür
+   höher, damit Knopf und Text nicht in die helle Zone geraten. */
+
+.hero { padding-bottom: clamp(150px, 20vh, 210px); }
+
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  height: clamp(130px, 18vh, 220px);
+  pointer-events: none;
+  background: linear-gradient(to bottom,
+    rgba(247, 245, 241, 0)    0%,
+    rgba(247, 245, 241, .10) 32%,
+    rgba(247, 245, 241, .38) 58%,
+    rgba(247, 245, 241, .78) 82%,
+    var(--papier)           100%);
+}
+
+/* Der Scroll-Hinweis steht im hellen Teil des Verlaufs und braucht
+   deshalb einen dunklen Ton statt Weiß. */
+.hero__cue { color: rgba(58, 120, 111, .8); }
+
+/* Ohne Bewegungswunsch bleibt der Verlauf, nur die Wanderung entfällt. */
+@media (prefers-reduced-motion: reduce) {
+  .hero__cue span { animation: none; }
+}
+
+
+/* ============================ Nachträge aus dem Gremium, zweiter Durchgang */
+
+/* Der feste Kopf blieb auf Tablet und Telefon reinweiß, während die
+   Seite auf Papier umgestellt wurde. */
+@media (max-width: 1199px) {
+  .kopf { background: var(--papier); }
+  .ueberlagerung { background: var(--papier); }
+}
+
+/* Die dunkle Ankerkarte trug einen dunklen Rahmen, den man auf ihr nicht
+   sah, der aber die Kante fransig machte. */
+.preis--hervor { border-color: rgba(255, 255, 255, .16); }
+
+/* Das Abzeichen war für die dunkle Karte gebaut. Auf den hellen Karten
+   stand hell auf hell. */
+.preis__badge { background: var(--anker); color: #fff; }
+.preis--hervor .preis__badge { background: rgba(255, 255, 255, .16); color: #fff; }
+
+/* Der Ornament-Trenner hatte nur oben Abstand und stand deshalb nicht in
+   der Mitte seiner Lücke. Er ersetzt jetzt den Abstand der Folgesektion,
+   statt sich dazuzuaddieren. */
+.ornament-trenner { margin: clamp(48px, 8vw, 96px) auto; }
+.inhalt > .ornament-trenner + section { margin-top: 0; }
+
+/* Auf dem Telefon hob die Grundregel den Innenabstand des
+   Akademietextes auf, der Titel klebte am Bild. */
+@media (max-width: 809px) {
+  .akademie__innen { margin-top: -28px; padding-top: 40px; }
+}
+
+/* ==================================== Ein Rhythmus statt vierer Skalen
+   Die Vorlage mischte 120, 160, 180 und 200 Pixel Sektionsabstand, und
+   Tablet und Telefon folgten einer zweiten, abweichenden Skala. Jetzt
+   drei Stufen je Haltepunkt, jede Sektion genau einer zugeordnet. */
+
+:root {
+  --luft-eng:   120px;
+  --luft:       160px;
+  --luft-gross: 200px;
+}
+
+@media (max-width: 1199px) {
+  :root { --luft-eng: 96px; --luft: 120px; --luft-gross: 140px; }
+}
+
+@media (max-width: 809px) {
+  :root { --luft-eng: 72px; --luft: 96px; --luft-gross: 112px; }
+}
+
+.leitsatz,
+.hinweis        { margin-top: var(--luft-eng); }
+
+.ablauf,
+.angebot,
+.angebote,
+.bild-zitat,
+.breitbild,
+.buchung,
+.grossersatz,
+.grosszitat,
+.koennen,
+.lichtkoerper,
+.preise,
+.raeume,
+.stimmen,
+.zahlen         { margin-top: var(--luft); }
+
+.aufruf         { margin-top: var(--luft-gross); }
+
+/* Die vollflächigen Sektionen bekommen dieselbe Innenpolsterung. */
+.faq            { padding: var(--luft) 0; }
+.buchung        { padding: var(--luft) 0; }

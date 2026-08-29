@@ -22,6 +22,11 @@ SEITEN = [
 
 MARKE = "Schöpferwerke der Agnes Aichholzer"
 BASIS = "https://schoepferwerke.com"
+
+# Solange die Seite noch auf Netlify zur Ansicht liegt, muss das Vorschaubild
+# von dort kommen, sonst zeigt WhatsApp beim Weiterschicken kein Bild.
+# Beim Umzug auf die eigene Adresse hier BASIS eintragen.
+MEDIEN_BASIS = "https://schoepferwerke.netlify.app"
 MAIL = "info@schoepferwerke.com"
 
 WELLE_A = ("M 258.784 6000 C 172.776 5764.462 179.274 5473.637 486.263 5396.38 C 793.252 5319.123 "
@@ -172,13 +177,20 @@ FAQ = [
 ]
 
 
-def pille(text, ziel=None, art="gruen", extra=""):
+def pille(text, ziel=None, art="gruen", extra="", hier=False):
     tag = "a" if ziel else "button"
     attr = f'href="{ziel}"' if ziel else 'type="button"'
+    if hier:
+        attr += ' aria-current="page"'
     kl = f"pille pille--{art} t-label{(' ' + extra) if extra else ''}"
     return (f'<{tag} class="{kl}" {attr}>'
             f'<span class="pille__punkt pille__punkt--b"></span>{text}'
             f'<span class="pille__punkt pille__punkt--a"></span></{tag}>')
+
+
+def menue_link(text, ziel, aktiv):
+    hier = ' aria-current="page"' if ziel == aktiv else ''
+    return f'<a href="{ziel}"{hier}>{text}</a>'
 
 
 def kopf(aktiv, hell=False):
@@ -204,7 +216,7 @@ def kopf(aktiv, hell=False):
       {link('Über mich', 'ueber-mich.html')}
       {link('Angebote', 'angebote.html')}
       {link('Initiationen', 'initiationen.html')}
-      {pille('Session buchen', 'session-buchen.html')}
+      {pille('Session buchen', 'session-buchen.html', hier=(aktiv == 'session-buchen.html'))}
     </div>
     <button class="pille pille--gruen t-label kopf__schalter" type="button"
             data-menue-auf aria-expanded="false" aria-controls="menue">
@@ -221,11 +233,12 @@ def kopf(aktiv, hell=False):
 <div class="ueberlagerung" id="menue" data-offen="nein" role="dialog" aria-modal="true" aria-label="Menü" hidden>
   {pille('Schließen', None, 'gruen', 'ueberlagerung__schliessen').replace('<button class', '<button data-menue-zu class')}
   <nav class="ueberlagerung__liste" aria-label="Menü">
-    <a href="index.html">Startseite</a>
-    <a href="ueber-mich.html">Über mich</a>
-    <a href="angebote.html">Angebote</a>
-    <a href="initiationen.html">Initiationen</a>
-    <a href="session-buchen.html">Session buchen</a>
+    {menue_link('Startseite', 'index.html', aktiv)}
+    {menue_link('Über mich', 'ueber-mich.html', aktiv)}
+    {menue_link('Angebote', 'angebote.html', aktiv)}
+    {menue_link('Initiationen', 'initiationen.html', aktiv)}
+    {menue_link('Die Schöpferwerke', 'schoepferwerke.html', aktiv)}
+    {menue_link('Session buchen', 'session-buchen.html', aktiv)}
   </nav>
 </div>"""
 
@@ -322,9 +335,10 @@ def fuss(aktiv):
               {link('Über mich', 'ueber-mich.html')}
               {link('Angebote', 'angebote.html')}
               {link('Initiationen', 'initiationen.html')}
+              {link('Die Schöpferwerke', 'schoepferwerke.html')}
+              {link('Session buchen', 'session-buchen.html')}
             </nav>
             <nav class="sitemap__spalte auftritt" aria-label="Rechtliches">
-              {link('Session buchen', 'session-buchen.html')}
               {link('Datenschutz', 'datenschutz.html')}
               {link('Impressum', 'impressum.html')}
               {link('AGB', 'agb.html')}
@@ -373,6 +387,12 @@ def seite(datei, titel, beschreibung, inhalt, mit_faq=True, nach_faq=''):
 <meta property="og:site_name" content="{MARKE}">
 <meta property="og:title" content="{voll}">
 <meta property="og:description" content="{beschreibung}">
+<meta property="og:url" content="{BASIS}/{'' if datei == 'index.html' else datei[:-5]}">
+<meta property="og:image" content="{MEDIEN_BASIS}/assets/img/web/startseite-07@1800.jpg">
+<meta property="og:image:width" content="1800">
+<meta property="og:image:height" content="1350">
+<meta property="og:image:alt" content="Bergsee in den Alpen im Morgenlicht">
+<meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" href="assets/img/favicon.png">
 <link rel="apple-touch-icon" href="assets/img/Bilder/Framer/symbol-apple-touch.png">

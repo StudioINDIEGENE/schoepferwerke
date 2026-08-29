@@ -148,6 +148,11 @@
           var r = img.parentElement.getBoundingClientRect();
           if (r.bottom < 0 || r.top > innerHeight) return;
           var delta = (r.top + r.height / 2 - innerHeight / 2) * 0.06;
+          /* Bei niedrigen Rahmen (Kartenbilder am Telefon) reicht die
+             Vergrößerung von 1.12 nicht aus, um die Verschiebung zu
+             decken: das Bild rutschte aus seinem Rahmen. */
+          var grenze = r.height * 0.05;
+          delta = Math.max(-grenze, Math.min(grenze, delta));
           img.style.transform = "scale(1.12) translateY(" + delta.toFixed(1) + "px)";
         });
         laeuft = false;

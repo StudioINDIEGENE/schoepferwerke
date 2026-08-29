@@ -174,8 +174,9 @@ SCH_ZITAT = ("„Selbstermächtigung ist kein Konzept, sondern gelebte Schöpfer
 SCH_ZITAT_QUELLE = "— Agnes Aichholzer"
 
 SCH_TEXT = [
- "Schöpferwerke ist eine Forschungsakademie. Ihr Hauptaugenmerk ist die Heilung und Entfaltung "
- "der globalen menschlichen Schöpferkraft.",
+ ("auftakt",
+  "Schöpferwerke ist eine Forschungsakademie. Ihr Hauptaugenmerk ist die Heilung und Entfaltung "
+  "der globalen menschlichen Schöpferkraft."),
  "Gegründet von Agnes Aichholzer – Mentorin für Selbstermächtigung und Seelenintegration – öffnen "
  "sie einen Raum für Menschen, die bereit sind, ihr eigenes Schöpferwerk aus einer tiefen inneren "
  "Stimmigkeit in diese Welt zu bringen.",
@@ -185,7 +186,7 @@ SCH_TEXT = [
  "und sich dadurch das eigene Lebenswerk aus der Tiefe des Seins entwickeln kann.",
  "Hier findest du individuelle Wege und Werkzeuge, denn es geht um das unmittelbare Erfahren, "
  "Erinnern und Verkörpern dessen, was im Menschen ursprünglich angelegt ist.",
- "Im Zentrum steht die Verbindung zur eigenen Quelle.",
+ ("kern", "Im Zentrum steht die Verbindung zur eigenen Quelle."),
  "Jede Begegnung, jede Session, jedes Programm ist ein Schritt in diese Rückverbindung. Ein "
  "tieferes Verstehen der eigenen Struktur – ein Ermächtigen der eigenen Wahrheit. Ein Erkennen "
  "der eigenen Schöpferkraft und ein Leben der eigenen Seelennatur.",

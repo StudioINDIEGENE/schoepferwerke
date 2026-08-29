@@ -142,5 +142,5 @@ AUFRUF_TEXT = [
 
 AUFRUF_KNOPF = ("Deinen Weg beginnen", "session-buchen.html")
 
-BILD = "assets/img/Bilder/Framer/ueber-mich-01.jpg"
+BILD = "ueber-mich-01"
 BILD_ALT = "Porträt von Agnes Aichholzer"

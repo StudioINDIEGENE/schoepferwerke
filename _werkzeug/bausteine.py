@@ -98,11 +98,11 @@ def rechtstext(titel, datum, intro, abschnitte, kurz=None):
 # ===================================================================
 
 def bild_tag(name, alt, breite, hoehe, klasse="", laden="lazy", groessen=None,
-             hat_gross=True):
+             hat_gross=True, gross=1800):
     """<picture> mit webp und jpg, zwei Breiten."""
     sizes = f' sizes="{groessen}"' if groessen else ""
-    gross_webp = f", assets/img/web/{name}@1800.webp 1800w" if hat_gross else ""
-    gross_jpg = f", assets/img/web/{name}@1800.jpg 1800w" if hat_gross else ""
+    gross_webp = f", assets/img/web/{name}@{gross}.webp {gross}w" if hat_gross else ""
+    gross_jpg = f", assets/img/web/{name}@{gross}.jpg {gross}w" if hat_gross else ""
     return (f'<picture class="{klasse}">'
             f'<source type="image/webp" srcset="assets/img/web/{name}.webp 900w{gross_webp}"{sizes}>'
             f'<img src="assets/img/web/{name}.jpg" srcset="assets/img/web/{name}.jpg 900w{gross_jpg}"{sizes} '
@@ -187,7 +187,7 @@ def bild_zitat(bild, alt, zitat, quelle):
       <div class="s5">
         <div class="block">
           <figure class="bildrahmen bildrahmen--bogen auftritt">
-            <img src="{bild}" alt="{alt}" width="1104" height="1472" loading="lazy" decoding="async">
+            {bild_tag(bild, alt, 1104, 1472, "", "lazy", "(max-width: 809px) 90vw, 40vw", True, 1104)}
           </figure>
         </div>
       </div>
@@ -426,9 +426,20 @@ def preise(label, titel, unterzeile, karten_daten, zentriert=False):
     </section>"""
 
 
-def breitbild(bild, alt, titel, absaetze):
-    """Im Original steht die Überschrift über dem Bild, nicht darunter."""
+def breitbild(bild, alt, titel, absaetze, zitat=None, quelle=None):
+    """Im Original steht die Überschrift über dem Bild, nicht darunter.
+
+    Liegt ein Zitat an, steht es im Bild selbst, auf einem Schleier, der
+    es lesbar hält. Es braucht dann keinen eigenen dunklen Block mehr.
+    """
     text = "".join(f'<p>{a}</p>' for a in absaetze)
+    spruch = ""
+    if zitat:
+        herkunft = (f'\n          <figcaption class="t-label breitbild__quelle">{quelle}</figcaption>'
+                    if quelle else "")
+        spruch = (f'\n        <figure class="breitbild__spruch">'
+                  f'\n          <blockquote><p class="t-h2">{zitat}</p></blockquote>'
+                  f'{herkunft}\n        </figure>')
     return f"""    <section class="breitbild">
       <div class="bahn breitbild__zeile">
         <div class="s2"></div>
@@ -440,8 +451,8 @@ def breitbild(bild, alt, titel, absaetze):
         </div>
         <div class="s2"></div>
       </div>
-      <div class="breitbild__bild auftritt fenster">
-        {bild_tag(bild, alt, 1440, 1580, "", "lazy", "100vw")}
+      <div class="breitbild__bild auftritt fenster{" breitbild__bild--spruch" if zitat else ""}">
+        {bild_tag(bild, alt, 1440, 1580, "", "lazy", "100vw")}{spruch}
       </div>
     </section>"""
 
@@ -700,8 +711,25 @@ def inhaltsseite(*abschnitte):
 # ===================================================================
 
 def akademie(bild, titel, zitat, quelle, absaetze, knopf_text, knopf_ziel):
-    """Eigener Aufbau: sehr hohes Bild, Überschrift 130px, Zitat 54px."""
-    text = "".join(f'<p>{a}</p>' for a in absaetze)
+    """Eigener Aufbau: großes Bild, Überschrift 130px, Zitat 54px.
+
+    Ein Absatz darf als ("auftakt", ...) oder ("kern", ...) ausgezeichnet
+    sein. Der Auftakt steht größer, der Kernsatz wird als eigene Stufe
+    aus dem Fließtext gehoben.
+    """
+    def absatz(a):
+        if isinstance(a, tuple):
+            art, wort = a
+            if art == "auftakt":
+                return f'<p class="akademie__auftakt">{wort}</p>'
+            if art == "kern":
+                return ('<div class="akademie__kern">'
+                        '<span class="akademie__kern-zier" aria-hidden="true"></span>'
+                        f'<p>{wort}</p>'
+                        '<span class="akademie__kern-zier" aria-hidden="true"></span>'
+                        '</div>')
+        return f'<p>{a}</p>'
+    text = "".join(absatz(a) for a in absaetze)
     return f"""    <div class="kopfabstand kopfabstand--klein"></div>
 
     <header class="akademie">
