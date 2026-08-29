@@ -1108,12 +1108,30 @@ html, body { overflow-x: clip; }
   transition: background-color .35s ease, box-shadow .35s ease;
 }
 
-.kopf--fest {
-  background: rgba(247, 245, 241, .90);
-  -webkit-backdrop-filter: blur(18px) saturate(1.15);
-          backdrop-filter: blur(18px) saturate(1.15);
-  box-shadow: 0 1px 0 rgba(46, 50, 49, .09);
+/* Kein eigener Kasten mit harter Unterkante. Der Grund ist ein Verlauf,
+   der über die Kopfhöhe hinausreicht und nach unten ausläuft. Darunter
+   arbeitet weiter der gestufte Weichzeichner der Vorlage. */
+.kopf::before {
+  content: "";
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 210px;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .45s ease;
+  background: linear-gradient(to bottom,
+    rgb(247, 245, 241)      0%,
+    rgba(247, 245, 241, .96) 28%,
+    rgba(247, 245, 241, .78) 46%,
+    rgba(247, 245, 241, .46) 64%,
+    rgba(247, 245, 241, .18) 82%,
+    rgba(247, 245, 241, 0)  100%);
 }
+
+.kopf--fest::before { opacity: 1; }
+
+.kopf--fest { background: transparent; box-shadow: none; }
 
 /* Die Wortmarke stand in hellem Grün und erreichte auf Papier nur
    2,3 zu 1. Auf eigenem Grund gilt der tiefe Ton. */
@@ -1134,9 +1152,9 @@ html, body { overflow-x: clip; }
   .kopf--hell:not(.kopf--fest) .menue-link { color: rgba(255, 255, 255, .92); }
 }
 
-/* Der gestufte Weichzeichner darüber ist mit eigenem Grund überflüssig
-   und würde die Kante doppeln. */
-.kopf--fest ~ .kopfschleier { opacity: 0; transition: opacity .3s ease; }
+/* Der gestufte Weichzeichner der Vorlage bleibt sichtbar, er ist es,
+   der den Übergang abstuft statt ihn abzuhacken. */
+.kopfschleier { transition: opacity .45s ease; }
 
 /* ============================================ Das Porträt von Agnes
    Es lief auf 537 zu 1104 zugeschnitten, die Quelle ist 1104 zu 1472.
