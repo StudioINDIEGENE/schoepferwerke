@@ -1203,3 +1203,70 @@ html, body { overflow-x: clip; }
 
 /* Der herausgehobene Satz behält seine Größe, er ist kein Fließtext. */
 .leitsatz__text p.leitsatz__merk { font-size: clamp(24px, 2.6vw, 36px); }
+
+/* ======================================= Bedienbarkeit am Telefon
+   Gemessen auf allen neun Seiten bei 390 Pixel Breite: jeder Knopf war
+   39 Pixel hoch, die FAQ-Zeilen 31, die Fußzeilenlinks 31, das
+   Kontrollkästchen im Formular 13 auf 13. Die anerkannte Untergrenze
+   für ein Tippziel liegt bei 44 Pixeln. Darunter trifft man daneben. */
+
+@media (max-width: 809px) {
+  .pille {
+    min-height: 46px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  /* Die Frage in der FAQ ist die Schaltfläche, nicht nur Text. */
+  .fq__kopf {
+    min-height: 48px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  /* Fußzeile: die Linkliste wird angenehm greifbar. */
+  .sitemap__link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  /* Kästchen und Wahlknöpfe im Formular waren 13 auf 13 Pixel. */
+  .wahl input[type="checkbox"],
+  .wahl input[type="radio"],
+  .formular input[type="checkbox"],
+  .formular input[type="radio"] {
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+    accent-color: var(--gruen-tief);
+  }
+
+  /* Die Symbole zu den Kanälen waren 24 auf 24, also nur das Bild.
+     Sie bekommen eine greifbare Fläche darum. */
+  .sozial a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin: -10px;
+  }
+
+  /* Die Programmleiste lag zwei Pixel unter der Grenze. */
+  .programm-nav a { min-height: 46px; align-items: center; }
+
+  .wahl {
+    min-height: 48px;
+    align-items: center;
+  }
+
+  /* Die Auszeichnungszeilen standen in 12 Pixel. Auf dem Telefon eine
+     Spur größer, sonst verschwinden sie. */
+  .t-label { font-size: 13px; }
+
+  /* Verweise im Fließtext bekommen etwas mehr Griff, ohne die Zeile
+     auseinanderzuziehen. */
+  .textspalte a,
+  .anschrift a { padding: 2px 0; }
+}
