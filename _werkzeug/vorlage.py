@@ -209,6 +209,24 @@ def marke_der_dateien():
 VERSION = marke_der_dateien()
 
 
+def marke_der_karte():
+    """Kurzzeichen aus dem Inhalt der Teilen-Karte.
+
+    Vorschau-Dienste merken sich Bilder getrennt von der Seite. Mit einer
+    Marke am Bildnamen holen sie beim nächsten Mal von selbst die neue
+    Fassung, statt die alte zu zeigen.
+    """
+    import hashlib
+    import pathlib
+    datei = pathlib.Path(__file__).resolve().parent.parent / "assets" / "img" / "web" / "teilen-karte.jpg"
+    if not datei.is_file():
+        return "0"
+    return hashlib.sha1(datei.read_bytes()).hexdigest()[:8]
+
+
+KARTE_VERSION = marke_der_karte()
+
+
 def pille(text, ziel=None, art="gruen", extra="", hier=False):
     tag = "a" if ziel else "button"
     attr = f'href="{ziel}"' if ziel else 'type="button"'
@@ -425,7 +443,7 @@ def seite(datei, titel, beschreibung, inhalt, mit_faq=True, nach_faq=''):
 <meta property="og:title" content="{voll}">
 <meta property="og:description" content="{beschreibung}">
 <meta property="og:url" content="{BASIS}/{'' if datei == 'index.html' else datei[:-5]}">
-<meta property="og:image" content="{MEDIEN_BASIS}/assets/img/web/teilen-karte.jpg">
+<meta property="og:image" content="{MEDIEN_BASIS}/assets/img/web/teilen-karte.jpg?v={KARTE_VERSION}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Schöpferwerke der Agnes Aichholzer, Bergsee in den Alpen">
