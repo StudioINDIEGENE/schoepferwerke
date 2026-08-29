@@ -1305,3 +1305,33 @@ html, body { overflow-x: clip; }
   outline: 2px solid var(--gruen-tief);
   outline-offset: 4px;
 }
+
+/* ===================================== Bildausschnitt der Angebotskarten
+   Die Karten sind hochformatig (377 auf 560), die Aufnahmen querformatig.
+   Beim Füllen bleiben nur rund 45 Prozent der Bildbreite stehen, mittig
+   gerechnet also von 27,5 bis 72,5 Prozent. Beim Gipfelbild liegen Sonne
+   und Gruppe bei 27 bis 29 Prozent, standen also genau auf der
+   Schnittkante. Der Ausschnitt wandert dafür nach links. */
+/* Das neue Gipfelbild ist hochformatig wie die Karte, Gipfel und Sonne
+   stehen darin bereits mittig. Es braucht keine Ausschnittkorrektur. */
+
+/* Das Gipfelbild steht im Hochformat, weil es auf der Karte fast genau
+   das Kartenmaß trifft. Im breiten Band der Angebotsseite fiele die
+   Sonne dadurch heraus: Bei 21 zu 9 blieben nur 28,6 Prozent der
+   Bildhöhe stehen, Sonne und Gipfel brauchen aber 30. Dieses eine Band
+   steht deshalb in 16 zu 9, mit dem Ausschnitt bei 35 Prozent. Dann
+   zeigt es 22 bis 59,5 Prozent der Höhe, also Sonne und Gipfel. */
+@media (min-width: 1200px) {
+  #seelenmacht .angebot__bild img {
+    aspect-ratio: 16 / 9;
+    object-position: 50% 35%;
+  }
+}
+
+@media (min-width: 810px) and (max-width: 1199px) {
+  #seelenmacht .angebot__bild img { object-position: 50% 35%; }
+}
+
+@media (max-width: 809px) {
+  #seelenmacht .angebot__bild img { aspect-ratio: 3 / 4; object-position: 50% 42%; }
+}

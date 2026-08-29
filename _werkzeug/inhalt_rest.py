@@ -55,7 +55,7 @@ ANG_BLOECKE = [
       eckdaten=[("Dauer", "6 Wochen"), ("Deine Investition", "2.500 Euro")],
       knopf=("Jetzt buchen (2.500 €)", "session-buchen.html")),
 
- dict(kennung="seelenmacht", bild="natur-gipfel",
+ dict(kennung="seelenmacht", bild="natur-gipfelsonne",
       titel="13 Wochen – Erwacht in deiner Seelenmacht. Revolutionär.",
       unterzeile="Eine tiefgreifende, transformative Reise über dreizehn Wochen.",
       absaetze=[

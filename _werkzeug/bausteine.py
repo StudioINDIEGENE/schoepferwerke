@@ -329,7 +329,7 @@ def karten(label, titel, unterzeile, eintraege, knoepfe):
     # Jetzt führt die Überschrift auf den zugehörigen Abschnitt der
     # Angebotsseite, und die ganze Karte ist über diesen Verweis greifbar.
     karten_html = "\n          ".join(
-        f'<article class="karte karte--klick auftritt">'
+        f'<article class="karte karte--klick karte--{b} auftritt">'
         f'<div class="karte__bild">{bild_tag(b, alt, 377, 560, "", "lazy", "(max-width: 809px) 90vw, 377px", False)}</div>'
         f'<h3 class="karte__titel"><a class="karte__ziel" href="{z}">{h}</a></h3>'
         f'<p class="t-klein karte__text">{t}</p>'

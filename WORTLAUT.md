@@ -39,11 +39,36 @@ deshalb“. Das ist eine Zeile in `_werkzeug/vorlage.py`.
 Reiner Zahlfehler. Das Satzsubjekt „die Ursachen“ steht in der Mehrzahl.
 Hier gibt es keine zweite Lesart.
 
+## 29. August 2026, zweiter Eingriff, von Benjamin beauftragt
+
+Die englischen Wörter „Premium“ und „High“ ersetzt. Benjamin bat um
+andere Wörter, beide Prüfer des Hauses hatten sie zuvor beanstandet:
+Sie stehen quer zur sonst durchgehend deutschen Seite, und sie widersprechen
+Agnes' eigenem Satz auf initiationen.html, dies sei kein weiteres Format
+im Markt der Möglichkeiten.
+
+Gewählt wurden nicht neue Wörter, sondern **ihre eigenen**, die auf der
+Angebotsseite bereits stehen. Damit heißt jedes Programm überall gleich,
+was beide Prüfer ebenfalls gefordert hatten.
+
+    Karte:  6 Wochen Premium Begleitung
+        ->  6 Wochen intensive Begleitung
+
+    Karte:  13 Wochen High Begleitung
+        ->  13 Wochen transformative Reise
+
+Eine dritte Stelle stand nur im Preisblock und hatte keine Entsprechung
+in ihrem Wortschatz. Hier ist „Umfassende“ neu, es steigert die Reihe
+gegenüber „Kontinuierliche Begleitung“ beim Sechswochenprogramm:
+
+    Preis:  High-Level Begleitung über dreizehn Wochen
+        ->  Umfassende Begleitung über dreizehn Wochen
+
+Falls Agnes ein anderes Wort möchte, kommen infrage: vertiefende,
+weitreichende, durchgehende, vollständige.
+
 ## Noch nicht angetastet
 
-- Die Startseite nennt das mittlere Angebot „6 Wochen Premium
-  Begleitung“, alle übrigen Seiten nennen es „6 Wochen intensive
-  Begleitung“. Die Dauer stimmt überall, der Name nicht. Agnes wählt.
 - „Direktbuchung möglich“ in der ersten Preiskarte und im Fragenkatalog
   hat keine technische Deckung. Streichen oder anbinden, nicht
   umschreiben.
