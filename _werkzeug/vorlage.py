@@ -21,12 +21,16 @@ SEITEN = [
 ]
 
 MARKE = "Schöpferwerke der Agnes Aichholzer"
-BASIS = "https://schoepferwerke.com"
+# Die echte Adresse der Seite. Solange die Domain schoepferwerke.com
+# noch bei All-Inkl auf eine leere Platzhalterseite zeigt, ist die
+# Netlify-Adresse die richtige Angabe: Sie steht in der Kanonik, in der
+# Teilvorschau und beim Vorschaubild. Beim Umzug genügt es, hier
+# "https://schoepferwerke.com" einzutragen und neu zu bauen.
+BASIS = "https://schoepferwerke.netlify.app"
+MEDIEN_BASIS = BASIS
 
-# Solange die Seite noch auf Netlify zur Ansicht liegt, muss das Vorschaubild
-# von dort kommen, sonst zeigt WhatsApp beim Weiterschicken kein Bild.
-# Beim Umzug auf die eigene Adresse hier BASIS eintragen.
-MEDIEN_BASIS = "https://schoepferwerke.netlify.app"
+# Die Adresse, unter der Agnes im Impressum erreichbar genannt wird.
+HEIMATADRESSE = "https://schoepferwerke.com"
 MAIL = "schoepferwerke@gmail.com"
 
 WELLE_A = ("M 258.784 6000 C 172.776 5764.462 179.274 5473.637 486.263 5396.38 C 793.252 5319.123 "
