@@ -1,0 +1,30 @@
+# Netlify baut die Seite aus dieser Arbeitskopie.
+# `bauen.py` erzeugt die neun Seiten aus den Bausteinen,
+# `paket.py` schnürt daraus den Ordner, der veröffentlicht wird.
+[build]
+  command = "python3 _werkzeug/bauen.py && python3 _werkzeug/paket.py"
+  publish = "_veroeffentlichung"
+
+# Bilder und Schriften tragen feste Namen und dürfen lange liegen bleiben.
+[[headers]]
+  for = "/assets/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Die Seiten selbst sollen sich bei jeder Änderung sofort erneuern.
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"

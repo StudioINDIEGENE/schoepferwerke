@@ -1,0 +1,9 @@
+# Wird bei jedem Bau neu erzeugt
+_veroeffentlichung/
+
+# Betriebssystem
+.DS_Store
+._*
+
+# Netlify-Arbeitsdaten
+.netlify/
