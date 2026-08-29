@@ -46,6 +46,14 @@ def sammle(text, basis, treffer):
         rein(m.group(2))
 
 
+# Dateien, die keine Seite relativ verlinkt und die trotzdem
+# mitmüssen. Die Teilen-Karte steht in den Kopfdaten mit voller
+# Adresse, weil Vorschauen absolute Adressen verlangen.
+IMMER_MIT = [
+    "assets/img/web/teilen-karte.jpg",
+]
+
+
 def schnueren():
     if ZIEL.exists():
         shutil.rmtree(ZIEL)
@@ -67,6 +75,12 @@ def schnueren():
             if datei.suffix == ".css" and datei.is_file():
                 basis = str(datei.parent.relative_to(WURZEL))
                 sammle(datei.read_text(encoding="utf-8"), basis, treffer)
+
+    for zusatz in IMMER_MIT:
+        if (WURZEL / zusatz).is_file():
+            treffer.add(zusatz)
+        else:
+            sys.exit(f"Pflichtdatei fehlt: {zusatz}")
 
     dateien = sorted({pathlib.Path(t) for t in treffer if (WURZEL / t).is_file()})
     for rel in dateien:
