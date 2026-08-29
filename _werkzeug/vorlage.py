@@ -177,6 +177,27 @@ FAQ = [
 ]
 
 
+def marke_der_dateien():
+    """Kurzzeichen aus dem Inhalt der Stilblätter und Skripte.
+
+    Damit trägt jede Adresse automatisch eine neue Marke, sobald sich
+    eine dieser Dateien ändert. Vorher stand dort eine feste Zahl, die
+    beim Ändern vergessen wurde: Besucher bekamen altes CSS.
+    """
+    import hashlib
+    import pathlib
+    wurzel = pathlib.Path(__file__).resolve().parent.parent
+    roh = b""
+    for name in ("site.css", "site-v2.css", "site.js", "site-v2.js", "fonts.css"):
+        datei = wurzel / "assets" / name
+        if datei.is_file():
+            roh += datei.read_bytes()
+    return hashlib.sha1(roh).hexdigest()[:8]
+
+
+VERSION = marke_der_dateien()
+
+
 def pille(text, ziel=None, art="gruen", extra="", hier=False):
     tag = "a" if ziel else "button"
     attr = f'href="{ziel}"' if ziel else 'type="button"'
@@ -398,8 +419,8 @@ def seite(datei, titel, beschreibung, inhalt, mit_faq=True, nach_faq=''):
 <link rel="apple-touch-icon" href="assets/img/Bilder/Framer/symbol-apple-touch.png">
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/crimson-text-400-latin.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-400-latin.woff2" crossorigin>
-<link rel="stylesheet" href="assets/site.css?v=4">
-<link rel="stylesheet" href="assets/site-v2.css?v=4">
+<link rel="stylesheet" href="assets/site.css?v={VERSION}">
+<link rel="stylesheet" href="assets/site-v2.css?v={VERSION}">
 <script>document.documentElement.dataset.js = "ja";</script>
 </head>
 <body>
@@ -425,8 +446,8 @@ def seite(datei, titel, beschreibung, inhalt, mit_faq=True, nach_faq=''):
 {fuss(datei)}
 </main>
 
-<script src="assets/site.js?v=4"></script>
-<script src="assets/site-v2.js?v=4"></script>
+<script src="assets/site.js?v={VERSION}"></script>
+<script src="assets/site-v2.js?v={VERSION}"></script>
 </body>
 </html>
 """

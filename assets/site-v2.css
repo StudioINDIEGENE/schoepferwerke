@@ -1097,3 +1097,91 @@ html, body { overflow-x: clip; }
 /* Die vollflächigen Sektionen bekommen dieselbe Innenpolsterung. */
 .faq            { padding: var(--luft) 0; }
 .buchung        { padding: var(--luft) 0; }
+
+/* ================================= Die Kopfleiste bekommt eigenen Grund
+   Der feste Kopf schwebte über wechselnden Hintergründen: mal verschwand
+   die Wortmarke im Hellen, mal die Menüpunkte im Dunklen. Sobald
+   gescrollt wird, stellt er sich auf eigenen Grund und führt eine
+   feste, kontraststarke Schrift. */
+
+.kopf {
+  transition: background-color .35s ease, box-shadow .35s ease;
+}
+
+.kopf--fest {
+  background: rgba(247, 245, 241, .90);
+  -webkit-backdrop-filter: blur(18px) saturate(1.15);
+          backdrop-filter: blur(18px) saturate(1.15);
+  box-shadow: 0 1px 0 rgba(46, 50, 49, .09);
+}
+
+/* Die Wortmarke stand in hellem Grün und erreichte auf Papier nur
+   2,3 zu 1. Auf eigenem Grund gilt der tiefe Ton. */
+.kopf .wortmarke { color: var(--gruen-tief); }
+.kopf--fest .wortmarke { color: var(--gruen-tief); }
+.kopf--fest .menue-link { color: var(--dunkel); }
+
+.kopf--fest .logo__ring {
+  box-shadow:
+    rgba(201, 168, 74, .28) 0 1px 3px 0,
+    rgba(255, 242, 184, .7) 0 1px 1px 0 inset,
+    0 0 0 1px rgba(169, 128, 40, .45);
+}
+
+/* Über dem dunklen Hero, solange nicht gescrollt wurde, bleibt hell. */
+@media (min-width: 1200px) {
+  .kopf--hell:not(.kopf--fest) .wortmarke { color: var(--gruen); }
+  .kopf--hell:not(.kopf--fest) .menue-link { color: rgba(255, 255, 255, .92); }
+}
+
+/* Der gestufte Weichzeichner darüber ist mit eigenem Grund überflüssig
+   und würde die Kante doppeln. */
+.kopf--fest ~ .kopfschleier { opacity: 0; transition: opacity .3s ease; }
+
+/* ============================================ Das Porträt von Agnes
+   Es lief auf 537 zu 1104 zugeschnitten, die Quelle ist 1104 zu 1472.
+   Damit fehlte ein Drittel der Breite, und der Vollbogen kappte den Hut.
+   Jetzt das volle Bild im eigenen Format, mit ruhigem Bogen und einem
+   weichen Auslauf an der Unterkante. */
+
+.bildrahmen img {
+  aspect-ratio: 3 / 4;
+  object-position: 50% 42%;
+}
+
+.bildrahmen--bogen {
+  border-radius: 64px 64px 24px 24px;
+  -webkit-mask-image: linear-gradient(to bottom, #000 88%, rgba(0,0,0,.55) 96%, transparent 100%);
+          mask-image: linear-gradient(to bottom, #000 88%, rgba(0,0,0,.55) 96%, transparent 100%);
+}
+
+@media (max-width: 809px) {
+  .bildrahmen--bogen { border-radius: 40px 40px 20px 20px; }
+}
+
+/* ================================= Lesbarkeit der langen Textabschnitte
+   Auf der Über-mich-Seite standen neun Absätze hintereinander in 26
+   Pixel. Das ermüdet. Jetzt trägt der erste Absatz die große Stimme als
+   Auftakt, die folgenden stehen in ruhiger Lesegröße. */
+
+.leitsatz__text p.t-h5 ~ p.t-h5 {
+  font-size: 18px;
+  line-height: 1.68;
+  max-width: 680px;          /* rund 70 Zeichen, die bequeme Zeilenlänge */
+  color: var(--grau-dunkel);
+}
+
+/* Etwas mehr Luft zwischen den Absätzen als zwischen den Zeilen, damit
+   das Auge die Absatzgrenze findet. */
+.leitsatz__text { gap: 20px; }
+
+/* Auch der Auftakt braucht eine Grenze, 964 Pixel sind zu weit. */
+.leitsatz__text > p.t-h5:first-of-type { max-width: 860px; }
+
+@media (max-width: 809px) {
+  .leitsatz__text p.t-h5 ~ p.t-h5 { font-size: 17px; line-height: 1.62; }
+  .leitsatz__text { gap: 16px; }
+}
+
+/* Der herausgehobene Satz behält seine Größe, er ist kein Fließtext. */
+.leitsatz__text p.leitsatz__merk { font-size: clamp(24px, 2.6vw, 36px); }

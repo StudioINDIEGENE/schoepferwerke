@@ -196,3 +196,26 @@
   window.addEventListener("scroll", zeigen, { passive: true });
   zeigen();
 })();
+
+/* ------------------------------------- Nachtrag: Kopfleiste auf Grund */
+(function () {
+  "use strict";
+  var kopf = document.querySelector(".kopf");
+  if (!kopf) return;
+
+  /* Über dem Hero bleibt der Kopf durchsichtig, sobald darunter Inhalt
+     liegt, stellt er sich auf eigenen Grund. */
+  var schwelle = 40;
+  var stand = null;
+
+  function pruefen() {
+    var fest = window.scrollY > schwelle;
+    if (fest === stand) return;
+    stand = fest;
+    kopf.classList.toggle("kopf--fest", fest);
+  }
+
+  window.addEventListener("scroll", pruefen, { passive: true });
+  window.addEventListener("resize", pruefen, { passive: true });
+  pruefen();
+})();
