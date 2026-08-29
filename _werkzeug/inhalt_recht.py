@@ -8,7 +8,7 @@ als Fließtext mit Mittelpunkten zusammengelaufen sind, stehen hier als
 echte Listen, und jeder Punkt hat seinen eigenen Abschnitt.
 """
 
-MAIL = "info@schoepferwerke.com"
+MAIL = "schoepferwerke@gmail.com"
 
 # ---------------------------------------------------------------------- AGB
 

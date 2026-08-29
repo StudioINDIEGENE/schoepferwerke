@@ -27,7 +27,7 @@ BASIS = "https://schoepferwerke.com"
 # von dort kommen, sonst zeigt WhatsApp beim Weiterschicken kein Bild.
 # Beim Umzug auf die eigene Adresse hier BASIS eintragen.
 MEDIEN_BASIS = "https://schoepferwerke.netlify.app"
-MAIL = "info@schoepferwerke.com"
+MAIL = "schoepferwerke@gmail.com"
 
 WELLE_A = ("M 258.784 6000 C 172.776 5764.462 179.274 5473.637 486.263 5396.38 C 793.252 5319.123 "
 "193.717 5766.427 155.057 5396.38 C 116.397 5026.333 836.552 5059.991 503.173 5016.262 C 169.794 "

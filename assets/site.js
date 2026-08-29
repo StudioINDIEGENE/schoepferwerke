@@ -271,7 +271,7 @@
       }).catch(function () {
         bMeldung.textContent =
           "Das hat gerade nicht geklappt. Schreib mir bitte direkt an " +
-          "info@schoepferwerke.com, dann geht nichts verloren.";
+          "schoepferwerke@gmail.com, dann geht nichts verloren.";
       }).then(function () {
         if (knopf) knopf.disabled = false;
       });
