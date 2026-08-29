@@ -646,7 +646,12 @@ def buchung(label, titel, unterzeile, einleitung, absaetze, wege_titel, wege, ma
         <div class="s1"></div>
         <div class="s5">
           <div class="block">
-            <form class="formular auftritt" name="session" method="post" data-buchung novalidate>
+            <form class="formular auftritt" name="session" method="post" data-buchung
+                  data-netlify="true" netlify-honeypot="firmenname">
+              <input type="hidden" name="form-name" value="session">
+              <p class="honigtopf" aria-hidden="true">
+                <label>Bitte leer lassen: <input name="firmenname" tabindex="-1" autocomplete="off"></label>
+              </p>
               <p class="t-label formular__wegetitel">{wege_titel}</p>
               <div class="wahlen">{wege_html}</div>
 

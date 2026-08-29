@@ -15,18 +15,18 @@
 <meta property="og:title" content="Angebote — Schöpferwerke der Agnes Aichholzer">
 <meta property="og:description" content="Die Begleitungsformate von Agnes Aichholzer: einmalige 1:1 Session, 6 Wochen Lichtkörperstabilisierung, 13 Wochen transformative Reise.">
 <meta property="og:url" content="https://schoepferwerke.com/angebote">
-<meta property="og:image" content="https://schoepferwerke.netlify.app/assets/img/web/startseite-07@1800.jpg">
-<meta property="og:image:width" content="1800">
-<meta property="og:image:height" content="1350">
-<meta property="og:image:alt" content="Bergsee in den Alpen im Morgenlicht">
+<meta property="og:image" content="https://schoepferwerke.netlify.app/assets/img/web/teilen-karte.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Schöpferwerke der Agnes Aichholzer, Bergsee in den Alpen">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" href="assets/img/favicon.png">
 <link rel="apple-touch-icon" href="assets/img/Bilder/Framer/symbol-apple-touch.png">
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/crimson-text-400-latin.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-400-latin.woff2" crossorigin>
-<link rel="stylesheet" href="assets/site.css?v=09293b8b">
-<link rel="stylesheet" href="assets/site-v2.css?v=09293b8b">
+<link rel="stylesheet" href="assets/site.css?v=f12813c3">
+<link rel="stylesheet" href="assets/site-v2.css?v=f12813c3">
 <script>document.documentElement.dataset.js = "ja";</script>
 </head>
 <body>
@@ -402,7 +402,12 @@
         <div class="s1"></div>
         <div class="s5">
           <div class="block">
-            <form class="formular auftritt" name="session" method="post" data-buchung novalidate>
+            <form class="formular auftritt" name="session" method="post" data-buchung
+                  data-netlify="true" netlify-honeypot="firmenname">
+              <input type="hidden" name="form-name" value="session">
+              <p class="honigtopf" aria-hidden="true">
+                <label>Bitte leer lassen: <input name="firmenname" tabindex="-1" autocomplete="off"></label>
+              </p>
               <p class="t-label formular__wegetitel">Deine Möglichkeiten der Begleitung</p>
               <div class="wahlen"><label class="wahl"><input type="radio" name="Begleitung" value="Kostenloses Kennenlerngespräch"><span>Kostenloses Kennenlerngespräch</span></label><label class="wahl"><input type="radio" name="Begleitung" value="Einmalige 1:1 Session, das Transformationsportal"><span>Einmalige 1:1 Session, das Transformationsportal</span></label><label class="wahl"><input type="radio" name="Begleitung" value="6 Wochen intensive Begleitung, die Lichtkörperstabilisierung"><span>6 Wochen intensive Begleitung, die Lichtkörperstabilisierung</span></label><label class="wahl"><input type="radio" name="Begleitung" value="13 Wochen transformative Reise, erwache in deiner Seelenmacht"><span>13 Wochen transformative Reise, erwache in deiner Seelenmacht</span></label></div>
 
@@ -444,7 +449,12 @@
             <h2 class="t-h1 newsletter__titel auftritt">Bleib in Verbindung.</h2>
             <p class="newsletter__zeile auftritt">Melde dich an und erhalte inspirierende Impulse für deine innere Entwicklung. Dich erwarten kraftvolle, kostenfreie Meditationen, sowie ausgewählte Einblicke und Informationen zu meinen aktuellen Angeboten.</p>
           </div>
-          <form class="newsletter__form auftritt" name="newsletter" method="post" data-newsletter novalidate>
+          <form class="newsletter__form auftritt" name="newsletter" method="post" data-newsletter
+                data-netlify="true" netlify-honeypot="firmenname">
+            <input type="hidden" name="form-name" value="newsletter">
+            <p class="honigtopf" aria-hidden="true">
+              <label>Bitte leer lassen: <input name="firmenname" tabindex="-1" autocomplete="off"></label>
+            </p>
             <label class="newsletter__feldhuelle" for="nl-email">
               <span class="nur-vorlesen">E-Mail-Adresse</span>
               <input class="newsletter__feld" id="nl-email" type="email" name="Email"
@@ -501,7 +511,7 @@
   </footer>
 </main>
 
-<script src="assets/site.js?v=09293b8b"></script>
-<script src="assets/site-v2.js?v=09293b8b"></script>
+<script src="assets/site.js?v=f12813c3"></script>
+<script src="assets/site-v2.js?v=f12813c3"></script>
 </body>
 </html>

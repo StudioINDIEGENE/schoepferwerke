@@ -1270,3 +1270,13 @@ html, body { overflow-x: clip; }
   .textspalte a,
   .anschrift a { padding: 2px 0; }
 }
+
+/* Der Honigtopf gegen Werbezusendungen. Menschen sehen ihn nicht,
+   Maschinen füllen ihn aus und werden dadurch erkannt. */
+.honigtopf {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

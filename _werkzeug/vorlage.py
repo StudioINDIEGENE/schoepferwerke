@@ -335,7 +335,12 @@ def fuss(aktiv):
             <h2 class="t-h1 newsletter__titel auftritt">Bleib in Verbindung.</h2>
             <p class="newsletter__zeile auftritt">Melde dich an und erhalte inspirierende Impulse für deine innere Entwicklung. Dich erwarten kraftvolle, kostenfreie Meditationen, sowie ausgewählte Einblicke und Informationen zu meinen aktuellen Angeboten.</p>
           </div>
-          <form class="newsletter__form auftritt" name="newsletter" method="post" data-newsletter novalidate>
+          <form class="newsletter__form auftritt" name="newsletter" method="post" data-newsletter
+                data-netlify="true" netlify-honeypot="firmenname">
+            <input type="hidden" name="form-name" value="newsletter">
+            <p class="honigtopf" aria-hidden="true">
+              <label>Bitte leer lassen: <input name="firmenname" tabindex="-1" autocomplete="off"></label>
+            </p>
             <label class="newsletter__feldhuelle" for="nl-email">
               <span class="nur-vorlesen">E-Mail-Adresse</span>
               <input class="newsletter__feld" id="nl-email" type="email" name="Email"
@@ -409,10 +414,10 @@ def seite(datei, titel, beschreibung, inhalt, mit_faq=True, nach_faq=''):
 <meta property="og:title" content="{voll}">
 <meta property="og:description" content="{beschreibung}">
 <meta property="og:url" content="{BASIS}/{'' if datei == 'index.html' else datei[:-5]}">
-<meta property="og:image" content="{MEDIEN_BASIS}/assets/img/web/startseite-07@1800.jpg">
-<meta property="og:image:width" content="1800">
-<meta property="og:image:height" content="1350">
-<meta property="og:image:alt" content="Bergsee in den Alpen im Morgenlicht">
+<meta property="og:image" content="{MEDIEN_BASIS}/assets/img/web/teilen-karte.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Schöpferwerke der Agnes Aichholzer, Bergsee in den Alpen">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" href="assets/img/favicon.png">

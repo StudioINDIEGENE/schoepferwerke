@@ -197,10 +197,9 @@
   });
 
   /* -------------------------------------------------------- Newsletter
-     Ohne angebundenen Dienst wird nichts verschickt. Sobald ein Ziel
-     feststeht, hier die Adresse in ZIEL eintragen. */
-
-  var ZIEL = "";
+     Der Eintrag geht an Netlify Forms, also an dieselbe Adresse wie die
+     Seite selbst. Die Einträge liegen im Netlify-Konto, eine
+     Benachrichtigung an ein Postfach richtet Benjamin dort ein. */
 
   var form = document.querySelector("[data-newsletter]");
   var meldung = document.querySelector("[data-newsletter-meldung]");
@@ -219,16 +218,11 @@
         return;
       }
 
-      if (!ZIEL) {
-        sagen("Danke. Der Versand ist noch nicht angebunden, deine Adresse wurde nicht gespeichert.");
-        return;
-      }
-
       sagen("Einen Moment.");
-      fetch(ZIEL, {
+      fetch("/", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: feld.value })
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(new FormData(form)).toString()
       }).then(function (antwort) {
         if (!antwort.ok) throw new Error("Antwort " + antwort.status);
         sagen("Danke, du bist eingetragen.");
@@ -260,9 +254,27 @@
         mail.focus();
         return;
       }
-      bMeldung.textContent =
-        "Danke. Der Versand ist noch nicht angebunden, deine Anfrage wurde nicht verschickt. " +
-        "Schreib mir bitte direkt per E-Mail.";
+      var knopf = bForm.querySelector("button[type=submit], .formular__knopf");
+      if (knopf) knopf.disabled = true;
+      bMeldung.textContent = "Einen Moment, deine Anfrage geht raus.";
+
+      var daten = new URLSearchParams(new FormData(bForm)).toString();
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: daten
+      }).then(function (antwort) {
+        if (!antwort.ok) throw new Error("Antwort " + antwort.status);
+        bForm.reset();
+        bMeldung.textContent =
+          "Danke, deine Anfrage ist angekommen. Agnes meldet sich bei dir.";
+      }).catch(function () {
+        bMeldung.textContent =
+          "Das hat gerade nicht geklappt. Schreib mir bitte direkt an " +
+          "info@schoepferwerke.com, dann geht nichts verloren.";
+      }).then(function () {
+        if (knopf) knopf.disabled = false;
+      });
     });
   }
 
