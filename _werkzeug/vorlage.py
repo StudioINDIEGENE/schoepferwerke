@@ -113,7 +113,7 @@ FAQ = [
   "Verbindung mit dir selbst. Wenn du schon vieles versucht hast und spürst, dass oberflächliche "
   "Lösungen nicht mehr greifen — und wenn du bereit bist, dir selbst in der Tiefe zu begegnen und "
   "zu heilen, dann bist du hier genau richtig. Mit über 25 Jahren Erfahrung halte ich einen Raum, "
-  "in dem sich dein System in seine ursprüngliche Ordnung zurückbewegt. Viele meiner Kund kommen "
+  "in dem sich dein System in seine ursprüngliche Ordnung zurückbewegt. Viele meiner Kunden kommen "
   "genau deshalb — weil sie bereits viel ausprobiert haben und spüren, dass es tiefer gehen darf."]),
  ("Was passiert in einer Session?", [
   "Jede Session ist individuell. Es gibt kein festes Schema — wir arbeiten mit dem, was sich in "
@@ -162,7 +162,7 @@ FAQ = [
   "Oft ja — aber nicht immer so, wie man es erwartet. Manche Veränderungen sind direkt spürbar, "
   "andere entfalten sich leise in den Tagen danach. Dein System integriert das, was sich zeigt, in "
   "seinem eigenen Tempo. Meine Arbeit basiert nicht auf einer Methode. Ich arbeite direkt im Feld "
-  "— dort, wo die Ursachen von Mustern, Blockaden und inneren Programmen liegt. Deshalb ist jede "
+  "— dort, wo die Ursachen von Mustern, Blockaden und inneren Programmen liegen. Deshalb ist jede "
   "Sitzung einmalig."]),
  ("Ersetzt diese Arbeit eine Therapie oder ärztliche Behandlung?", [
   "Nein. Meine Arbeit dient der persönlichen Entwicklung, energetischen Balance und "
