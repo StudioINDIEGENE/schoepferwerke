@@ -60,7 +60,14 @@ PLUS = ("M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0
 "88.1,0,0,1,128,216Zm48-88a8,8,0,0,1-8,8H136v32a8,8,0,0,1-16,0V136H88a8,8,0,0,1,0-16h32V88a8,8,0,"
 "0,1,16,0v32h32A8,8,0,0,1,176,128Z")
 
-SOZIAL = [
+# Bis Agnes ihre tatsächlichen Adressen nennt, bleibt die Liste leer.
+# Die Sinnbilder führten auf instagram.com, threads.com, facebook.com
+# und youtube.com, also auf Anmeldemasken. Ein leerer Platz ist
+# besser als eine Sackgasse. Die Einträge stehen unten in SOZIAL_WARTET
+# bereit und müssen nur die richtige Adresse bekommen.
+SOZIAL = []
+
+SOZIAL_WARTET = [
     ("https://instagram.com", "Instagram",
      "M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,"
      "160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56"
@@ -387,7 +394,7 @@ def fuss(aktiv):
       <div class="s4">
         <div class="block abspann">
           <div class="abspann__vorlage"></div>
-          <p class="t-klein abspann__recht auftritt">Copyright 2026 Schöpferwerke. <span lang="en">All rights reserved.</span></p>
+          <p class="t-klein abspann__recht auftritt">&copy; 2026 Schöpferwerke der Agnes Aichholzer. Alle Rechte vorbehalten.</p>
         </div>
       </div>
     </div>

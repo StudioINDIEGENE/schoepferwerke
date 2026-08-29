@@ -50,21 +50,24 @@ ANGEBOTE_KARTEN = [
  ("natur-wasser", "Bachlauf zwischen moosbewachsenen Felsen",
   "Einmalige 1:1 Session",
   "Ein klarer Raum für Orientierung, Lösung und die erste tiefe Rückverbindung zu deiner inneren "
-  "Ordnung."),
+  "Ordnung.",
+  "angebote.html#portal"),
  ("natur-licht", "Goldenes Morgenlicht über einem Bergwald",
   "6 Wochen Premium Begleitung",
   "Für eine intensivere Stabilisierung deiner Seelenkraft, wenn dein System kontinuierliche "
-  "Begleitung wünscht."),
+  "Begleitung wünscht.",
+  "angebote.html#lichtkoerper"),
  ("natur-gipfel", "Menschen auf einem Gipfel über dem Wolkenmeer",
   "13 Wochen High Begleitung",
   "Eine tiefgreifende Reise für Menschen, die ihre innere Führung nicht nur erkennen, sondern "
-  "verkörpern wollen."),
+  "verkörpern wollen.",
+  "angebote.html#seelenmacht"),
 ]
 
 ANGEBOTE_KNOEPFE = [
  ("Zu den Angeboten", "angebote.html", "gruen"),
  ("Schöpferwerke", "schoepferwerke.html", "weiss"),
- ("Über Agnes", "ueber-mich.html", "weiss"),
+ ("Über mich", "ueber-mich.html", "weiss"),
 ]
 
 ABLAUF_TITEL = "So arbeiten wir zusammen."

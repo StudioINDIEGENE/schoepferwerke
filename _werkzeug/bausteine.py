@@ -325,13 +325,16 @@ def hero(bild, titel, unterzeile, knopf_text, knopf_ziel):
 
 def karten(label, titel, unterzeile, eintraege, knoepfe):
     """Angebotsvorschau. Überschrift im Original 76px, Kartentitel 34px."""
+    # Die Karten reagierten beim Überfahren und taten beim Klick nichts.
+    # Jetzt führt die Überschrift auf den zugehörigen Abschnitt der
+    # Angebotsseite, und die ganze Karte ist über diesen Verweis greifbar.
     karten_html = "\n          ".join(
-        f'<article class="karte auftritt">'
+        f'<article class="karte karte--klick auftritt">'
         f'<div class="karte__bild">{bild_tag(b, alt, 377, 560, "", "lazy", "(max-width: 809px) 90vw, 377px", False)}</div>'
-        f'<h3 class="karte__titel">{h}</h3>'
+        f'<h3 class="karte__titel"><a class="karte__ziel" href="{z}">{h}</a></h3>'
         f'<p class="t-klein karte__text">{t}</p>'
         f'</article>'
-        for b, alt, h, t in eintraege)
+        for b, alt, h, t, z in eintraege)
     kn = "\n          ".join(
         f'<a class="pille pille--{art} t-label auftritt" href="{ziel}"><span class="pille__punkt pille__punkt--b"></span>{txt}<span class="pille__punkt pille__punkt--a"></span></a>'
         for txt, ziel, art in knoepfe)

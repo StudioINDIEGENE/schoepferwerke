@@ -115,13 +115,16 @@ def baue_startseite():
         bausteine.karten(st.ANGEBOTE_LABEL, st.ANGEBOTE_TITEL, st.ANGEBOTE_UNTERZEILE,
                          st.ANGEBOTE_KARTEN, st.ANGEBOTE_KNOEPFE),
         bausteine.schritte(st.ABLAUF_TITEL, st.ABLAUF_UNTERZEILE, st.ABLAUF),
-        bausteine.aufruf(st.AUFRUF_TITEL, st.AUFRUF_TEXT, *st.AUFRUF_KNOPF),
-        bausteine.ornament(),
-        bausteine.preise(st.PREISE_LABEL, st.PREISE_TITEL, st.PREISE_UNTERZEILE, st.PREISE),
+        # Der Beleg steht jetzt vor dem Preis: Bild, Zahlen und Stimmen
+        # zuerst, dann erst die Beträge. Von Sindri und Bragi unabhängig
+        # gefordert, kein Wort ändert sich dabei.
         bausteine.breitbild(st.BREITBILD, st.BREITBILD_ALT, st.BREITBILD_TITEL,
                             st.BREITBILD_TEXT, zitat=st.ZITAT, quelle=st.ZITAT_QUELLE),
         bausteine.zahlen(st.ZAHLEN_TITEL, st.ZAHLEN_UNTERZEILE, st.ZAHLEN),
         bausteine.stimmen(st.STIMMEN_LABEL, st.STIMMEN_TITEL, st.STIMMEN),
+        bausteine.ornament(),
+        bausteine.aufruf(st.AUFRUF_TITEL, st.AUFRUF_TEXT, *st.AUFRUF_KNOPF),
+        bausteine.preise(st.PREISE_LABEL, st.PREISE_TITEL, st.PREISE_UNTERZEILE, st.PREISE),
     )
     nach_faq = bausteine.buchung(**BUCHUNG)
     schreibe("index.html",
@@ -141,11 +144,13 @@ def baue_angebote():
                                 ("Kennenlerngespräch", "#kennenlernen")]),
         bausteine.leitsatz("Angebote", re_.ANG_EINSTIEG),
         *bloecke,
-        bausteine.preise(re_.ANG_PREISE_LABEL, re_.ANG_PREISE_TITEL,
-                         re_.ANG_PREISE_UNTERZEILE, st.PREISE, zentriert=True),
-        bausteine.hinweisblock(re_.ANG_HINWEIS_TITEL, re_.ANG_HINWEIS),
         bausteine.zahlen(st.ZAHLEN_TITEL, st.ZAHLEN_UNTERZEILE, st.ZAHLEN),
         bausteine.stimmen(st.STIMMEN_LABEL, st.STIMMEN_TITEL, st.STIMMEN),
+        bausteine.preise(re_.ANG_PREISE_LABEL, re_.ANG_PREISE_TITEL,
+                         re_.ANG_PREISE_UNTERZEILE, st.PREISE, zentriert=True),
+        # Der Haftungshinweis stand direkt hinter den Beträgen. Jetzt
+        # hinter dem Beleg, wo er niemanden mehr abschreckt.
+        bausteine.hinweisblock(re_.ANG_HINWEIS_TITEL, re_.ANG_HINWEIS),
         bausteine.kauf_leiste(),
     )
     schreibe("angebote.html",

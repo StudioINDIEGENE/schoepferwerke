@@ -1280,3 +1280,28 @@ html, body { overflow-x: clip; }
   height: 1px;
   overflow: hidden;
 }
+
+/* Die Angebotskarten der Startseite sind jetzt Wege, nicht nur Bilder.
+   Der Verweis in der Überschrift spannt sich über die ganze Karte, damit
+   überall auf ihr geklickt werden kann. */
+.karte--klick { position: relative; }
+
+.karte__ziel {
+  color: inherit;
+  text-decoration: none;
+}
+
+.karte__ziel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.karte--klick:hover .karte__titel,
+.karte--klick:focus-within .karte__titel { color: var(--gruen-tief); }
+
+.karte__ziel:focus-visible::after {
+  outline: 2px solid var(--gruen-tief);
+  outline-offset: 4px;
+}
