@@ -98,7 +98,7 @@ BUCHUNG = dict(
     wege=[
         "Kostenloses Kennenlerngespräch",
         "Einmalige 1:1 Session, das Transformationsportal",
-        "8 Wochen intensive Begleitung, die Lichtkörperstabilisierung",
+        "6 Wochen intensive Begleitung, die Lichtkörperstabilisierung",
         "13 Wochen transformative Reise, erwache in deiner Seelenmacht",
     ],
     mail=vorlage.MAIL,
@@ -136,7 +136,7 @@ def baue_angebote():
                for b in re_.ANG_BLOECKE]
     inhalt = bausteine.inhaltsseite(
         bausteine.kopfbereich(re_.ANG_TITEL, re_.ANG_UNTERZEILE),
-        bausteine.programm_nav([("1:1 Session", "#portal"), ("8 Wochen", "#lichtkoerper"),
+        bausteine.programm_nav([("1:1 Session", "#portal"), ("6 Wochen", "#lichtkoerper"),
                                 ("13 Wochen", "#seelenmacht"),
                                 ("Kennenlerngespräch", "#kennenlernen")]),
         bausteine.leitsatz("Angebote", re_.ANG_EINSTIEG),

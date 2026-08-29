@@ -130,7 +130,7 @@ PREISE = [
    "Direktbuchung möglich",
    "Online oder in Präsenz"],
   "Einmalige tiefe Rückverbindung mit deiner Seelenessenz.", False),
- ("8 Wochen intensive Begleitung", "Kontinuierliche Begleitung über acht Wochen", "2.500 €",
+ ("6 Wochen intensive Begleitung", "Kontinuierliche Begleitung über sechs Wochen", "2.500 €",
   ["Stabilisierung deines Lichtkörpers",
    "Individuelle Sessions in deinem Rhythmus",
    "Integration zwischen den Sessions",

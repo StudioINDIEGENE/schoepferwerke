@@ -10,7 +10,7 @@ angeklebt, hier stehen sie als Eckdaten. Zusammengelaufene Sätze sind getrennt.
 # =============================================================== Angebote
 
 ANG_BESCHREIBUNG = ("Die Begleitungsformate von Agnes Aichholzer: einmalige 1:1 Session, "
-                    "8 Wochen Lichtkörperstabilisierung, 13 Wochen transformative Reise.")
+                    "6 Wochen Lichtkörperstabilisierung, 13 Wochen transformative Reise.")
 
 ANG_TITEL = "Der Weg in deine Schöpferkraft."
 ANG_UNTERZEILE = ("Entdecke die Begleitungsformate abgestimmt auf dein Thema, dein Tempo und "
@@ -43,8 +43,8 @@ ANG_BLOECKE = [
       knopf=("Jetzt buchen (450 €)", "session-buchen.html")),
 
  dict(kennung="lichtkoerper", bild="natur-licht", badge="Beliebteste Wahl",
-      titel="8 Wochen – Lichtkörperstabilisierung. Intensiv.",
-      unterzeile="Eine strukturierte, intensive Begleitung über acht Wochen.",
+      titel="6 Wochen – Lichtkörperstabilisierung. Intensiv.",
+      unterzeile="Eine strukturierte, intensive Begleitung über sechs Wochen.",
       absaetze=[
         "Der Fokus liegt auf der Stabilisierung deines Lichtkörpers und der kontinuierlichen "
         "Integration der geöffneten kosmischen Frequenzen in deinen Alltag.",
@@ -52,7 +52,7 @@ ANG_BLOECKE = [
         "Seelenfrequenz tragfähig wird und sich in deinem Leben verankern kann. Diese Begleitung "
         "ist klar geführt und ermöglicht dir eine stabile, sichere Entwicklung.",
       ],
-      eckdaten=[("Dauer", "8 Wochen"), ("Deine Investition", "2.500 Euro")],
+      eckdaten=[("Dauer", "6 Wochen"), ("Deine Investition", "2.500 Euro")],
       knopf=("Jetzt buchen (2.500 €)", "session-buchen.html")),
 
  dict(kennung="seelenmacht", bild="natur-gipfel",
