@@ -1,6 +1,6 @@
 # Bildauswahl für die drei Angebote
 
-Neununddreißig Vorschläge, gesucht in den Tiroler und Südtiroler Alpen,
+Siebenundfünfzig Vorschläge, gesucht in den Tiroler und Südtiroler Alpen,
 geordnet nach den drei Programmen. Alle liegen als Datei in den
 Unterordnern, im Kartenformat 2 zu 3.
 
@@ -17,7 +17,7 @@ Alle Bilder stammen von Unsplash. Zwei Arten sind darunter:
   Wasserzeichen quer über das Bild. Es verschwindet erst mit dem Kauf.
   Sie sind also nur als Vorschau zu verstehen.
 
-Von 39 Bildern sind **31 frei** und **8 kostenpflichtig**.
+Von 57 Bildern sind **49 frei** und **8 kostenpflichtig**.
 
 ## Die Übersichtsblätter
 
@@ -28,31 +28,38 @@ entspricht der Nummer im Dateinamen und in der Liste unten.
 
 ## Was ich vorschlagen würde
 
-Die drei Programme steigern sich, und die Bilder sollten das mittragen:
+Die drei Programme steigern sich, und die Bilder sollten das mittragen.
+Quelle, Wald, Gipfel:
 
 1. **Einzelsession, Bild 3**: der Karersee mit dem Latemar. Klares,
    tiefes Wasser, der Wald spiegelt sich darin. Ein Ort, an dem etwas
    sichtbar wird. Das passt zur einmaligen Rückverbindung.
-2. **Sechs Wochen, Bild 17**: ein Pfad, der zwischen hohen Stämmen in
-   den Nebel führt. Der Weg ist begonnen, das Ziel noch nicht zu sehen.
-   Das ist die begleitete Strecke.
+2. **Sechs Wochen, Bild 53**: dunkler Nadelwald, der den Hang
+   hinaufsteigt, darüber die geschichtete Felswand des Gipfels. Drei
+   Ebenen übereinander, klar durchgezeichnet. Das ist das Wachsen über
+   Wochen, mit dem Ziel schon sichtbar.
 3. **Dreizehn Wochen, Bild 29**: der Grat der Seceda, die Felsnadel im
    Licht, Wolken ziehen darüber. Der Gipfel, die Weite, das
    Angekommensein. Das trägt den höchsten Preis, und es ist
    nachweislich Südtirol.
 
-Ausweichbilder, falls eines davon nicht gefällt: 8 statt 3 (See mit
-Schilf im Vordergrund), 28 statt 17 (Weg zum Rosengarten), 35 statt 29
-(Bergrücken über dem Wolkenmeer im ersten Licht).
+Alle drei sind frei nutzbar, alle drei ohne Menschen, alle drei klar
+durchgezeichnet, keines mit Nebelschleier über dem Hauptmotiv oder
+unscharfem Vordergrund.
 
-**Wichtig zu Bild 30**: Es sieht auf den ersten Blick aus wie eine
-kleine Hütte auf dem Grat, und die Beschreibung bei Unsplash sagt das
-auch. Vergrößert man die Stelle, steht dort ein Mensch mit
-ausgebreiteten Armen in gelber Jacke. Weil du Bilder ohne Menschen
-wolltest, ist es aus der Empfehlung genommen. Es bleibt in der Liste,
-falls es dir trotzdem gefällt.
+Ausweichbilder: 8 statt 3 (See mit Schilf), 27 statt 53 (Gebirgsbach im
+Herbstwald mit Gipfel dahinter) oder 21 statt 53 (klarer Waldweg
+zwischen Lärchen), 35 statt 29 (Bergrücken über dem Wolkenmeer).
 
-Alle drei sind frei nutzbar, keines kostenpflichtig.
+**Zurückgezogen**: Bild 17, der neblige Waldpfad, war zuerst
+vorgeschlagen. Agnes findet ihn zu unklar, das ist berechtigt: Der Nebel
+verschluckt das halbe Bild. Bild 28 scheidet aus demselben Grund aus, es
+hat einen unscharfen Zweig im Vordergrund.
+
+**Wichtig zu Bild 30**: Es sieht aus wie eine kleine Hütte auf dem Grat,
+und die Beschreibung bei Unsplash sagt das auch. Vergrößert man die
+Stelle, steht dort ein Mensch mit ausgebreiteten Armen in gelber Jacke.
+Deshalb nicht empfohlen.
 
 ## Die vollständige Liste
 
@@ -82,7 +89,7 @@ Alle drei sind frei nutzbar, keines kostenpflichtig.
 |---|---|---|---|---|
 | 15 | Berge über ländlicher Landschaft | Sofia Gerasimenko | **kostenpflichtig** | [ansehen](https://unsplash.com/photos/FT4mC7Crd7w) |
 | 16 | Gebirgskette mit grünen Tälern, Sellagruppe, Dolomiten | waa towaw | frei | [ansehen](https://unsplash.com/photos/3Ftwkr3IOHI) |
-| 17 | Nebliger Pfad im Wald **(erste Wahl)** | Artem Stoliar | frei | [ansehen](https://unsplash.com/photos/7xjJPLG-xTw) |
+| 17 | Nebliger Pfad im Wald, zu unklar | Artem Stoliar | frei | [ansehen](https://unsplash.com/photos/7xjJPLG-xTw) |
 | 18 | Hügel mit Gras und Blumen | Hans | **kostenpflichtig** | [ansehen](https://unsplash.com/photos/1pndCtkqmiQ) |
 | 19 | Silhouette des Berges bei Sonnenuntergang | Alex Rainer | frei | [ansehen](https://unsplash.com/photos/tBSY1FgEHkQ) |
 | 20 | Schneebedeckter Berg | Daniel J. Schwarz | frei | [ansehen](https://unsplash.com/photos/BImL-nrv8lw) |
@@ -93,7 +100,7 @@ Alle drei sind frei nutzbar, keines kostenpflichtig.
 | 25 | Berg neben dem Gewässer | Daniel Seßler | frei | [ansehen](https://unsplash.com/photos/tBPVJo8Lfv8) |
 | 26 | Straße an Kiefern vorbei | Daniel J. Schwarz | frei | [ansehen](https://unsplash.com/photos/F8QDoWjZnsA) |
 | 27 | Kiefern vor Bergen | Daniel Seßler | frei | [ansehen](https://unsplash.com/photos/k2ZRhUUbpVc) |
-| 28 | Weg zwischen Bäumen am Berg, Rosengarten oder Latemar, Dolomiten **(Ausweichbild)** | daniel plan | frei | [ansehen](https://unsplash.com/photos/WS21-ExEDE8) |
+| 28 | Weg zwischen Bäumen am Berg, unscharfer Vordergrund | daniel plan | frei | [ansehen](https://unsplash.com/photos/WS21-ExEDE8) |
 
 ### 3 Dreizehn Wochen
 
@@ -110,6 +117,30 @@ Alle drei sind frei nutzbar, keines kostenpflichtig.
 | 37 | Holzhütten unter zerklüfteten Gipfeln, Seiser Alm mit Langkofel, Südtirol | Anjith Paul | frei | [ansehen](https://unsplash.com/photos/BVzKm9EAkoE) |
 | 38 | Schneebedeckter Berg | Alexandros Giannakakis | **kostenpflichtig** | [ansehen](https://unsplash.com/photos/8hAtswe7xR8) |
 | 39 | Blick von einem Gipfel | Gantas Vaičiulėnas | **kostenpflichtig** | [ansehen](https://unsplash.com/photos/XlIpZd0IySU) |
+
+
+### Später nachgeholt, alle für die sechs Wochen, alle frei
+
+| Nr | Motiv | Urheberin oder Urheber | Quelle |
+|---|---|---|---|
+| 40 | Sonnenuntergang über den Bergen | Davide Pietralunga | [ansehen](https://unsplash.com/photos/ie687sFO69k) |
+| 41 | Sonne durch Wolken in den Bergen | Reegan Fraser | [ansehen](https://unsplash.com/photos/f9V_YRDO7TY) |
+| 42 | Holzzaun am Hang | Patrick Baum | [ansehen](https://unsplash.com/photos/8xyPe4nTDls) |
+| 43 | Grasfeld mit Berg im Hintergrund | Daniel J. Schwarz | [ansehen](https://unsplash.com/photos/jd5KhMiQ5qo) |
+| 44 | Berg unter weissem Himmel | Daniel J. Schwarz | [ansehen](https://unsplash.com/photos/EswLMnbV7GU) |
+| 45 | Unbefestigte Strasse im Grasfeld | Tobias Reich | [ansehen](https://unsplash.com/photos/9BKSdvsRSuA) |
+| 46 | Fingerhut am Hang vor bewaldeten Bergen | Veronica Dudarev | [ansehen](https://unsplash.com/photos/u3Ciet2TH5g) |
+| 47 | Berghütte mit Blick auf Gipfel, Dolomiten | ekaterina domracheva | [ansehen](https://unsplash.com/photos/uTGPrF2uGDc) |
+| 48 | Grasfeld vor schneebedecktem Berg | Tyler Scheviak | [ansehen](https://unsplash.com/photos/-Edg-zf49O4) |
+| 49 | Tal mit Bäumen und Bergen | Kate Banar | [ansehen](https://unsplash.com/photos/bkJD-k9jxR4) |
+| 50 | Kirche vor Gebirgszügen | Marc St | [ansehen](https://unsplash.com/photos/q31NEozbK3c) |
+| 51 | Berge unter weissen Wolken | Hugo Kruip | [ansehen](https://unsplash.com/photos/3nM-GV4unJQ) |
+| 52 | Haus am felsigen Seeufer | Ilaria Ghidini | [ansehen](https://unsplash.com/photos/dYhNMaWFRys) |
+| 53 | Gebirgskette mit Bäumen **(erste Wahl)** | Elisa Kerschbaumer | [ansehen](https://unsplash.com/photos/NsLO5m_SUS0) |
+| 54 | Kiefern mit schneebedecktem Berg | daniel plan | [ansehen](https://unsplash.com/photos/7nRFxcxzebo) |
+| 55 | Hütte in Bergwaldlandschaft | Dean Zhang | [ansehen](https://unsplash.com/photos/5P0fjdVVgNQ) |
+| 56 | Hoher weisser Berg | Quaritsch Photography | [ansehen](https://unsplash.com/photos/2ulOMTUK0Ig) |
+| 57 | Gewässer über grün belaubten Bäumen | Marc St | [ansehen](https://unsplash.com/photos/0NGQmnuDnJ0) |
 
 ## Die Kartenansicht
 
