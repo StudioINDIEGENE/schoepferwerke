@@ -42,7 +42,7 @@ QUELLE_SCHLUSS = [
 ]
 
 ANGEBOTE_LABEL = "Angebote"
-ANGEBOTE_TITEL = "Drei Wege in deine <em>Schöpferkraft</em>."
+ANGEBOTE_TITEL = "Wege in deine <em>Schöpferkraft</em>."
 ANGEBOTE_UNTERZEILE = ("Wähle die Begleitung, die deinem aktuellen Feld entspricht — von der "
                        "klaren Einzel-Session bis zur tief geführten Transformation.")
 

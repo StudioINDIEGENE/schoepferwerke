@@ -100,6 +100,7 @@ BUCHUNG = dict(
         "Einmalige 1:1 Session, das Transformationsportal",
         "6 Wochen intensive Begleitung, die Lichtkörperstabilisierung",
         "13 Wochen transformative Reise, erwache in deiner Seelenmacht",
+        "Initiationen mit Selbststudium",
     ],
     mail=vorlage.MAIL,
 )

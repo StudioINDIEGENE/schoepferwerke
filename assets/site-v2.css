@@ -1335,3 +1335,73 @@ html, body { overflow-x: clip; }
 @media (max-width: 809px) {
   #seelenmacht .angebot__bild img { aspect-ratio: 3 / 4; object-position: 50% 42%; }
 }
+
+/* ================================ Der Hero-Text steht über dem Wasser
+   Links lag der Block über Waldrand, hellem Ufer und Sträuchern, einem
+   unruhigen Grund. Rechts liegt die ruhige, dunkle Wasserfläche des
+   Sees. Der Block rückt deshalb am Desktop in die rechte Hälfte und
+   beginnt an der Seitenmitte.
+   Nachgerechnet bei 1440 auf 900: Auf gleicher Höhe stünde die erste
+   Titelzeile rechts auf dem hellen Fels am Bergfuß, an den hellsten
+   Stellen nur 2,8 zu 1. Sechzig Pixel tiefer liegt der ganze Block auf
+   Uferwald und Wasser, 5,1 bis 7,1 zu 1. Darum steht er tiefer als
+   bisher. Tablet und Telefon behalten die volle Breite. */
+@media (min-width: 1200px) {
+  .hero__zeile .s4 { order: -1; flex: 6 0 0px; }
+  .hero__zeile .s8 { flex: 6 0 0px; }
+  .hero { padding-bottom: clamp(96px, calc(18vh - 42px), 170px); }
+
+  /* Auf kleinen Laptopschirmen (1280 auf 720) rückt der Block höher ins
+     Bild, die erste Zeile lag dort noch auf dem hellen Fels, 2,7 zu 1.
+     Ein weicher Schatten hinter dem Block hebt das auf 3,4 zu 1. Er ist
+     so leicht gewählt, wie es für diese Reserve nötig ist, der Berg links
+     bleibt unberührt. Nachgerechnet von 1280 auf 720 bis 2560 auf 1440,
+     der schwächste Wert je Größe: 3,4 / 4,8 / 6,5 / 6,5 / 7,4 zu 1. */
+  .hero__schleier {
+    background:
+      radial-gradient(ellipse 40% 44% at 68% 55%,
+        rgba(16, 27, 25, .32) 0%, rgba(16, 27, 25, 0) 70%),
+      linear-gradient(to top,
+        rgba(16, 27, 25, .84) 0%,
+        rgba(16, 27, 25, .42) 42%,
+        rgba(16, 27, 25, .08) 72%,
+        rgba(16, 27, 25, .26) 100%);
+  }
+}
+
+/* Am Telefon: „Seelenkraftentfaltung" ist gut siebeneinhalb Schriftgrade
+   breit, bei 48 Pixel also 373 Pixel. Auf Telefonen bis 390 Pixel Breite
+   ist das mehr als Platz ist, das Wort wurde rechts abgeschnitten. Die
+   Titelgröße richtet sich jetzt nach der Bildschirmbreite, ab 412 Pixel
+   bleibt sie bei 48. Der Knopf war mit 365 Pixel ebenso zu breit. */
+@media (max-width: 809px) {
+  .hero__titel { font-size: clamp(34px, calc((100vw - 32px) / 8), 48px); }
+
+  .hero__text .pille {
+    max-width: 100%;
+    padding: 1px 38px 0 18px;
+    font-size: clamp(11.5px, 3.4vw, 13px);
+    letter-spacing: .07em;
+  }
+}
+
+/* Am Telefon: „Lichtkörperstabilisierung" ist gut neun Schriftgrade breit,
+   bei 40 Pixel also 371 Pixel, und ragte auf der Angebotsseite bei 360
+   Pixel Breite über den Rand. Die Größe folgt jetzt der Bildschirmbreite.
+   Als letzte Sicherung bricht ein Wort, das breiter ist als die ganze
+   Zeile, in Überschriften um, statt abgeschnitten zu werden. */
+@media (max-width: 809px) {
+  .t-angebot { font-size: clamp(28px, calc((100vw - 32px) / 9.6), 40px); }
+  h1, h2, h3, h4, .t-riesig, .t-h1, .t-h2, .t-gross, .t-angebot { overflow-wrap: break-word; }
+}
+
+/* Sehr kleine Telefone bis 380 Pixel Breite: Menüknopf und lange Knöpfe
+   wie „Kennenlerngespräch anfragen" standen bei 320 Pixel über den Rand.
+   Etwas weniger Sperrung und Innenabstand holt sie zurück. */
+@media (max-width: 380px) {
+  .pille {
+    padding: 1px 34px 0 16px;
+    font-size: 12px;
+    letter-spacing: .06em;
+  }
+}

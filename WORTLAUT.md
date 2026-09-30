@@ -67,6 +67,18 @@ gegenüber „Kontinuierliche Begleitung“ beim Sechswochenprogramm:
 Falls Agnes ein anderes Wort möchte, kommen infrage: vertiefende,
 weitreichende, durchgehende, vollständige.
 
+## 30. September 2026, von Benjamin beauftragt
+
+Titel der Angebotsvorschau auf der Startseite, das Zahlwort entfällt:
+
+    vorher:  Drei Wege in deine Schöpferkraft.
+    nachher: Wege in deine Schöpferkraft.
+
+Neue fünfte Möglichkeit im Buchungsformular unter „Deine Möglichkeiten
+der Begleitung“, auf Startseite, Angebotsseite und Buchungsseite:
+
+    Initiationen mit Selbststudium
+
 ## Noch nicht angetastet
 
 - „Direktbuchung möglich“ in der ersten Preiskarte und im Fragenkatalog
