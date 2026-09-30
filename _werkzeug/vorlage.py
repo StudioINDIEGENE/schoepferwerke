@@ -306,6 +306,14 @@ def wellen():
   </div>"""
 
 
+def welle_in_buchung():
+    """Welle vom hellen Fragenblock in den grünen Buchungsabschnitt.
+    Vorher lag dazwischen ein Abstand im Papierton, ein beiger Streifen."""
+    return ('    <div class="kurve kurve--fluss kurve--in-buchung" aria-hidden="true">'
+            '<svg viewBox="0 0 2880 96" preserveAspectRatio="none"><path d="M0,52 C420,90 1020,14 1440,48 '
+            'C1860,82 2460,20 2880,52 L2880,96 L0,96 Z" fill="#38786f"/></svg></div>\n')
+
+
 def faq_block():
     teile = []
     for i, (frage, antworten) in enumerate(FAQ):
@@ -473,7 +481,7 @@ def seite(datei, titel, beschreibung, inhalt, mit_faq=True, nach_faq=''):
 
 {faq_block() if mit_faq else ''}
 
-{nach_faq}
+{welle_in_buchung() if nach_faq else ''}{nach_faq}
 
   </div>
 

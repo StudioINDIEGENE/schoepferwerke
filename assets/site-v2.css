@@ -1410,3 +1410,151 @@ html, body { overflow-x: clip; }
    Revolutionär, Bewusst) heben sich im tiefen Grün ab. Auf Papier
    4,7 zu 1, also gut lesbar. */
 .t-angebot .akzent { color: var(--gruen-tief); }
+
+/* ============================ Der Buchungsabschnitt im Grün der Knöpfe
+   Vorher fast schwarz (#2e3231), jetzt dasselbe Grün wie die Knöpfe.
+   Alles darin ist nachgezogen: Schrift weiß, Nebenschrift fast weiß,
+   Felder und Wahlflächen als helle Schleier, der Absendeknopf weiß mit
+   grüner Schrift, sonst verschwände er im gleichfarbigen Grund. */
+.buchung { background: var(--gruen-tief); }
+
+.buchung__marke { color: #ffffff; }
+.buchung__unterzeile,
+.buchung__text { color: rgba(255, 255, 255, .94); }
+
+.buchung .formular {
+  background: rgba(255, 255, 255, .08);
+  outline-color: rgba(255, 255, 255, .24);
+}
+
+.buchung .formular__wegetitel,
+.buchung .feld label,
+.buchung .formular__fussnote,
+.buchung .zustimmung { color: rgba(255, 255, 255, .94); }
+
+.buchung .wahl {
+  background: rgba(255, 255, 255, .07);
+  outline-color: rgba(255, 255, 255, .24);
+}
+.buchung .wahl:hover { background: rgba(255, 255, 255, .13); }
+.buchung .wahl:has(input:checked) { background: rgba(255, 255, 255, .2); outline-color: #ffffff; }
+
+.buchung .wahl input,
+.buchung .zustimmung input { accent-color: #ffffff; }
+
+.buchung .feld input,
+.buchung .feld textarea {
+  background: rgba(255, 255, 255, .1);
+  outline-color: rgba(255, 255, 255, .3);
+}
+.buchung .feld input::placeholder,
+.buchung .feld textarea::placeholder { color: rgba(255, 255, 255, .66); }
+.buchung .feld input:focus,
+.buchung .feld textarea:focus { outline-color: #ffffff; background: rgba(255, 255, 255, .15); }
+
+.buchung .formular__fussnote a,
+.buchung a:not(.pille) { color: #ffffff; }
+.buchung :focus-visible { outline-color: #ffffff; }
+
+.buchung .pille--gruen {
+  background: #ffffff;
+  color: var(--gruen-tief);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .14), 0 10px 24px rgba(0, 0, 0, .12);
+}
+.buchung .pille--gruen:hover { background: #eef5f4; }
+.buchung .pille--gruen .pille__punkt { background: var(--gruen-tief); }
+
+/* ============================================= Keine beigen Streifen
+   Die Wellen zwischen den Abschnitten hatten einen durchsichtigen Grund,
+   dort schien das beige Papier durch: über der Fußzeile, zwischen Buchung
+   und Fragenblock und zwischen Fragenblock und Buchung. Jede Welle trägt
+   jetzt den Grund des Abschnitts über ihr. */
+.kurve--in-buchung { background: var(--atem); }
+.kurve--in-buchung + .buchung { margin-top: 0; }
+.buchung + .kurve { background: var(--gruen-tief); }
+.faq { margin-bottom: 0; }
+body:has(.inhalt > .buchung:last-child) .kurve--spaet { background: var(--gruen-tief); }
+body:has(.inhalt > .faq:last-child) .kurve--spaet { background: var(--atem); }
+
+/* ================================ Ein Format für hervorgehobene Sätze
+   Vorbild ist der Satz auf Über mich: kursive Serifenschrift in
+   Tiefgrün, eine feine goldene Linie links. Dasselbe Format gilt jetzt
+   für den Kernsatz der Schöpferwerke und den Satz zu den
+   Heilversprechen in AGB und Impressum. Die Selektoren sind so gewählt,
+   dass sie die Absatzregeln der jeweiligen Seite überstimmen. */
+.merkzeile,
+.akademie__text .merkzeile,
+.absatz .merkzeile,
+.leitsatz__text .merkzeile {
+  margin: 1.1em 0;
+  padding: 0 0 0 clamp(18px, 2vw, 28px);
+  border-left: 2px solid rgba(214, 184, 92, .55);
+  border-radius: 0;
+  background: none;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(24px, 2.6vw, 36px);
+  line-height: 1.3;
+  letter-spacing: 0;
+  color: var(--gruen-tief);
+  text-wrap: balance;
+  max-width: 22em;
+}
+
+@media (max-width: 809px) {
+  .merkzeile,
+  .akademie__text .merkzeile,
+  .absatz .merkzeile,
+  .leitsatz__text .merkzeile { padding-left: 16px; font-size: 22px; }
+}
+
+/* Formular im grünen Abschnitt: als dunkleres Feld statt als helleres,
+   dann stehen die kleinen Beschriftungen über 4,5 zu 1. */
+.buchung .formular { background: rgba(0, 0, 0, .12); outline-color: rgba(255, 255, 255, .22); }
+.buchung .wahl { background: rgba(0, 0, 0, .06); outline-color: rgba(255, 255, 255, .22); }
+.buchung .wahl:hover { background: rgba(0, 0, 0, .12); }
+.buchung .wahl:has(input:checked) { background: rgba(0, 0, 0, .18); outline: 2px solid #ffffff; }
+.buchung .feld input,
+.buchung .feld textarea { background: rgba(0, 0, 0, .16); outline-color: rgba(255, 255, 255, .3); }
+.buchung .feld input:focus,
+.buchung .feld textarea:focus { background: rgba(0, 0, 0, .2); outline-color: #ffffff; }
+.buchung .feld input::placeholder,
+.buchung .feld textarea::placeholder { color: rgba(255, 255, 255, .72); }
+
+/* ========================================== Preiskarten, zweite Ordnung
+   Alle drei gleich hoch, die Knöpfe stehen unten auf einer Linie.
+   Hervorgehoben ist jetzt das Dreizehnwochenprogramm, in der Türkisfarbe
+   der Fußzeile. Weiße Schrift erreichte auf diesem Türkis nur 2,3 zu 1,
+   darum steht die Schrift der Karte dunkel, 5,6 zu 1. */
+.preise__reihe { align-items: stretch; }
+.preis { height: 100%; }
+.preis__knopf { margin-top: auto; }
+
+.preis--hervor {
+  background: var(--gruen);
+  color: var(--dunkel);
+  border-color: rgba(255, 255, 255, .35);
+  box-shadow: 0 24px 60px rgba(58, 127, 119, .26);
+}
+.preis--hervor:hover { box-shadow: 0 30px 70px rgba(58, 127, 119, .32); }
+.preis--hervor .preis__titel,
+.preis--hervor .preis__betrag,
+.preis--hervor .preis__dauer,
+.preis--hervor .preis__hinweis,
+.preis--hervor .preis__liste { color: var(--dunkel); }
+.preis--hervor .preis__liste li::before { background: #ffffff; }
+.preis--hervor .pille--gruen { background: #ffffff; color: var(--gruen-tief); }
+.preis--hervor .pille--gruen .pille__punkt { background: var(--gruen-tief); }
+
+/* Solange die Karten nebeneinander stehen, bekommen alle Titel die Höhe
+   von zwei Zeilen. Dann stehen Preis, Liste und Knopf in allen drei
+   Karten auf derselben Linie, auch wenn ein Titel einzeilig ist. */
+@media (min-width: 810px) {
+  .preis__titel { min-height: 2.6em; }
+}
+
+/* Haarfeine Fugen an den Wellen: Die Abschnitte enden oft auf
+   Bruchteilen von Pixeln, dort schien beim Zeichnen eine Linie des
+   Papiergrunds durch. Jede Welle überlappt ihre Nachbarn um einen Pixel. */
+.kurve--fluss { margin-top: -1px; margin-bottom: -1px; }

@@ -139,13 +139,13 @@ PREISE = [
    "Individuelle Sessions in deinem Rhythmus",
    "Integration zwischen den Sessions",
    "Tiefe Arbeit an deinen Kernthemen"],
-  "Für nachhaltige Integration und klare Ausrichtung über mehrere Wochen.", True),
+  "Für nachhaltige Integration und klare Ausrichtung über mehrere Wochen.", False),
  ("13 Wochen transformative Reise", "Umfassende Begleitung über dreizehn Wochen", "5.500 €",
   ["Vollständige Systemarbeit",
    "Tiefe Integration und Neuausrichtung",
    "Persönliche Begleitung auf höchstem Niveau",
    "Verkörperung deiner Seelenmacht"],
-  "Für tiefgreifende Transformation in Übereinstimmung mit deiner Seelenmission.", False),
+  "Für tiefgreifende Transformation in Übereinstimmung mit deiner Seelenmission.", True),
 ]
 
 BREITBILD = "natur-nebelmeer"

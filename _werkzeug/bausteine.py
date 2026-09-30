@@ -26,7 +26,7 @@ def block_html(art, *daten):
     if art == "lead":
         return f'<p class="auftritt"><strong class="hervor">{daten[0]}</strong> {daten[1]}</p>'
     if art == "merk":
-        return f'<p class="merksatz auftritt">{daten[0]}</p>'
+        return f'<p class="merkzeile auftritt">{daten[0]}</p>'
     if art == "ul":
         punkte = "\n              ".join(f"<li>{p}</li>" for p in daten[0])
         return f'<ul class="liste auftritt">\n              {punkte}\n            </ul>'
@@ -166,7 +166,7 @@ def leitsatz(label, absaetze, id=None, titel=None, gross=True, titel_klasse="t-h
     klasse = "t-h5 " if gross else ""
     def absatz(a):
         if isinstance(a, tuple) and a[0] == "merk":
-            return f'<p class="leitsatz__merk auftritt">{a[1]}</p>'
+            return f'<p class="leitsatz__merk merkzeile auftritt">{a[1]}</p>'
         return f'<p class="{klasse}auftritt">{a}</p>'
     text = "\n            ".join(absatz(a) for a in absaetze)
     marke = f'<p class="t-label leitsatz__marke auftritt">{label}</p>\n            ' if label else ''
@@ -379,7 +379,7 @@ def schritte(titel, unterzeile, eintraege):
       <div class="bahn">
         <div class="s8">
           <div class="block ablauf__kopf">
-            <h2 class="t-riesig auftritt" id="ablauf-titel">{titel}</h2>
+            <h2 class="t-h2 auftritt" id="ablauf-titel">{titel}</h2>
             <p class="t-h5 auftritt">{unterzeile}</p>
           </div>
         </div>
@@ -730,11 +730,8 @@ def akademie(bild, titel, zitat, quelle, absaetze, knopf_text, knopf_ziel):
             if art == "auftakt":
                 return f'<p class="akademie__auftakt">{wort}</p>'
             if art == "kern":
-                return ('<div class="akademie__kern">'
-                        '<span class="akademie__kern-zier" aria-hidden="true"></span>'
-                        f'<p>{wort}</p>'
-                        '<span class="akademie__kern-zier" aria-hidden="true"></span>'
-                        '</div>')
+                # Gleiches Format wie der hervorgehobene Satz auf Über mich
+                return f'<p class="merkzeile">{wort}</p>'
         return f'<p>{a}</p>'
     text = "".join(absatz(a) for a in absaetze)
     return f"""    <div class="kopfabstand kopfabstand--klein"></div>
