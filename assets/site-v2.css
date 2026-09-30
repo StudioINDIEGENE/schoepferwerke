@@ -1558,3 +1558,75 @@ body:has(.inhalt > .faq:last-child) .kurve--spaet { background: var(--atem); }
    Bruchteilen von Pixeln, dort schien beim Zeichnen eine Linie des
    Papiergrunds durch. Jede Welle überlappt ihre Nachbarn um einen Pixel. */
 .kurve--fluss { margin-top: -1px; margin-bottom: -1px; }
+
+/* Das neue Zitat ist fast viermal so lang wie das alte und reicht höher
+   ins Bild, bis an den hellen Himmel um die Sonne. Die erste Zeile lag
+   dort an den hellsten Stellen bei 2,9 zu 1. Der Schatten sitzt jetzt
+   mittig und ist eine Spur dichter. */
+.breitbild__bild--spruch::after {
+  background:
+    radial-gradient(ellipse 80% 68% at 50% 50%, rgba(12, 22, 20, .66), transparent 74%),
+    linear-gradient(to top, rgba(12, 22, 20, .60) 0%, rgba(12, 22, 20, .22) 46%, rgba(12, 22, 20, .36) 100%);
+}
+
+/* ========================================= Farbstufen der Angebotskarten
+   Von Benjamin festgelegt: die Einzelsession weiß, sechs Wochen in hellem
+   Türkis, dreizehn Wochen im Grün der Knöpfe. Die Farbe steigt mit dem
+   Umfang. Auf Türkis steht dunkle Schrift (5,6 zu 1), auf Grün weiße
+   (5,1 zu 1). Die weiße Karte bekommt den grünen Knopf, die farbigen
+   einen weißen, so hebt sich jeder Knopf von seiner Karte ab. */
+.preis--hell {
+  background: var(--gruen);
+  color: var(--dunkel);
+  border-color: rgba(255, 255, 255, .35);
+  box-shadow: 0 20px 50px rgba(58, 127, 119, .20);
+}
+.preis--hell .preis__titel,
+.preis--hell .preis__betrag,
+.preis--hell .preis__dauer,
+.preis--hell .preis__hinweis,
+.preis--hell .preis__liste { color: var(--dunkel); }
+.preis--hell .preis__liste li::before { background: #ffffff; }
+
+.preis--dunkel {
+  background: var(--gruen-tief);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, .16);
+  box-shadow: 0 24px 60px rgba(58, 127, 119, .30);
+}
+.preis--dunkel .preis__titel,
+.preis--dunkel .preis__betrag,
+.preis--dunkel .preis__dauer,
+.preis--dunkel .preis__hinweis,
+.preis--dunkel .preis__liste { color: #ffffff; }
+.preis--dunkel .preis__liste li::before { background: var(--gold-hell); }
+
+.preis--hell:hover { box-shadow: 0 28px 64px rgba(58, 127, 119, .26); }
+.preis--dunkel:hover { box-shadow: 0 30px 70px rgba(58, 127, 119, .36); }
+
+/* Seitentitel tragen ihre Betonung nur noch kursiv, ohne Farbe. Auf
+   Über mich stand „Seele" in Grün, die übrigen Titel sind schwarz. */
+.t-riesig em { color: inherit; }
+
+/* Die fünf Möglichkeiten der Begleitung als weiße Flächen, gestaltet wie
+   der Knopf „Session anfragen": weißer Grund, grüne Schrift, weicher
+   Schatten. Einzeilig werden sie zur Pille, mehrzeilig zur weich
+   gerundeten Fläche. Die gewählte Möglichkeit trägt einen grünen Ring. */
+.buchung .wahl {
+  background: #ffffff;
+  color: var(--gruen-tief);
+  outline: 0;
+  border-radius: 26px;
+  padding: 12px 20px;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .14), 0 10px 24px rgba(0, 0, 0, .10);
+  transition: box-shadow .25s ease, transform .25s var(--schwung), background-color .25s ease;
+}
+.buchung .wahl:hover { background: #f4f9f8; transform: translateY(-1px); }
+.buchung .wahl:has(input:checked) {
+  background: #ffffff;
+  outline: 0;
+  box-shadow: inset 0 0 0 2px var(--gruen-tief), 0 10px 24px rgba(0, 0, 0, .14);
+}
+.buchung .wahl:has(input:focus-visible) { box-shadow: 0 0 0 3px #ffffff, 0 0 0 5px var(--gruen-tief); }
+.buchung .wahl input { accent-color: var(--gruen-tief); }

@@ -473,7 +473,7 @@ def seite(datei, titel, beschreibung, inhalt, mit_faq=True, nach_faq=''):
 
 <main class="seite" id="inhalt">
 
-{wellen()}
+
 
   <div class="inhalt">
 

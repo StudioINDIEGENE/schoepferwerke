@@ -110,6 +110,28 @@ Kennzahl auf Startseite und Angebotsseite:
     vorher:  3   Begleitungsformate — individuell wählbar
     nachher: 3+  Begleitungsformate — individuell wählbar
 
+## 30. September 2026, das Zitat im Nebelmeer-Bild der Startseite
+
+Von Benjamin ersetzt.
+
+    vorher:  „Wahre Heilung beginnt dort, wo deine Geschichte beginnt.“
+             — Agnes Aichholzer, Seherin und Mentorin für Seelenintegration
+
+    nachher: „Es braucht keinen geistigen Vermittler zwischen Mensch und
+             Schöpfung. Ein Leben in Übereinstimmung mit der eigenen
+             Seelennatur – in tiefer Beziehung mit dem Schöpfergeist zu
+             leben – das ist normal.“
+             — Agnes Aichholzer, Mentorin für Selbstermächtigung &
+             Seelenintegration
+
+Gegenüber Benjamins Eingabe nur Schreibung und Satzzeichen:
+- „braucht“ statt „brauch“, das fehlende t.
+- Halbgeviertstriche „–“ statt Bindestriche „-“, so wie im Zitat auf
+  der Schöpferwerke-Seite.
+- Deutsche Anführungszeichen „…“ wie bei allen Zitaten der Seite.
+- Der führende Strich „—“ vor der Quelle wie bei den beiden anderen
+  Zitaten (Über mich, Schöpferwerke).
+
 ## Noch nicht angetastet
 
 - „Direktbuchung möglich“ in der ersten Preiskarte und im Fragenkatalog

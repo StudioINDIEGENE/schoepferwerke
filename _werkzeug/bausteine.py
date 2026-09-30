@@ -398,16 +398,16 @@ def schritte(titel, unterzeile, eintraege):
 
 def preise(label, titel, unterzeile, karten_daten, zentriert=False):
     karten_html = "\n          ".join(
-        f'<article class="preis auftritt{" preis--hervor" if hervor else ""}">'
+        f'<article class="preis preis--{ton} auftritt">'
         + f'<h3 class="preis__titel">{h}</h3>'
         f'<p class="t-klein preis__dauer">{dauer}</p>'
         f'<p class="t-h2 preis__betrag">{betrag}</p>'
         f'<ul class="preis__liste">' + "".join(f'<li>{p}</li>' for p in punkte) + '</ul>'
-        f'<a class="pille pille--{"gruen" if hervor else "weiss"} t-label preis__knopf" href="session-buchen.html">'
+        f'<a class="pille pille--{"gruen" if ton == "weiss" else "weiss"} t-label preis__knopf" href="session-buchen.html">'
         f'<span class="pille__punkt pille__punkt--b"></span>Jetzt buchen<span class="pille__punkt pille__punkt--a"></span></a>'
         f'<p class="t-klein preis__hinweis">{hinweis}</p>'
         f'</article>'
-        for h, dauer, betrag, punkte, hinweis, hervor in karten_daten)
+        for h, dauer, betrag, punkte, hinweis, ton in karten_daten)
     mitte = " preise__kopf--mitte" if zentriert else ""
     return f"""    <section class="preise" aria-labelledby="preise-titel">
       <div class="bahn preise__kopf{mitte}">

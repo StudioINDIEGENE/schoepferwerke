@@ -133,19 +133,19 @@ PREISE = [
    "Individuell auf dein Thema abgestimmt",
    "Direktbuchung möglich",
    "Online oder in Präsenz"],
-  "Einmalige tiefe Rückverbindung mit deiner Seelenessenz.", False),
+  "Einmalige tiefe Rückverbindung mit deiner Seelenessenz.", "weiss"),
  ("6 Wochen intensive Begleitung", "Kontinuierliche Begleitung über sechs Wochen", "2.500 €",
   ["Stabilisierung deines Lichtkörpers",
    "Individuelle Sessions in deinem Rhythmus",
    "Integration zwischen den Sessions",
    "Tiefe Arbeit an deinen Kernthemen"],
-  "Für nachhaltige Integration und klare Ausrichtung über mehrere Wochen.", False),
+  "Für nachhaltige Integration und klare Ausrichtung über mehrere Wochen.", "hell"),
  ("13 Wochen transformative Reise", "Umfassende Begleitung über dreizehn Wochen", "5.500 €",
   ["Vollständige Systemarbeit",
    "Tiefe Integration und Neuausrichtung",
    "Persönliche Begleitung auf höchstem Niveau",
    "Verkörperung deiner Seelenmacht"],
-  "Für tiefgreifende Transformation in Übereinstimmung mit deiner Seelenmission.", True),
+  "Für tiefgreifende Transformation in Übereinstimmung mit deiner Seelenmission.", "dunkel"),
 ]
 
 BREITBILD = "natur-nebelmeer"
@@ -157,8 +157,14 @@ BREITBILD_TEXT = [
  "Ich öffne Räume, in denen du dich erinnerst. An deinen Ursprung. An deine Natur.",
 ]
 
-ZITAT = "„Wahre Heilung beginnt dort, wo deine Geschichte beginnt.“"
-ZITAT_QUELLE = "— Agnes Aichholzer, Seherin und Mentorin für Seelenintegration"
+# Von Benjamin am 30. September 2026 vorgegeben. Gegenüber der Eingabe
+# nur Schreibung und Satzzeichen: "braucht" statt "brauch", Halbgeviert-
+# striche statt Bindestriche, deutsche Anführungszeichen, der führende
+# Strich vor der Quelle wie bei den beiden anderen Zitaten der Seite.
+ZITAT = ("„Es braucht keinen geistigen Vermittler zwischen Mensch und Schöpfung. "
+         "Ein Leben in Übereinstimmung mit der eigenen Seelennatur – in tiefer Beziehung "
+         "mit dem Schöpfergeist zu leben – das ist normal.“")
+ZITAT_QUELLE = "— Agnes Aichholzer, Mentorin für Selbstermächtigung &amp; Seelenintegration"
 
 ZAHLEN_TITEL = ("Von ersten Schritten zu dauerhafter Veränderung — diese Zahlen spiegeln wider, "
                 "was entsteht, wenn man den Weg gemeinsam geht.")
