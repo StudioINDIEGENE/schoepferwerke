@@ -108,6 +108,13 @@ ANG_HINWEIS = [
 ]
 
 # ============================================================ Initiationen
+#
+# Text nach Agnes' Dokument „INITIATIONEN - Erlesene Programme für
+# Selbstermächtigung“, von Benjamin am 30. September 2026 übergeben und
+# wörtlich übernommen, die fetten Stellen als <strong>. Seitentitel, Marke,
+# Schild, die drei Initiationen und der Schluss stehen nicht im Dokument
+# und bleiben, wie sie waren. Was sich im Wortlaut geändert hat, steht in
+# WORTLAUT.md.
 
 INI_BESCHREIBUNG = ("Initiationen und Entfaltungsräume von Agnes Aichholzer. Begleitete Programme "
                     "zum Lichtkörperprozess, derzeit in Vorbereitung.")
@@ -115,30 +122,83 @@ INI_BESCHREIBUNG = ("Initiationen und Entfaltungsräume von Agnes Aichholzer. Be
 INI_BILD = "natur-waldsee"
 INI_LABEL = "Vorschau kommender Räume"
 INI_TITEL = "Initiationen und Entfaltungsräume"
+INI_UNTERTITEL = "Wege der Rückkehr"
 INI_KOPFTEXT = [
- "Hier findest du Wege und Werkzeuge – sie alle dienen dem Lichtkörperprozess: damit du deinen "
- "physischen Körper vollständig bewohnst und aus deiner eigenen Quelle wirkst.",
- "Wenn dein Lichtkörper kohärent ist, wird dein physischer Körper tragfähig für höhere "
- "Frequenzen. Dein Wirken wird klar und deine Seelenmission lebbar.",
-]
-INI_SCHILD = "Programme in Vorbereitung"
-
-INI_LK_LABEL = "Lichtkörperprozess"
-INI_LK_TITEL = "Das ist kein Luxus – es ist die Grundarchitektur deiner individuellen Freiheit."
-INI_LK_TEXT = [
- "Diese Initiationen und Programme sind kein „Kurs“, kein weiteres Format im Markt der "
- "Möglichkeiten. Es sind strukturierte Wege der Rückkehr in deine ursprüngliche Wahrheit.",
- "Alle Initiationen und Übungen führen dich zurück in deine Essenz, deine Kohärenz, deine Kraft – "
- "in dein Licht und in die Liebe.",
+ "Diese Initiationen und Programme sind kein klassischer „Onlinekurs“, kein weiteres Format im "
+ "Markt der Möglichkeiten. Es sind klar strukturierte Wege der Rückkehr in deine ursprüngliche "
+ "Wahrheit, in deine Essenz, deine Kraft – in dein Licht und in die Liebe.",
  "Denn dieses Licht, das aus der eigenen Quelle schöpft, authentisch in sich selbst sowie im "
  "kosmisch-irdischen verankert ist und dem Göttlichen innig zugewandt bleibt, wird jetzt auf "
  "dieser Welt so dringend gebraucht.",
 ]
+INI_SCHILD = "Programme in Vorbereitung"
 
-INI_KARTEN_TITEL = "Erlesene Programme für Rückkehr, Kohärenz und Verkörperung."
-INI_KARTEN_INTRO = ("Es sind erlesene, frequenzerhöhende Initiationen, die ich im Format von "
-                    "begleiteten Programmen mit Selbststudium anbiete — Abkürzungen zum "
-                    "Wesentlichen, in klaren Schritten und mit persönlicher Begleitung.")
+# Der letzte Satz des zweiten Absatzes steht als Merkzeile für sich, im
+# selben Format wie die hervorgehobenen Sätze auf Über mich und
+# Schöpferwerke. Im Dokument schließt er den Absatz ab.
+INI_LK_LABEL = "Lichtkörperprozess"
+INI_LK_TEXT = [
+ "Hier findest du Wege und Werkzeuge – sie alle dienen dem <strong>Lichtkörperprozess</strong>: "
+ "damit du deinen physischen Körper vollständig bewohnst, deine Schöpferkraft nutzt und aus deiner"
+ " eigenen Quelle wirkst.",
+ "Wenn dein Lichtkörper kohärent ist, wird dein physischer Körper tragfähig für höhere Frequenzen."
+ " Dein Wirken wird klar und deine Seelenmission lebbar.",
+ ("merk", "Das ist kein Luxus – es ist die Grundarchitektur deiner individuellen Freiheit."),
+]
+
+# Vollmond über Wildem Pfaff und Becher mit dem Becherhaus, Stubaier Alpen.
+# Von Agnes geliefert, steht als ruhiges Band zwischen den beiden Kapiteln.
+INI_MOND = "natur-mond"
+INI_MOND_ALT = "Vollmond über verschneiten Gipfeln der Stubaier Alpen im Abendlicht"
+
+INI_PROGRAMME_TITEL = "Erlesene Programme für Selbstermächtigung, Kohärenz und Verkörperung"
+# Die Spanne hält den zweiten Halbsatz beim Umbruch zusammen, das geschützte
+# Leerzeichen bindet den Gedankenstrich an „gehst“. So bricht die Zeile
+# hinter dem Strich und nicht nach „in“. Am Wortlaut ändert das nichts.
+INI_PROGRAMME_UNTERZEILE = ('Ein Weg, den du selbst gehst&nbsp;– <span class="zusammen">in einem Feld, '
+                            'das ich für dich eröffne.</span>')
+INI_PROGRAMME_EINLEITUNG = (
+ "Diese Initiationen und Programme sind erlesene Werkzeuge für Menschen, die eigenverantwortlich "
+ "und in der Tiefe mit sich arbeiten möchten, um ihre eigene schöpferische Kraft im Alltag bewusst"
+ " zu erfahren und zu leben, sowie neue spirituelle Fähigkeiten zu erlernen.")
+
+INI_WEGE_TITEL = "Übermittelte Meisterwege – persönlich durch mich zugänglich"
+INI_WEGE_BILD = ("natur-edelweiss", "Ein einzelnes Edelweiß leuchtet auf dunklem Fels")
+INI_WEGE_TEXT = [
+ "Durch meine langjährige Erfahrung mit verschiedenen feinstofflichen Ebenen und meine eigene "
+ "Schulung in unterschiedlichen Energiesystemen erhalten diese Programme einen klaren, "
+ "strukturierten und persönlich begleiteten Rahmen. <strong>Sie sind zugleich Ausdruck eines über "
+ "viele Jahre gewachsenen Erfahrungsschatzes, in den wertvolle Übermittlungen verschiedener "
+ "Meister, Schamanen und Lehrer metaphysischer Traditionen eingeflossen sind und die ich hier für "
+ "euch zusammengeführt habe und in ihrer reinen, originalen Form weitergebe.</strong>",
+ "Es sind Kostbarkeiten – Perlen der spirituellen Welt – und nur jenen zugänglich, die dafür "
+ "bereit sind. Und wenn du bis hierher auf meiner Seite gefunden hast, dann gehörst du bestimmt "
+ "dazu.",
+]
+
+# Drei Absätze, drei Merkmale der Programme. Der vierte Absatz des
+# Dokuments führt zu den Karten und steht deshalb direkt über ihnen.
+INI_STUDIUM_TITEL = "Selbststudium und persönliche Übermittlung"
+INI_STUDIUM = [
+ "Die Programme sind <strong>mehrwöchige Selbststudienwege</strong>, die du eigenständig und in "
+ "deinem eigenen Rhythmus durchläufst. Sie verbinden die persönliche Übermittlung und Initiation "
+ "in das jeweilige System mit tiefgreifenden Übungen, Meditationen und energetischer "
+ "Selbsterfahrung.",
+ "Ein wesentlicher Bestandteil ist eine <strong>persönliche Zoom-Session mit mir</strong>, in der "
+ "die jeweilige Initiation und Energieübertragung stattfindet und der Zugang zum entsprechenden "
+ "System eröffnet wird. Sie bildet den Ausgangspunkt für deine anschließende eigene Arbeit und "
+ "eine bewusste Entwicklung, Integration und Verkörperung über mehrere Wochen hinweg.",
+ "Die Programme sind keine klassischen Onlinekurse, die lediglich Wissen vermitteln. Sie sind "
+ "<strong>Erfahrungs- und Transformationswege</strong>, die darauf ausgerichtet sind, neue "
+ "Bewusstseinsräume und spirituelle Fähigkeiten in dir zu erschließen und die jeweilige "
+ "Energiequalität zunehmend in deinem eigenen Leben zu verkörpern.",
+]
+
+INI_BRUECKE = (
+ "<strong>Du bist deines Glückes Schmied</strong> und wenn dich einer dieser Wege innerlich ruft, "
+ "dann folge diesem Ruf. Wähle das Programm, das dich anspricht, und schenke dir die Möglichkeit, "
+ "deine eigene Tiefe zu betreten, deine Kraft neu zu erfahren und das in die Welt zu bringen, was "
+ "nur durch dich geboren werden kann.")
 
 # Bilder der drei Initiationen, in derselben Reihenfolge
 INI_KARTEN_BILDER = [

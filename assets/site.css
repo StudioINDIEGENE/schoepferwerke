@@ -1676,52 +1676,6 @@ html[data-js="ja"] .auftritt[data-sichtbar] {
 .hinweis__innen p { text-wrap: pretty; }
 
 /* Lichtkörper: Überschrift links, Nebentitel rechts, mittig gesetzt */
-.lichtkoerper { margin-top: 160px; }
-
-.lichtkoerper__zeile {
-  display: flex;
-  justify-content: center;
-  gap: 132px;
-  width: 100%;
-  padding: 0 var(--bahn-pad);
-}
-
-.lichtkoerper__haupt,
-.lichtkoerper__neben { flex: 0 0 auto; width: 436px; }
-
-.lichtkoerper__titel {
-  margin: 0;
-  font-family: var(--serif);
-  font-size: 46px;
-  line-height: 1.15;
-  font-weight: 400;
-  letter-spacing: -.035em;
-  text-wrap: balance;
-}
-
-.lichtkoerper__neben { padding-top: 6px; }
-
-.lichtkoerper__nebentitel {
-  margin: 12px 0 0;
-  font-family: var(--serif);
-  font-size: 34px;
-  line-height: 1.25;
-  font-weight: 400;
-  letter-spacing: -.02em;
-}
-
-.lichtkoerper__text {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  width: 100%;
-  max-width: 1004px;
-  margin: 48px auto 0;
-  padding: 0 var(--bahn-pad);
-}
-
-.lichtkoerper__text .t-h5 { text-wrap: pretty; }
-
 /* Kommende Initiationsräume */
 .raeume { margin-top: 160px; }
 
@@ -1990,7 +1944,7 @@ html[data-js="ja"] .auftritt[data-sichtbar] {
   .buchung__text { max-width: none; }
 
 
-  .angebot, .lichtkoerper, .raeume { margin-top: 120px; }
+  .angebot, .raeume { margin-top: 120px; }
   .t-angebot { font-size: 56px; }
   .angebot__innen { padding: 44px var(--bahn-pad) 0; }
   .angebot__unterzeile { font-size: 28px; }
@@ -2009,10 +1963,6 @@ html[data-js="ja"] .auftritt[data-sichtbar] {
   .hinweis .s2, .raeume__schluss .s2 { display: none; }
   .hinweis .s8, .raeume__schluss .s8 { flex: 0 0 auto; width: 100%; }
 
-  .lichtkoerper__zeile { flex-direction: column; gap: 20px; align-items: center; }
-  .lichtkoerper__haupt, .lichtkoerper__neben { width: 100%; max-width: 640px; }
-  .lichtkoerper__titel { font-size: 38px; }
-  .lichtkoerper__nebentitel { font-size: 28px; }
   .raeume__gitter { grid-template-columns: repeat(2, 1fr); }
 
   /* Ohne JavaScript bleibt die Kopfnavigation erreichbar. */
@@ -2104,7 +2054,7 @@ html[data-js="ja"] .auftritt[data-sichtbar] {
   .formular { padding: 24px; }
 
 
-  .angebot, .lichtkoerper, .raeume { margin-top: 96px; }
+  .angebot, .raeume { margin-top: 96px; }
   .t-angebot { font-size: 40px; }
   .angebot__innen { padding: 32px var(--bahn-pad) 0; }
   .angebot__unterzeile { font-size: 24px; }
@@ -2113,8 +2063,6 @@ html[data-js="ja"] .auftritt[data-sichtbar] {
   .akademie__innen { padding-top: 48px; }
   .akademie__bild img { aspect-ratio: 3 / 4; }
   .raeume__gitter { grid-template-columns: 1fr; }
-  .lichtkoerper__titel { font-size: 32px; }
-  .lichtkoerper__nebentitel { font-size: 24px; }
   .initiation__titel { font-size: 26px; }
   .bildkopf__bild img { aspect-ratio: 4 / 3; }
   .bildkopf__bild { border-radius: 0 0 18px 18px; }

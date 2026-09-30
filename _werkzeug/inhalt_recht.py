@@ -278,6 +278,7 @@ IMPRESSUM = [
   ("ul", [
     "Seebensee (Startseite): Daniel Jacob",
     "Drei Zinnen unter der Milchstraße (Die Schöpferwerke): Jan Valečka",
+    "Edelweiß auf dunklem Fels (Initiationen): Jan Behnisch",
   ]),
   ("p", "Lizenztext: <a href=\"https://unsplash.com/de/lizenz\" rel=\"noopener noreferrer\" "
         "target=\"_blank\">unsplash.com/de/lizenz</a>"),

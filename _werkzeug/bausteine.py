@@ -154,9 +154,11 @@ def kopfbereich(titel, unterzeile=None, bild=None):
     </header>"""
 
 
-def bildkopf(bild, label, titel, absaetze, hinweis=None, mitte=False):
+def bildkopf(bild, label, titel, absaetze, hinweis=None, mitte=False, untertitel=None):
     """Seitenkopf mit großem Bild darüber. Überschrift im Original 72px."""
     text = "".join(f'<p class="bildkopf__text auftritt">{a}</p>' for a in absaetze)
+    unter = (f'\n            <h2 class="bildkopf__untertitel auftritt">{untertitel}</h2>'
+             if untertitel else '')
     marke = f'<p class="t-label bildkopf__marke auftritt">{label}</p>' if label else ''
     schild = f'<p class="t-label schild auftritt">{hinweis}</p>' if hinweis else ''
     zentriert = " bildkopf--mitte" if mitte else ""
@@ -170,7 +172,7 @@ def bildkopf(bild, label, titel, absaetze, hinweis=None, mitte=False):
         <div class="s8">
           <div class="block bildkopf__innen">
             {marke}
-            <h1 class="t-h1 auftritt">{titel}</h1>
+            <h1 class="t-h1 auftritt">{titel}</h1>{unter}
             {text}
             {schild}
           </div>
@@ -605,14 +607,21 @@ def hinweisblock(titel, absaetze):
 # Initiationen
 # ===================================================================
 
-def initiationen(label, titel, absaetze, karten_titel, karten_intro, eintraege, schluss,
-                 nebentitel=None, bilder=None):
-    """Im Original: Überschrift links, Nebentitel rechts, beides mittig gesetzt."""
-    text = "".join(f'<p class="t-h5 auftritt">{a}</p>' for a in absaetze)
-    neben = (f'<div class="lichtkoerper__neben">'
-             f'<p class="t-label leitsatz__marke auftritt">{label}</p>'
-             f'<h3 class="lichtkoerper__nebentitel auftritt">{nebentitel}</h3></div>'
-             if nebentitel else '')
+def bildband(bild, alt):
+    """Ein ruhiges Bild über die volle Breite, Atempause zwischen zwei Kapiteln."""
+    return f"""    <div class="bildband auftritt fenster">
+      {bild_tag(bild, alt, 1440, 720, "", "lazy", "100vw")}
+    </div>"""
+
+
+def initiationen(titel, unterzeile, einleitung, wege_titel, wege_absaetze, wege_bild,
+                 studium_titel, merkmale, bruecke, eintraege, schluss, bilder=None):
+    """Die Programme in fünf Schritten: Überschrift mit Unterzeile, Bild neben
+    dem ersten Textabschnitt, drei Merkmale nebeneinander, der Satz, der zu
+    den Karten führt, die Karten selbst und der Schluss."""
+    wege_text = "".join(f'<p>{a}</p>' for a in wege_absaetze)
+    merkmale_html = "\n          ".join(
+        f'<li class="merkmal auftritt"><p>{m}</p></li>' for m in merkmale)
     bilder = bilder or [None] * len(eintraege)
 
     def kartenbild(b):
@@ -632,23 +641,45 @@ def initiationen(label, titel, absaetze, karten_titel, karten_intro, eintraege, 
         f'</article>'
         for (nr, h, t, stand), b in zip(eintraege, bilder))
     schlusstext = "".join(f'<p class="auftritt">{a}</p>' for a in schluss)
-    return f"""    <section class="lichtkoerper" aria-labelledby="lk-titel">
-      <div class="lichtkoerper__zeile">
-        <div class="lichtkoerper__haupt">
-          <h2 class="lichtkoerper__titel auftritt" id="lk-titel">{titel}</h2>
-        </div>
-        {neben}
-      </div>
-      <div class="lichtkoerper__text">
-        {text}
-      </div>
-    </section>
-
-    <section class="raeume" aria-labelledby="raeume-titel">
+    return f"""    <section class="raeume" aria-labelledby="raeume-titel">
       <div class="raeume__kopf">
-        <h2 class="t-h2 auftritt" id="raeume-titel">{karten_titel}</h2>
-        <p class="raeume__intro auftritt">{karten_intro}</p>
+        <h2 class="t-h2 auftritt" id="raeume-titel">{titel}</h2>
+        <p class="raeume__unterzeile auftritt">{unterzeile}</p>
+        <p class="raeume__intro auftritt">{einleitung}</p>
       </div>
+
+      <div class="bahn raeume__wege">
+        <div class="s4">
+          <figure class="block raeume__bild auftritt">
+            {bild_tag(wege_bild[0], wege_bild[1], 900, 1125, "", "lazy", "(max-width: 809px) 92vw, 34vw", True, 1280)}
+          </figure>
+        </div>
+        <div class="s1"></div>
+        <div class="s7">
+          <div class="block raeume__text auftritt">
+            <h3 class="t-h4 raeume__zwischentitel">{wege_titel}</h3>
+            {wege_text}
+          </div>
+        </div>
+      </div>
+
+      <div class="raeume__studium">
+        <div class="bahn">
+          <div class="block raeume__studiumkopf">
+            <h3 class="t-h4 raeume__zwischentitel auftritt">{studium_titel}</h3>
+          </div>
+        </div>
+        <div class="bahn">
+          <ul class="merkmale">
+          {merkmale_html}
+          </ul>
+        </div>
+      </div>
+
+      <div class="raeume__bruecke">
+        <p class="t-h5 auftritt">{bruecke}</p>
+      </div>
+
       <div class="bahn">
         <div class="raeume__gitter">
           {karten_html}

@@ -1150,7 +1150,6 @@ html, body { overflow-x: clip; }
 .grossersatz,
 .grosszitat,
 .koennen,
-.lichtkoerper,
 .preise,
 .raeume,
 .stimmen,
@@ -1880,4 +1879,165 @@ body:has(.inhalt > .faq:last-child) .kurve--spaet { background: var(--atem); }
   .bild-zitat .s5 { flex: 0 0 40%; width: 40%; }
   .bild-zitat .s6 { flex: 1 1 0; width: auto; }
   .bild-zitat .t-h4 { font-size: 26px; }
+}
+
+/* ============================= Initiationen, neu gegliedert (30.09.2026)
+   Agnes' neuer Text steht in klaren Schritten: Kopf mit Untertitel, der
+   Lichtkörperprozess mit Merkzeile, das Mondband als Atempause, dann das
+   Kapitel der Programme mit zwei Abschnitten, dem Satz zu den Karten, den
+   drei Karten und dem Schluss. */
+
+/* Untertitel im Kopf */
+.bildkopf__untertitel {
+  margin: -6px 0 2px;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(24px, 2.5vw, 34px);
+  line-height: 1.2;
+  color: var(--gruen-tief);
+}
+
+/* Hervorhebungen aus dem Dokument. Die Serifenschrift liegt nur in einem
+   Schnitt vor, dort steht die Hervorhebung kursiv in Grün wie alle Akzente
+   der Seite. Im Fließtext trägt sie echte Halbfette. */
+.leitsatz__text .t-h5 strong,
+.raeume__bruecke strong {
+  font-weight: 400;
+  font-style: italic;
+  color: var(--gruen-tief);
+}
+
+.raeume__text strong,
+.merkmal strong {
+  font-weight: 600;
+  color: var(--dunkel);
+}
+
+/* Mondband: volle Breite, ohne Schweben, damit die Hütte am rechten
+   Gipfel im Bild bleibt. */
+.bildband {
+  width: 100%;
+  margin-top: var(--luft);
+  overflow: hidden;
+  background: var(--hellgrau);
+}
+
+.bildband picture { display: block; }
+
+.bildband img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+  object-position: 50% 18%;
+}
+
+.bildband + .raeume { margin-top: var(--luft-eng); }
+
+/* Kopf der Programme */
+.zusammen { display: inline-block; }
+
+.raeume__unterzeile {
+  font-family: var(--serif);
+  font-size: clamp(22px, 2.2vw, 30px);
+  line-height: 1.3;
+  letter-spacing: -.02em;
+  color: var(--gruen-tief);
+  text-wrap: balance;
+}
+
+.raeume__intro { max-width: 680px; }
+
+/* Erster Abschnitt: das Edelweiß links, der Text rechts, wie Porträt und
+   Zitat auf Über mich. */
+.raeume__wege {
+  margin-top: clamp(56px, 7vw, 104px);
+  align-items: center;
+}
+
+.raeume__bild { margin: 0; }
+
+.raeume__bild img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 22px;
+  box-shadow: 0 24px 60px rgba(20, 30, 28, .22);
+}
+
+.raeume__text {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 640px;
+}
+
+.raeume__text p { text-wrap: pretty; }
+.raeume__zwischentitel { margin: 0 0 6px; text-wrap: balance; }
+
+/* Zweiter Abschnitt: drei Merkmale nebeneinander, jedes unter einer
+   feinen Goldlinie wie die Merkzeile. */
+.raeume__studium { margin-top: clamp(64px, 8vw, 120px); }
+
+.merkmale {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  width: 100%;
+  margin: 28px 0 0;
+  padding: 0 var(--block-pad);
+}
+
+.merkmal {
+  padding-top: 20px;
+  border-top: 2px solid rgba(214, 184, 92, .55);
+}
+
+.merkmal p { text-wrap: pretty; }
+
+/* Der Satz, der zu den Karten führt */
+.raeume__bruecke {
+  width: 100%;
+  max-width: 900px;
+  margin: clamp(64px, 8vw, 120px) auto 0;
+  padding: 0 var(--bahn-pad);
+  text-align: center;
+}
+
+.raeume__bruecke p { text-wrap: balance; }
+.raeume__bruecke + .bahn .raeume__gitter { margin-top: 48px; }
+
+@media (min-width: 810px) and (max-width: 1199px) {
+  .bildband img { aspect-ratio: 16 / 9; object-position: 50% 20%; }
+}
+
+/* Ab 600 Pixeln steht das Edelweiß neben dem Text, am Tablet mit etwas
+   mehr Breite als am Desktop. */
+@media (min-width: 600px) and (max-width: 1199px) {
+  .raeume__wege { gap: 32px; }
+  .raeume__wege .s1 { display: none; }
+  .raeume__wege .s4 { flex: 0 0 38%; width: 38%; }
+  .raeume__wege .s7 { flex: 1 1 0; width: auto; }
+}
+
+/* Unter 1000 Pixeln wären drei Textspalten zu schmal zum Lesen. */
+@media (max-width: 999px) {
+  .merkmale { grid-template-columns: 1fr; gap: 24px; max-width: 680px; }
+}
+
+@media (max-width: 809px) {
+  .bildband img { aspect-ratio: 4 / 3; object-position: 50% 50%; }
+  .raeume__bild img { border-radius: 16px; }
+}
+
+@media (max-width: 599px) {
+  .raeume__wege { flex-direction: column; gap: 32px; }
+  .raeume__wege .s1 { display: none; }
+  .raeume__wege .s4, .raeume__wege .s7 { flex: 0 0 auto; width: 100%; }
+  .raeume__bild { max-width: 436px; }
 }

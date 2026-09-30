@@ -165,11 +165,15 @@ def baue_angebote():
 def baue_initiationen():
     inhalt = bausteine.inhaltsseite(
         bausteine.bildkopf(re_.INI_BILD, re_.INI_LABEL, re_.INI_TITEL,
-                           re_.INI_KOPFTEXT, re_.INI_SCHILD, mitte=True),
-        bausteine.initiationen(re_.INI_LK_LABEL, re_.INI_LK_TITEL, re_.INI_LK_TEXT,
-                               re_.INI_KARTEN_TITEL, re_.INI_KARTEN_INTRO,
+                           re_.INI_KOPFTEXT, re_.INI_SCHILD, mitte=True,
+                           untertitel=re_.INI_UNTERTITEL),
+        bausteine.leitsatz(re_.INI_LK_LABEL, re_.INI_LK_TEXT),
+        bausteine.bildband(re_.INI_MOND, re_.INI_MOND_ALT),
+        bausteine.initiationen(re_.INI_PROGRAMME_TITEL, re_.INI_PROGRAMME_UNTERZEILE,
+                               re_.INI_PROGRAMME_EINLEITUNG,
+                               re_.INI_WEGE_TITEL, re_.INI_WEGE_TEXT, re_.INI_WEGE_BILD,
+                               re_.INI_STUDIUM_TITEL, re_.INI_STUDIUM, re_.INI_BRUECKE,
                                re_.INI_KARTEN, re_.INI_SCHLUSS,
-                               nebentitel="Wege der Rückkehr",
                                bilder=re_.INI_KARTEN_BILDER),
     )
     schreibe("initiationen.html",

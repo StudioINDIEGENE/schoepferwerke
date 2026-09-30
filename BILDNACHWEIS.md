@@ -14,6 +14,7 @@ Weiterverkauf der Bilder selbst. Lizenztext: https://unsplash.com/de/lizenz
 |---|---|---|---|
 | `startseite-07` | Seebensee, Österreich (Hero) | Daniel Jacob (@dnljcb) | https://unsplash.com/photos/S84pCIjiEC4 |
 | `natur-sterne` | Drei Zinnen (Dolomiten) unter der Milchstraße (Schöpferwerke), retuschiert | Jan Valečka | https://unsplash.com/photos/SRJkK4rtZvs |
+| `natur-edelweiss` | Einzelnes Edelweiß auf dunklem Fels, Schweiz (Initiationen, neben „Übermittelte Meisterwege“) | Jan Behnisch (@janbehnisch) | https://unsplash.com/de/fotos/eine-weisse-blume-mit-grunen-blattern-im-dunkeln-cIRmZ4N0WE8 |
 
 ## Von Benjamin geliefert am 30. September 2026
 
@@ -53,6 +54,7 @@ Namen.
 | `natur-steinmaenner` | Steinmänner auf einer Hochfläche (Initiation 03) | `initiationen 5.jpg`, 1920 × 1440 | Pixabay |
 | `natur-weg-matterhorn` | Wanderweg auf das Matterhorn zu (Buchungsabschnitt, neben dem Titel „Veränderung beginnt …“) | `veränderung_beginnt_…_loszugehen.jpg`, 853 × 1280 | Pixabay |
 | `agnes-gruss` | Agnes Aichholzer mit Hut am Bergsee (Buchungsabschnitt, links neben dem Formular) | `WhatsApp Image 2026-09-22 at 10.16.54.jpeg` | Von Agnes, Privataufnahme |
+| `natur-mond` | Vollmond über zwei verschneiten Gipfeln im Abendlicht (Initiationen, Band zwischen den Kapiteln) | `mond becher-pfaff.JPG`, Nikon D500, 11811 × 8268 | Von Agnes. Urheber in den Bilddaten nicht genannt, von Agnes zu bestätigen. Siehe Anmerkung unten. |
 | `natur-steinturm`, `-hoch` | Steinturm mit rot-weißem Wegzeichen vor Gipfel und Gletscher (Startseite, Grund des Zitats) | `über mich 4.JPG`, Panasonic DMC-FS45, 9. September 2012 | Von Agnes, Privataufnahme. Farblich angeglichen, siehe unten. |
 
 Nicht eingebaut, liegen im selben Ordner bereit:
@@ -65,20 +67,36 @@ Nicht eingebaut, liegen im selben Ordner bereit:
   Webfassungen sind gelöscht. Damit entfällt auch die Frage nach Walter
   Brunners Erlaubnis und der Hinweis auf die fremde Frau.
 
-- `initiationen 6.jpg`, Edelweiß. Fünf Bilder für vier Plätze, dieses
-  blieb übrig.
+- `initiationen 6.jpg`, Edelweiß (Pixabay). Benjamin wünschte es am
+  30. September hochskaliert oder durch ein starkes Bild ersetzt. In
+  voller Größe ist es weich und flach ausgeleuchtet, Hochskalieren hätte
+  es größer gemacht, nicht stärker. An seiner Stelle steht das Edelweiß
+  von Jan Behnisch (Unsplash, siehe oben).
 - `Ali 3.JPG`, Wasserfall in einer Felsschlucht, gleiche Kamera und
   gleicher Tag wie `über mich 4.JPG`. Ohne Beschriftung.
 - `susanne906-waterfall-5434936_1920.jpg`, Wasserfall am türkisen See.
   Pixabay, Nutzer susanne906, Bild 5434936. Ohne Beschriftung.
-- `mond becher-pfaff.JPG`, Vollmond über Gipfeln im Abendlicht, Nikon
-  D500, 11811 × 8268 Pixel (Druckmaß 100 × 70 cm). Arbeit eines
-  Fotografen (Becher-Pfaff), Nutzung nur mit dessen Erlaubnis. Ohne
-  Beschriftung.
 - Drei weitere WhatsApp-Bilder von Agnes am Bergsee (10.15.59 und
   19.20.01 sind dieselbe Datei, dazu 10.17.27 und 19.19.23). Ohne
   Beschriftung.
 - `Gedichterklärung`, ein Video (MP4, 368 MB), kein Bild.
+
+## Anmerkung zum Mondbild
+
+Der Dateiname `mond becher-pfaff.JPG` nennt nicht den Fotografen, wie
+hier zuerst stand, sondern das Motiv: Auf dem rechten Gipfel steht eine
+Hütte, das passt zum Becherhaus auf dem Becher, links daneben der Wilde
+Pfaff. Beide liegen in den Stubaier Alpen über dem Ridnauntal, also in
+Agnes' Heimat. Die Zuordnung der Gipfel ist aus Dateiname und Hütte
+geschlossen, nicht vor Ort geprüft. Die Bilddaten nennen eine Nikon
+D500 mit 200 bis 500 Millimeter und einen Lightroom-Export von 2023 im
+Druckmaß 100 × 70 cm, aber keinen Urheber. Wer das Bild aufgenommen hat,
+weiß Agnes.
+
+Das Edelweiß von Jan Behnisch ist am 30. September 2026 von Unsplash
+geladen (2400 Pixel Breite, 209 KB). Vor der Übernahme geprüft: Die
+Fotoseite weist es als „Kostenlos zu verwenden im Rahmen der Unsplash
+Lizenz“ aus, ohne Unsplash+ Kennzeichnung.
 
 ## Farbangleichung am 30. September 2026
 
@@ -120,7 +138,7 @@ wandern nicht ins Veröffentlichungspaket:
 Der Bildnachweis im Impressum ist nachgezogen. Er nannte noch Dominik
 Mattern, dessen Bild seit dem 29. August nicht mehr auf der Seite steht,
 und begann mit dem Satz, alle Landschaftsaufnahmen stammten von Unsplash.
-Das stimmt seit heute nicht mehr. Er nennt jetzt die zwei verwendeten
+Das stimmt seit heute nicht mehr. Er nennt jetzt die drei verwendeten
 Unsplash-Bilder mit Namen, Pixabay als Quelle der weiteren Landschafts-
 und Naturaufnahmen und die Aufnahmen aus Agnes' eigenem Bestand.
 

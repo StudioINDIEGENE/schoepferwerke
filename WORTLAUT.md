@@ -154,6 +154,88 @@ Das Feld ist freiwillig, wie „Erzähle mir von dir“. Die
 Datenschutzerklärung führte die Telefonnummer schon als Angabe „falls
 angegeben“ und bleibt unverändert.
 
+## 30. September 2026, Initiationen nach Agnes' neuem Dokument
+
+Von Benjamin übergeben: „INITIATIONEN - Erlesene Programme für
+Selbstermächtigung.docx“. Der Text ist maschinell aus dem Dokument
+übernommen, Wort für Wort, die fetten Stellen als Hervorhebung.
+
+Das Dokument fasst vier Absätze neu, die schon auf der Seite standen, und
+bringt zwei neue Abschnitte. Wo es einen Absatz neu fasst, ersetzt die
+neue Fassung die alte, sonst stünde fast derselbe Satz zweimal da.
+
+Neu gefasst:
+
+    vorher:  Diese Initiationen und Programme sind kein „Kurs“, kein
+             weiteres Format im Markt der Möglichkeiten. Es sind
+             strukturierte Wege der Rückkehr in deine ursprüngliche
+             Wahrheit.
+             Alle Initiationen und Übungen führen dich zurück in deine
+             Essenz, deine Kohärenz, deine Kraft – in dein Licht und in
+             die Liebe.
+    nachher: Diese Initiationen und Programme sind kein klassischer
+             „Onlinekurs“, kein weiteres Format im Markt der
+             Möglichkeiten. Es sind klar strukturierte Wege der Rückkehr
+             in deine ursprüngliche Wahrheit, in deine Essenz, deine
+             Kraft – in dein Licht und in die Liebe.
+
+    vorher:  … damit du deinen physischen Körper vollständig bewohnst und
+             aus deiner eigenen Quelle wirkst.
+    nachher: … damit du deinen physischen Körper vollständig bewohnst,
+             deine Schöpferkraft nutzt und aus deiner eigenen Quelle
+             wirkst.
+
+    vorher:  Erlesene Programme für Rückkehr, Kohärenz und Verkörperung.
+    nachher: Erlesene Programme für Selbstermächtigung, Kohärenz und
+             Verkörperung
+
+Der Satz „Das ist kein Luxus – es ist die Grundarchitektur deiner
+individuellen Freiheit.“ war bisher eine Überschrift. Im Dokument
+schließt er den zweiten Lichtkörper-Absatz ab. Er steht jetzt dort, als
+Merkzeile abgesetzt, im selben Format wie die hervorgehobenen Sätze auf
+„Über mich“ und „Schöpferwerke“.
+
+Entfallen, weil das Dokument die Stelle neu schreibt und den Satz nicht
+mehr führt. Bei Bedarf von hier zurückholen:
+
+    Es sind erlesene, frequenzerhöhende Initiationen, die ich im Format
+    von begleiteten Programmen mit Selbststudium anbiete — Abkürzungen
+    zum Wesentlichen, in klaren Schritten und mit persönlicher
+    Begleitung.
+
+Neu: die Unterzeile „Ein Weg, den du selbst gehst – in einem Feld, das
+ich für dich eröffne.“, der Absatz darunter, die Abschnitte „Übermittelte
+Meisterwege – persönlich durch mich zugänglich“ und „Selbststudium und
+persönliche Übermittlung“.
+
+Nicht im Dokument und unverändert geblieben: der Seitentitel
+„Initiationen und Entfaltungsräume“, die Marke „Vorschau kommender
+Räume“, das Schild „Programme in Vorbereitung“, die drei Initiationen
+und die drei Schlussabsätze.
+
+Gliederung, keine Eingriffe in den Wortlaut:
+- „INITIATIONEN:“ ist die Seitenangabe des Dokuments und steht nicht
+  eigens da. „Wege der Rückkehr“ ist der Untertitel im Seitenkopf.
+- Die gepunktete Linie des Dokuments ist die Grenze zwischen Kopf und
+  dem Abschnitt „Lichtkörperprozess“.
+- Die drei ersten Absätze von „Selbststudium und persönliche
+  Übermittlung“ stehen als drei Merkmale nebeneinander. Der vierte („Du
+  bist deines Glückes Schmied …“) führt zu den Programmen und steht
+  deshalb direkt über den drei Karten.
+- Die Serifenschrift liegt nur in einem Schnitt vor. Fett Gesetztes
+  steht dort kursiv in Grün, im Fließtext in echter Halbfette.
+- In der Unterzeile hält ein geschütztes Leerzeichen den Gedankenstrich
+  bei „gehst“, damit die Zeile hinter dem Strich bricht.
+
+Aufgefallen, nicht geändert:
+- „die ich hier für euch zusammengeführt habe“: Die Seite spricht sonst
+  durchgehend mit „du“.
+- „… zu erfahren und zu leben, sowie neue spirituelle Fähigkeiten zu
+  erlernen“: Vor „sowie“ steht nach der Regel kein Komma.
+- Der Satz über den Karten endet mit „was nur durch dich geboren werden
+  kann“, der erste Schlussabsatz darunter mit „was durch dich in die
+  Welt geboren werden möchte“. Beides steht nah beieinander.
+
 ## Noch nicht angetastet
 
 - „Direktbuchung möglich“ in der ersten Preiskarte und im Fragenkatalog
