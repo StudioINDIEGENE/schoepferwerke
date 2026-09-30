@@ -44,7 +44,8 @@ QUELLE_SCHLUSS = [
 ANGEBOTE_LABEL = "Angebote"
 ANGEBOTE_TITEL = "Wege in deine <em>Schöpferkraft</em>."
 ANGEBOTE_UNTERZEILE = ("Wähle die Begleitung, die deinem aktuellen Feld entspricht — von der "
-                       "klaren Einzel-Session bis zur tief geführten Transformation.")
+                       "klaren Einzel-Session bis zur tief geführten Transformation oder "
+                       "Initiationen mit Selbststudium.")
 
 ANGEBOTE_KARTEN = [
  ("natur-wasser", "Bachlauf zwischen moosbewachsenen Felsen",
@@ -168,7 +169,7 @@ ZAHLEN_UNTERZEILE = ("Hinter jeder Zahl steckt eine Geschichte. Diese Meilenstei
 # Werte von Benjamin bestätigt am 25. August 2026.
 ZAHLEN = [
  ("25+", "Jahre Erfahrung in der energetischen Begleitung"),
- ("3", "Begleitungsformate — individuell wählbar"),
+ ("3+", "Begleitungsformate — individuell wählbar"),
  ("500+", "Begleitete Menschen"),
  ("1.200+", "Sessions durchgeführt"),
 ]

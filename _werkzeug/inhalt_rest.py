@@ -30,7 +30,7 @@ ANG_EINSTIEG = [
 
 ANG_BLOECKE = [
  dict(kennung="portal", bild="natur-wasser",
-      titel="1:1 – Das Transformation Portal. Transformierend.",
+      titel="1:1 – Das Seelen Portal. <span class=\"akzent\">Transformierend.</span>",
       unterzeile="Eine einmalige, tiefgehende multidimensionale Sitzung.",
       absaetze=[
         "In diesem Raum erfolgt die gezielte Einstimmung deiner Seelenessenz in deinen physischen "
@@ -42,8 +42,8 @@ ANG_BLOECKE = [
       eckdaten=[("Dauer", "2,5 Stunden"), ("Deine Investition", "450 Euro")],
       knopf=("Jetzt buchen (450 €)", "session-buchen.html")),
 
- dict(kennung="lichtkoerper", bild="natur-licht", badge="Beliebteste Wahl",
-      titel="6 Wochen – Lichtkörperstabilisierung. Intensiv.",
+ dict(kennung="lichtkoerper", bild="natur-licht",
+      titel="6 Wochen – Lichtkörperstabilisierung. <span class=\"akzent\">Intensiv.</span>",
       unterzeile="Eine strukturierte, intensive Begleitung über sechs Wochen.",
       absaetze=[
         "Der Fokus liegt auf der Stabilisierung deines Lichtkörpers und der kontinuierlichen "
@@ -56,7 +56,7 @@ ANG_BLOECKE = [
       knopf=("Jetzt buchen (2.500 €)", "session-buchen.html")),
 
  dict(kennung="seelenmacht", bild="natur-gipfelsonne",
-      titel="13 Wochen – Erwacht in deiner Seelenmacht. Revolutionär.",
+      titel="13 Wochen – Erwacht in deiner Seelenmacht. <span class=\"akzent\">Revolutionär.</span>",
       unterzeile="Eine tiefgreifende, transformative Reise über dreizehn Wochen.",
       absaetze=[
         "Diese Begleitung führt dich durch eine vollständige Neuausrichtung deines Systems – hin "
@@ -74,7 +74,7 @@ ANG_BLOECKE = [
       knopf=("Jetzt buchen (5.500 €)", "session-buchen.html")),
 
  dict(kennung="kennenlernen", bild=None,
-      titel="Kennenlerngespräch – dein erster Schritt. Bewusst.",
+      titel="Kennenlerngespräch – dein erster Schritt. <span class=\"akzent\">Bewusst.</span>",
       unterzeile="Ein klar gehaltener Raum für unsere erste Begegnung.",
       absaetze=[
         "In dieser Session nehme ich dich in deinem Feld wahr, ich lese was sich zeigt und was "

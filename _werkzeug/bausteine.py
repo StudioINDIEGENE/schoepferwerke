@@ -399,7 +399,6 @@ def schritte(titel, unterzeile, eintraege):
 def preise(label, titel, unterzeile, karten_daten, zentriert=False):
     karten_html = "\n          ".join(
         f'<article class="preis auftritt{" preis--hervor" if hervor else ""}">'
-        + ('<p class="preis__badge t-label">Beliebteste Wahl</p>' if hervor else '')
         + f'<h3 class="preis__titel">{h}</h3>'
         f'<p class="t-klein preis__dauer">{dauer}</p>'
         f'<p class="t-h2 preis__betrag">{betrag}</p>'

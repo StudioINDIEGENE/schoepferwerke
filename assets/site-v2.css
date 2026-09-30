@@ -1405,3 +1405,8 @@ html, body { overflow-x: clip; }
     letter-spacing: .06em;
   }
 }
+
+/* Die Schlussworte der Angebotstitel (Transformierend, Intensiv,
+   Revolutionär, Bewusst) heben sich im tiefen Grün ab. Auf Papier
+   4,7 zu 1, also gut lesbar. */
+.t-angebot .akzent { color: var(--gruen-tief); }

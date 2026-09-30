@@ -79,6 +79,37 @@ der Begleitung“, auf Startseite, Angebotsseite und Buchungsseite:
 
     Initiationen mit Selbststudium
 
+Unterzeile der Angebotsvorschau auf der Startseite, ergänzt:
+
+    vorher:  … von der klaren Einzel-Session bis zur tief geführten
+             Transformation.
+    nachher: … von der klaren Einzel-Session bis zur tief geführten
+             Transformation oder Initiationen mit Selbststudium.
+
+Titel des ersten Angebots auf der Angebotsseite:
+
+    vorher:  1:1 – Das Transformation Portal. Transformierend.
+    nachher: 1:1 – Das Seelen Portal. Transformierend.
+
+Hinweis zur Schreibung: Im Deutschen wird die Zusammensetzung
+zusammengeschrieben, also „Seelenportal“. Gesetzt ist die Form, wie
+Benjamin sie vorgegeben hat, passend zum bisherigen „Transformation
+Portal“. Wenn Agnes die zusammengeschriebene Form möchte, ist es eine
+Zeile in `_werkzeug/inhalt_rest.py`.
+
+Die Schlussworte der vier Angebotstitel stehen jetzt in Tiefgrün:
+Transformierend, Intensiv, Revolutionär, Bewusst. Der Wortlaut ist
+unverändert.
+
+Das Schild „Beliebteste Wahl“ am Sechswochenprogramm ist entfernt, am
+Angebotsblock und an der Preiskarte. Die Preiskarte bleibt farblich
+hervorgehoben.
+
+Kennzahl auf Startseite und Angebotsseite:
+
+    vorher:  3   Begleitungsformate — individuell wählbar
+    nachher: 3+  Begleitungsformate — individuell wählbar
+
 ## Noch nicht angetastet
 
 - „Direktbuchung möglich“ in der ersten Preiskarte und im Fragenkatalog

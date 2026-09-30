@@ -14,7 +14,7 @@ Weiterverkauf der Bilder selbst. Lizenztext: https://unsplash.com/de/lizenz
 | `natur-licht` | Goldenes Licht über Bergwald (Karte 6/8 Wochen) | Mateusz Kamieniarz | https://unsplash.com/photos/tEiz3e6UphQ |
 | `natur-gipfelsonne` | Verschneiter Berggipfel unter der Sonne (Karte 13 Wochen) | Andrea Caramello | https://unsplash.com/photos/heyatskPeMo |
 | `natur-nebelmeer` | Bergkette über Nebelmeer im Abendlicht (Breitbild) | Radomir Moysia | https://unsplash.com/photos/sWtc-R-fS1A |
-| `natur-sterne` | Drei Zinnen (Dolomiten) unter der Milchstraße (Schöpferwerke) | Jan Valečka | https://unsplash.com/photos/SRJkK4rtZvs |
+| `natur-sterne` | Drei Zinnen (Dolomiten) unter der Milchstraße (Schöpferwerke), retuschiert | Jan Valečka | https://unsplash.com/photos/SRJkK4rtZvs |
 | `natur-initiation` | Waldweg zum lichtdurchfluteten Tor (Initiationen) | Michael Held | https://unsplash.com/photos/nZLPd3QHsAo |
 
 ## Eigene Bilder
@@ -55,6 +55,27 @@ das Kartenmaß 377 zu 560. Vor der Übernahme geprüft: Die Fotoseite
 weist es als „Kostenloses Foto auf Unsplash“ aus, ohne Unsplash+
 Kennzeichnung, also unter der freien Unsplash-Lizenz mit erlaubter
 kommerzieller Nutzung.
+
+### Retusche am 30. September 2026
+
+`natur-sterne` zeigte am Fuß der Drei Zinnen die erleuchtete Rifugio
+Auronzo, den Parkplatz mit zwei Lichterreihen, eine zweite Hütte,
+Autolichter auf der Straße und ein kleines weißes Gebäude. Auf Wunsch von
+Benjamin entfernt. Die Unsplash-Lizenz erlaubt die Bearbeitung.
+
+Verfahren: Arbeitsvorlage in 2400 Pixel Breite frisch von Unsplash
+geholt, jede Stelle mit gezeichnetem Umriss samt Lichthof maskiert, die
+großen Stellen mit sauberem Hang aus der Nähe gefüllt und die Ränder
+stufenlos angeglichen, die kleinen aus dem Rand geglättet und mit der
+gemessenen Körnung des Hangs versehen. Der warme Lichtschein der Hütte
+auf dem Hang darunter wurde im Farbton zurückgenommen. Das warme Leuchten
+an der Felswand der linken Zinne ist geblieben, es liest sich als
+Abendlicht.
+
+Die retuschierte Vorlage liegt in
+`assets/img/Bilder/Retusche/natur-sterne-2400-ohne-huetten.jpg`, die
+Webfassungen sind daraus neu erzeugt. Das unbearbeitete Bild steht in
+der Versionsgeschichte.
 
 ## Regel für neue Bilder
 
