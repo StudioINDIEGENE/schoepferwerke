@@ -383,7 +383,7 @@ def fuss(aktiv):
             <label class="newsletter__feldhuelle" for="nl-email">
               <span class="nur-vorlesen">E-Mail-Adresse</span>
               <input class="newsletter__feld" id="nl-email" type="email" name="Email"
-                     placeholder="Deine beste E-Mail" required autocomplete="email">
+                     placeholder="Deine E-Mail" required autocomplete="email">
             </label>
             {pille('Eintragen', None, 'weiss', 'newsletter__knopf').replace('type="button"', 'type="submit"')}
           </form>

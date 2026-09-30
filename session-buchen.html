@@ -25,8 +25,8 @@
 <link rel="apple-touch-icon" href="assets/img/Bilder/Framer/symbol-apple-touch.png">
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/crimson-text-400-latin.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-400-latin.woff2" crossorigin>
-<link rel="stylesheet" href="assets/site.css?v=4a942d4d">
-<link rel="stylesheet" href="assets/site-v2.css?v=4a942d4d">
+<link rel="stylesheet" href="assets/site.css?v=fdb09b52">
+<link rel="stylesheet" href="assets/site-v2.css?v=fdb09b52">
 <script>document.documentElement.dataset.js = "ja";</script>
 </head>
 <body>
@@ -82,7 +82,7 @@
 
   <div class="inhalt">
 
-    <div class="kopfabstand"></div>
+    <div class="kopfabstand kopfabstand--klein"></div>
 
     <section class="buchung" aria-labelledby="buchung-titel">
       <div class="bahn buchung__kopf">
@@ -93,7 +93,7 @@
             <p class="t-h5 buchung__unterzeile auftritt">Nimm Kontakt auf und informiere dich über meine Programme.</p>
           </div>
         </div>
-        <div class="s4"></div>
+        <div class="s4 buchung__bildspalte"><figure class="buchung__weg auftritt"><picture class=""><source type="image/webp" srcset="assets/img/web/natur-weg-matterhorn.webp 900w" sizes="(max-width: 1199px) 92vw, 340px"><img src="assets/img/web/natur-weg-matterhorn.jpg" srcset="assets/img/web/natur-weg-matterhorn.jpg 900w" sizes="(max-width: 1199px) 92vw, 340px" alt="Ein Wanderweg führt über grüne Hänge auf das Matterhorn zu" width="853" height="1066" loading="lazy" decoding="async"></picture></figure></div>
       </div>
 
       <div class="bahn buchung__zeile">
@@ -102,6 +102,7 @@
             <h3 class="t-h5">Ich begleite jene, die entschieden sind.</h3>
             <p>Menschen, die ihr Leben selbst in die Hand nehmen und bereit sind, Verantwortung für ihr inneres Erleben zu übernehmen und eine echte, nachhaltige Veränderung anstreben.</p><p>Dieser Weg ist eine Meisterklasse, ein klar geführter Raum für tiefe Heilung und dauerhafte Transformation. Durch Selbstverantwortung und präzise, professionelle Führung entwickelst du deine eigene Selbstermächtigung.</p><p>Es entsteht kein kurzfristiger Effekt, sondern ein neues inneres Fundament, ein Lebensgefühl, das dich stabil hält, dir klare Ausrichtung schenkt und in dem du dir selbst zur Heimat wirst.</p>
           </div>
+          <figure class="block buchung__gruss auftritt"><picture class=""><source type="image/webp" srcset="assets/img/web/agnes-gruss.webp 900w, assets/img/web/agnes-gruss@1104.webp 1104w" sizes="(max-width: 1199px) 80vw, 400px"><img src="assets/img/web/agnes-gruss.jpg" srcset="assets/img/web/agnes-gruss.jpg 900w, assets/img/web/agnes-gruss@1104.jpg 1104w" sizes="(max-width: 1199px) 80vw, 400px" alt="Agnes Aichholzer mit Hut an einem Bergsee" width="1104" height="1472" loading="lazy" decoding="async"></picture></figure>
         </div>
         <div class="s1"></div>
         <div class="s5">
@@ -122,6 +123,10 @@
               <div class="feld">
                 <label for="b-mail">Deine E-Mail-Adresse</label>
                 <input id="b-mail" name="Email" type="email" autocomplete="email" required>
+              </div>
+              <div class="feld">
+                <label for="b-tel">Deine Telefonnummer</label>
+                <input id="b-tel" name="Telefon" type="tel" autocomplete="tel" inputmode="tel">
               </div>
               <div class="feld">
                 <label for="b-text">Erzähle mir von dir</label>
@@ -302,7 +307,7 @@
             <label class="newsletter__feldhuelle" for="nl-email">
               <span class="nur-vorlesen">E-Mail-Adresse</span>
               <input class="newsletter__feld" id="nl-email" type="email" name="Email"
-                     placeholder="Deine beste E-Mail" required autocomplete="email">
+                     placeholder="Deine E-Mail" required autocomplete="email">
             </label>
             <button class="pille pille--weiss t-label newsletter__knopf" type="submit"><span class="pille__punkt pille__punkt--b"></span>Eintragen<span class="pille__punkt pille__punkt--a"></span></button>
           </form>
@@ -351,7 +356,7 @@
   </footer>
 </main>
 
-<script src="assets/site.js?v=4a942d4d"></script>
-<script src="assets/site-v2.js?v=4a942d4d"></script>
+<script src="assets/site.js?v=fdb09b52"></script>
+<script src="assets/site-v2.js?v=fdb09b52"></script>
 </body>
 </html>

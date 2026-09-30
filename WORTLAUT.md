@@ -132,6 +132,28 @@ Gegenüber Benjamins Eingabe nur Schreibung und Satzzeichen:
 - Der führende Strich „—“ vor der Quelle wie bei den beiden anderen
   Zitaten (Über mich, Schöpferwerke).
 
+## 30. September 2026, zwei Formularfelder
+
+Von Benjamin angewiesen.
+
+Anmeldung „Bleib in Verbindung.“ in der Fußzeile, Platzhalter im Feld:
+
+    vorher:  Deine beste E-Mail
+    nachher: Deine E-Mail
+
+Der Text über dem Feld stand bereits in Benjamins Wortlaut und ist
+unverändert. Benjamin schrieb „Email“, gesetzt ist „E-Mail“ wie überall
+auf der Seite.
+
+Buchungsformular unter „Deine Möglichkeiten der Begleitung“, neues Feld
+zwischen „Deine E-Mail-Adresse“ und „Erzähle mir von dir“:
+
+    Deine Telefonnummer
+
+Das Feld ist freiwillig, wie „Erzähle mir von dir“. Die
+Datenschutzerklärung führte die Telefonnummer schon als Angabe „falls
+angegeben“ und bleibt unverändert.
+
 ## Noch nicht angetastet
 
 - „Direktbuchung möglich“ in der ersten Preiskarte und im Fragenkatalog

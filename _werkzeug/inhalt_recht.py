@@ -272,23 +272,19 @@ IMPRESSUM = [
         "Urheberrechts bedarf der vorherigen schriftlichen Zustimmung."),
  ]),
  ("Bildnachweis", [
-  ("p", "Die auf dieser Website verwendeten Landschaftsaufnahmen stammen von Unsplash und "
-        "stehen unter der Unsplash-Lizenz, die eine kommerzielle Nutzung ausdrücklich erlaubt. "
-        "Die Nennung der Urheber ist nicht verpflichtend, erfolgt hier aber aus Respekt vor "
-        "ihrer Arbeit."),
+  ("p", "Folgende Landschaftsaufnahmen stammen von Unsplash und stehen unter der "
+        "Unsplash-Lizenz, die eine kommerzielle Nutzung ausdrücklich erlaubt. Die Nennung der "
+        "Urheber ist nicht verpflichtend, erfolgt hier aber aus Respekt vor ihrer Arbeit."),
   ("ul", [
     "Seebensee (Startseite): Daniel Jacob",
-    "Bachlauf zwischen moosbewachsenen Felsen: Gary Yost",
-    "Goldenes Morgenlicht über einem Bergwald: Mateusz Kamieniarz",
-    "Gipfel über dem Wolkenmeer: Dominik Mattern",
-    "Bergkette über dem Nebelmeer: Radomir Moysia",
-    "Drei Zinnen unter der Milchstraße: Jan Valečka",
-    "Waldweg zum lichtdurchfluteten Tor: Michael Held",
+    "Bergkette über dem Nebelmeer (Startseite): Radomir Moysia",
+    "Drei Zinnen unter der Milchstraße (Die Schöpferwerke): Jan Valečka",
   ]),
   ("p", "Lizenztext: <a href=\"https://unsplash.com/de/lizenz\" rel=\"noopener noreferrer\" "
         "target=\"_blank\">unsplash.com/de/lizenz</a>"),
-  ("lead", "Porträt:", "Das Bild von Agnes Aichholzer ist eine private Aufnahme und darf nicht "
-                       "ohne schriftliche Zustimmung verwendet werden."),
+  ("lead", "Kuhschelle (Über mich):", "Walter Brunner."),
+  ("lead", "Porträts:", "Die Bilder von Agnes Aichholzer sind private Aufnahmen und dürfen nicht "
+                        "ohne schriftliche Zustimmung verwendet werden."),
   ("lead", "Wortmarke und Symbol:", "Die Zeichen der Schöpferwerke sind geschützte "
                                     "Kennzeichen der Anbieterin."),
  ]),

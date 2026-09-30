@@ -48,17 +48,17 @@ ANGEBOTE_UNTERZEILE = ("Wähle die Begleitung, die deinem aktuellen Feld entspri
                        "Initiationen mit Selbststudium.")
 
 ANGEBOTE_KARTEN = [
- ("natur-wasser", "Bachlauf zwischen moosbewachsenen Felsen",
+ ("natur-matterhorn-karte", "Matterhorn im ersten Morgenlicht, gespiegelt in einem Bergsee",
   "Einmalige 1:1 Session",
   "Ein klarer Raum für Orientierung, Lösung und die erste tiefe Rückverbindung zu deiner inneren "
   "Ordnung.",
   "angebote.html#portal"),
- ("natur-licht", "Goldenes Morgenlicht über einem Bergwald",
+ ("natur-alpengluehen-karte", "Gipfel im Alpenglühen, gespiegelt im stillen See",
   "6 Wochen intensive Begleitung",
   "Für eine intensivere Stabilisierung deiner Seelenkraft, wenn dein System kontinuierliche "
   "Begleitung wünscht.",
   "angebote.html#lichtkoerper"),
- ("natur-gipfelsonne", "Verschneiter Berggipfel unter der Sonne",
+ ("natur-sonnenaufgang-karte", "Sonnenaufgang über gestaffelten Bergketten",
   "13 Wochen transformative Reise",
   "Eine tiefgreifende Reise für Menschen, die ihre innere Führung nicht nur erkennen, sondern "
   "verkörpern wollen.",

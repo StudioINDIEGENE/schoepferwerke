@@ -64,8 +64,10 @@ def baue_rechtsseiten():
 
 def baue_ueber_mich():
     inhalt = bausteine.inhaltsseite(
-        bausteine.kopfbereich(um.TITEL, um.UNTERZEILE),
+        bausteine.kopfbereich(um.TITEL, um.UNTERZEILE, bild=um.KOPF_BILD),
         bausteine.leitsatz("Über mich", um.EINSTIEG),
+        # Die Bildreihe bricht die längste Textstrecke der Seite auf.
+        bausteine.bildreihe(um.BILDREIHE),
         bausteine.leitsatz(None, um.WER_ICH_BIN, titel="Wer ich bin",
                            titel_klasse="t-h1"),
         bausteine.bild_zitat(um.BILD, um.BILD_ALT, um.ZITAT, um.ZITAT_QUELLE),
@@ -103,6 +105,8 @@ BUCHUNG = dict(
         "Initiationen mit Selbststudium",
     ],
     mail=vorlage.MAIL,
+    bild=("natur-weg-matterhorn", "Ein Wanderweg führt über grüne Hänge auf das Matterhorn zu"),
+    gruss=("agnes-gruss", "Agnes Aichholzer mit Hut an einem Bergsee"),
 )
 
 
@@ -139,7 +143,7 @@ def baue_angebote():
                                  badge=b.get("badge"))
                for b in re_.ANG_BLOECKE]
     inhalt = bausteine.inhaltsseite(
-        bausteine.kopfbereich(re_.ANG_TITEL, re_.ANG_UNTERZEILE),
+        bausteine.kopfbereich(re_.ANG_TITEL, re_.ANG_UNTERZEILE, bild=re_.ANG_BILD),
         bausteine.programm_nav([("1:1 Session", "#portal"), ("6 Wochen", "#lichtkoerper"),
                                 ("13 Wochen", "#seelenmacht"),
                                 ("Kennenlerngespräch", "#kennenlernen")]),
@@ -166,7 +170,8 @@ def baue_initiationen():
         bausteine.initiationen(re_.INI_LK_LABEL, re_.INI_LK_TITEL, re_.INI_LK_TEXT,
                                re_.INI_KARTEN_TITEL, re_.INI_KARTEN_INTRO,
                                re_.INI_KARTEN, re_.INI_SCHLUSS,
-                               nebentitel="Wege der Rückkehr"),
+                               nebentitel="Wege der Rückkehr",
+                               bilder=re_.INI_KARTEN_BILDER),
     )
     schreibe("initiationen.html",
              vorlage.seite("initiationen.html", "Initiationen", re_.INI_BESCHREIBUNG, inhalt))
@@ -183,7 +188,7 @@ def baue_schoepferwerke():
 def baue_session_buchen():
     schreibe("session-buchen.html",
              vorlage.seite("session-buchen.html", "Session buchen", re_.SB_BESCHREIBUNG,
-                           '    <div class="kopfabstand"></div>\n\n'
+                           '    <div class="kopfabstand kopfabstand--klein"></div>\n\n'
                            + bausteine.buchung(**BUCHUNG, stufe=1)))
 
 

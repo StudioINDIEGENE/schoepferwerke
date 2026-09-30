@@ -13,6 +13,7 @@ ANG_BESCHREIBUNG = ("Die Begleitungsformate von Agnes Aichholzer: einmalige 1:1 
                     "6 Wochen Lichtkörperstabilisierung, 13 Wochen transformative Reise.")
 
 ANG_TITEL = "Der Weg in deine Schöpferkraft."
+ANG_BILD = "natur-wegzeichen"   # Wegmarkierung Rot-Weiß-Rot am Baum
 ANG_UNTERZEILE = ("Entdecke die Begleitungsformate abgestimmt auf dein Thema, dein Tempo und "
                   "deine Tiefe.")
 
@@ -29,7 +30,7 @@ ANG_EINSTIEG = [
 ]
 
 ANG_BLOECKE = [
- dict(kennung="portal", bild="natur-wasser",
+ dict(kennung="portal", bild="natur-matterhorn",
       titel="1:1 – Das Seelen Portal. <span class=\"akzent\">Transformierend.</span>",
       unterzeile="Eine einmalige, tiefgehende multidimensionale Sitzung.",
       absaetze=[
@@ -42,7 +43,7 @@ ANG_BLOECKE = [
       eckdaten=[("Dauer", "2,5 Stunden"), ("Deine Investition", "450 Euro")],
       knopf=("Jetzt buchen (450 €)", "session-buchen.html")),
 
- dict(kennung="lichtkoerper", bild="natur-licht",
+ dict(kennung="lichtkoerper", bild="natur-alpengluehen",
       titel="6 Wochen – Lichtkörperstabilisierung. <span class=\"akzent\">Intensiv.</span>",
       unterzeile="Eine strukturierte, intensive Begleitung über sechs Wochen.",
       absaetze=[
@@ -55,7 +56,7 @@ ANG_BLOECKE = [
       eckdaten=[("Dauer", "6 Wochen"), ("Deine Investition", "2.500 Euro")],
       knopf=("Jetzt buchen (2.500 €)", "session-buchen.html")),
 
- dict(kennung="seelenmacht", bild="natur-gipfelsonne",
+ dict(kennung="seelenmacht", bild="natur-sonnenaufgang",
       titel="13 Wochen – Erwacht in deiner Seelenmacht. <span class=\"akzent\">Revolutionär.</span>",
       unterzeile="Eine tiefgreifende, transformative Reise über dreizehn Wochen.",
       absaetze=[
@@ -73,7 +74,7 @@ ANG_BLOECKE = [
       eckdaten=[("Dauer", "13 Wochen"), ("Deine Investition", "5.500 Euro")],
       knopf=("Jetzt buchen (5.500 €)", "session-buchen.html")),
 
- dict(kennung="kennenlernen", bild=None,
+ dict(kennung="kennenlernen", bild="natur-bergsee-spiegel",
       titel="Kennenlerngespräch – dein erster Schritt. <span class=\"akzent\">Bewusst.</span>",
       unterzeile="Ein klar gehaltener Raum für unsere erste Begegnung.",
       absaetze=[
@@ -111,7 +112,7 @@ ANG_HINWEIS = [
 INI_BESCHREIBUNG = ("Initiationen und Entfaltungsräume von Agnes Aichholzer. Begleitete Programme "
                     "zum Lichtkörperprozess, derzeit in Vorbereitung.")
 
-INI_BILD = "natur-initiation"
+INI_BILD = "natur-waldsee"
 INI_LABEL = "Vorschau kommender Räume"
 INI_TITEL = "Initiationen und Entfaltungsräume"
 INI_KOPFTEXT = [
@@ -138,6 +139,13 @@ INI_KARTEN_TITEL = "Erlesene Programme für Rückkehr, Kohärenz und Verkörperu
 INI_KARTEN_INTRO = ("Es sind erlesene, frequenzerhöhende Initiationen, die ich im Format von "
                     "begleiteten Programmen mit Selbststudium anbiete — Abkürzungen zum "
                     "Wesentlichen, in klaren Schritten und mit persönlicher Begleitung.")
+
+# Bilder der drei Initiationen, in derselben Reihenfolge
+INI_KARTEN_BILDER = [
+ ("natur-heilsteine", "Farbige Heilsteine im Bogen auf einer Baumscheibe"),
+ ("natur-klangschale", "Klangschale auf moosigen Steinen an einer Quelle"),
+ ("natur-steinmaenner", "Steinmänner auf einer Hochfläche unter blauem Himmel"),
+]
 
 INI_KARTEN = [
  ("Initiation 01", "Lichtkörper-Kohärenz",

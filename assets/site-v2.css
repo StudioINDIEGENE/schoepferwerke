@@ -1306,35 +1306,23 @@ html, body { overflow-x: clip; }
   outline-offset: 4px;
 }
 
-/* ===================================== Bildausschnitt der Angebotskarten
-   Die Karten sind hochformatig (377 auf 560), die Aufnahmen querformatig.
-   Beim Füllen bleiben nur rund 45 Prozent der Bildbreite stehen, mittig
-   gerechnet also von 27,5 bis 72,5 Prozent. Beim Gipfelbild liegen Sonne
-   und Gruppe bei 27 bis 29 Prozent, standen also genau auf der
-   Schnittkante. Der Ausschnitt wandert dafür nach links. */
-/* Das neue Gipfelbild ist hochformatig wie die Karte, Gipfel und Sonne
-   stehen darin bereits mittig. Es braucht keine Ausschnittkorrektur. */
-
-/* Das Gipfelbild steht im Hochformat, weil es auf der Karte fast genau
-   das Kartenmaß trifft. Im breiten Band der Angebotsseite fiele die
-   Sonne dadurch heraus: Bei 21 zu 9 blieben nur 28,6 Prozent der
-   Bildhöhe stehen, Sonne und Gipfel brauchen aber 30. Dieses eine Band
-   steht deshalb in 16 zu 9, mit dem Ausschnitt bei 35 Prozent. Dann
-   zeigt es 22 bis 59,5 Prozent der Höhe, also Sonne und Gipfel. */
+/* ===================================== Bildausschnitt der Angebotsbänder
+   Seit dem 30. September 2026 tragen die vier Angebote querformatige
+   Aufnahmen. Die Karten der Startseite haben eigene Hochformat-Zuschnitte
+   (`-karte`), dort sitzt das Motiv schon mittig. In den breiten Bändern
+   der Angebotsseite bleibt am Desktop nur gut die Hälfte der Bildhöhe
+   stehen, weil das Bild zusätzlich für die Parallaxe vergrößert ist.
+   Der Ausschnitt ist je Bild so gesetzt, dass Gipfel, Sonne und
+   Spiegelung im Fenster bleiben. Bei 21 zu 9 reichte das nicht: Vom
+   Matterhorn blieb der Gipfel oder die Spiegelung, nie beides. Die vier
+   Bänder stehen darum am Desktop einheitlich in 2 zu 1. */
 @media (min-width: 1200px) {
-  #seelenmacht .angebot__bild img {
-    aspect-ratio: 16 / 9;
-    object-position: 50% 35%;
-  }
+  .angebot__bild img { aspect-ratio: 2 / 1; }
 }
-
-@media (min-width: 810px) and (max-width: 1199px) {
-  #seelenmacht .angebot__bild img { object-position: 50% 35%; }
-}
-
-@media (max-width: 809px) {
-  #seelenmacht .angebot__bild img { aspect-ratio: 3 / 4; object-position: 50% 42%; }
-}
+.angebot__bild img[src*="natur-matterhorn"]      { object-position: 50% 45%; }
+.angebot__bild img[src*="natur-alpengluehen"]    { object-position: 50% 12%; }
+.angebot__bild img[src*="natur-sonnenaufgang"]   { object-position: 50% 58%; }
+.angebot__bild img[src*="natur-bergsee-spiegel"] { object-position: 50% 55%; }
 
 /* ================================ Der Hero-Text steht über dem Wasser
    Links lag der Block über Waldrand, hellem Ufer und Sträuchern, einem
@@ -1657,3 +1645,179 @@ body:has(.inhalt > .faq:last-child) .kurve--spaet { background: var(--atem); }
 }
 .kontaktblock__mail:hover,
 .kontaktblock__mail:focus-visible { text-decoration-color: #ffffff; }
+
+/* ======================================= Bilder vom 30. September 2026
+   Kopfbilder für Über mich und Angebote, die Bildreihe auf Über mich,
+   Bilder auf den drei Initiationen, im Buchungsabschnitt das Wegbild
+   neben dem Titel und Agnes' Gruß links neben dem Formular. */
+
+/* Seitenkopf mit Bild. Das Bild verhält sich wie der Kopf der
+   Initiationen (gleiche Klasse), die große Überschrift steigt in die
+   Zone, in der es ins Papier ausläuft. */
+.seitenkopf-bild { position: relative; width: 100%; }
+
+.seitenkopf--bild {
+  position: relative;
+  z-index: 2;
+  margin-top: calc(-1 * clamp(48px, 8vw, 116px));
+}
+
+@media (max-width: 809px) {
+  .seitenkopf--bild { margin-top: -24px; }
+}
+
+/* Das Wegzeichen und der See stehen im klaren Teil des Bildes. */
+.seitenkopf-bild img[src*="natur-wegzeichen"]   { object-position: 50% 92%; }
+.seitenkopf-bild img[src*="natur-dolomitensee"] { object-position: 50% 64%; }
+
+/* Bildreihe: drei Hochformate auf der Randachse, wie die Karten der
+   Startseite. Am Telefon bleibt sie dreispaltig, als schmales Band. */
+.bildreihe { margin-top: var(--luft-eng); }
+
+.bildreihe__gitter {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  width: 100%;
+  padding: 0 var(--block-pad);
+}
+
+.bildreihe__bild {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 22px;
+  background: var(--hellgrau);
+}
+
+.bildreihe__bild img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+}
+
+@media (max-width: 1199px) {
+  .bildreihe__gitter { gap: 20px; }
+}
+
+@media (max-width: 809px) {
+  .bildreihe__gitter { gap: 10px; }
+  .bildreihe__bild { border-radius: 14px; }
+}
+
+/* Initiationen: das Bild sitzt randlos an der Oberkante der Karte. */
+.initiation__bild {
+  margin: -32px -32px 12px;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+  background: var(--hellgrau);
+}
+
+.initiation__bild img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+@media (max-width: 809px) {
+  .initiation__bild { margin: -24px -24px 8px; }
+}
+
+/* Buchung: das Wegbild neben dem Titel, der Gruß links neben dem
+   Formular, in den Leerraum unter dem Text. */
+.buchung__bildspalte {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buchung__weg {
+  width: 100%;
+  max-width: 340px;
+  margin: 0 var(--block-pad) 0 0;
+  overflow: hidden;
+  border-radius: 22px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, .18);
+}
+
+.buchung__weg img,
+.buchung__gruss img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.buchung__weg img { aspect-ratio: 4 / 5; }
+
+.buchung__gruss {
+  max-width: 400px;
+  margin: 56px 0 0;
+}
+
+.buchung__gruss img {
+  aspect-ratio: 3 / 4;
+  border-radius: 22px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, .18);
+}
+
+/* Tablet: Titel und Wegbild bleiben nebeneinander, ebenso Text mit
+   Gruß und Formular. Vorher stand hier alles untereinander. */
+@media (min-width: 810px) and (max-width: 1199px) {
+  .buchung__kopf:has(.buchung__bildspalte) { flex-direction: row; gap: 32px; }
+  .buchung__kopf:has(.buchung__bildspalte) .s8 { flex: 1 1 auto; width: auto; }
+  .buchung__kopf .buchung__bildspalte { display: flex; flex: 0 0 34%; width: 34%; }
+
+  .buchung__zeile:has(.buchung__gruss) { flex-direction: row; gap: 40px; }
+  .buchung__zeile:has(.buchung__gruss) .s6 { flex: 0 0 42%; width: 42%; }
+  .buchung__zeile:has(.buchung__gruss) .s5 { flex: 1 1 auto; width: auto; }
+  .buchung__gruss { margin-top: 40px; }
+}
+
+/* Telefon: alles untereinander. Das Wegbild steht als Band unter dem
+   Titel, der Gruß zwischen Text und Formular. */
+@media (max-width: 809px) {
+  .buchung__kopf .buchung__bildspalte { display: block; width: 100%; margin-top: 32px; }
+  .buchung__weg { max-width: none; margin: 0 var(--block-pad); width: auto; border-radius: 16px; }
+  .buchung__weg img { aspect-ratio: 4 / 3; object-position: 50% 30%; }
+  .buchung__gruss { max-width: none; margin-top: 40px; }
+  .buchung__gruss img { aspect-ratio: 4 / 5; border-radius: 16px; object-position: 50% 30%; }
+}
+
+/* Session buchen: Über dem grünen Block stand der Abstandhalter für
+   große Seitentitel samt Außenabstand, am Telefon 434 Pixel leeres
+   Papier. Hier steht kein Titel darüber, der Block beginnt deshalb
+   direkt unter der Kopfleiste, wie die Bildköpfe der anderen Seiten. */
+.kopfabstand + .buchung { margin-top: 0; }
+
+/* Initiationen: Das Waldbild ist dort, wo Marke und Titel in das Bild
+   steigen, dunkelgrün. Die grüne Marke hatte dort nur 1,6 bis 2,4 zu 1
+   Kontrast. Eine weiche Lichtung in Papierfarbe hinter dem Textblock
+   hellt genau diese Stelle auf, der Wald bleibt ringsum sichtbar. */
+.bildkopf--mitte .bildkopf__innen { position: relative; }
+
+.bildkopf--mitte .bildkopf__innen::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 0;
+  width: min(1100px, 150%);
+  height: 360px;
+  transform: translate(-50%, -32%);
+  background: radial-gradient(ellipse 50% 50% at 50% 50%,
+    rgba(247, 245, 241, 1) 0%,
+    rgba(247, 245, 241, .96) 40%,
+    rgba(247, 245, 241, .6) 70%,
+    rgba(247, 245, 241, 0) 100%);
+  pointer-events: none;
+}
+
+/* Mit den Bildern fielen die ungleichen Kartenhöhen auf: Der dritte
+   Titel bricht zweizeilig. Alle drei Karten stehen jetzt gleich hoch,
+   der Stand sitzt jeweils am Fuß. */
+.raeume__gitter { align-items: stretch; }
+.initiation--bild .initiation__stand { margin-top: auto; }
+.initiation--bild .initiation__text { margin-bottom: 8px; }

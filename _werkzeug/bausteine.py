@@ -114,19 +114,36 @@ def bild_tag(name, alt, breite, hoehe, klasse="", laden="lazy", groessen=None,
 # Seitenköpfe
 # ===================================================================
 
-def kopfbereich(titel, unterzeile=None):
-    """Kopf ohne Bild. Überschrift im Original 130px."""
+def kopfbereich(titel, unterzeile=None, bild=None):
+    """Seitenkopf, Überschrift im Original 130px.
+
+    Mit Bild steht das Foto oben und läuft unten weich ins Papier aus,
+    die Überschrift steigt in diese Zone. Das Bild trägt dafür dieselbe
+    Klasse wie auf der Initiationen-Seite und verhält sich genauso.
+    """
     unten = (f'\n            <p class="kopf-unterzeile auftritt">{unterzeile}</p>'
              if unterzeile else '')
-    return f"""    <div class="kopfabstand"></div>
-
-    <header class="bahn seitenkopf">
-      <div class="s10">
+    zeile = f"""<div class="s10">
         <div class="block">
           <h1 class="t-riesig titel auftritt">{titel}</h1>{unten}
         </div>
       </div>
-      <div class="s2"></div>
+      <div class="s2"></div>"""
+    if bild:
+        return f"""    <div class="kopfabstand kopfabstand--klein"></div>
+
+    <header class="seitenkopf-bild">
+      <div class="bildkopf__bild">
+        {bild_tag(bild, "", 1440, 630, "", "eager", "100vw")}
+      </div>
+      <div class="bahn seitenkopf seitenkopf--bild">
+      {zeile}
+      </div>
+    </header>"""
+    return f"""    <div class="kopfabstand"></div>
+
+    <header class="bahn seitenkopf">
+      {zeile}
     </header>"""
 
 
@@ -201,6 +218,20 @@ def bild_zitat(bild, alt, zitat, quelle):
         </div>
       </div>
     </section>"""
+
+
+def bildreihe(eintraege):
+    """Drei Bilder im Hochformat nebeneinander, eine ruhige Pause im Text."""
+    bilder = "\n        ".join(
+        f'<figure class="bildreihe__bild auftritt">'
+        f'{bild_tag(b, alt, 900, 1350, "", "lazy", "(max-width: 809px) 31vw, 30vw", False)}'
+        f'</figure>'
+        for b, alt in eintraege)
+    return f"""    <div class="bahn bildreihe">
+      <div class="bildreihe__gitter">
+        {bilder}
+      </div>
+    </div>"""
 
 
 def grosser_satz(absaetze):
@@ -573,21 +604,31 @@ def hinweisblock(titel, absaetze):
 # ===================================================================
 
 def initiationen(label, titel, absaetze, karten_titel, karten_intro, eintraege, schluss,
-                 nebentitel=None):
+                 nebentitel=None, bilder=None):
     """Im Original: Überschrift links, Nebentitel rechts, beides mittig gesetzt."""
     text = "".join(f'<p class="t-h5 auftritt">{a}</p>' for a in absaetze)
     neben = (f'<div class="lichtkoerper__neben">'
              f'<p class="t-label leitsatz__marke auftritt">{label}</p>'
              f'<h3 class="lichtkoerper__nebentitel auftritt">{nebentitel}</h3></div>'
              if nebentitel else '')
+    bilder = bilder or [None] * len(eintraege)
+
+    def kartenbild(b):
+        if not b:
+            return ''
+        return (f'<div class="initiation__bild">'
+                f'{bild_tag(b[0], b[1], 900, 675, "", "lazy", "(max-width: 809px) 92vw, 30vw", False)}'
+                f'</div>')
+
     karten_html = "\n          ".join(
-        f'<article class="initiation auftritt">'
+        f'<article class="initiation{" initiation--bild" if b else ""} auftritt">'
+        f'{kartenbild(b)}'
         f'<p class="t-label initiation__nr">{nr}</p>'
         f'<h3 class="initiation__titel">{h}</h3>'
         f'<p class="t-klein initiation__text">{t}</p>'
         f'<p class="t-label initiation__stand">{stand}</p>'
         f'</article>'
-        for nr, h, t, stand in eintraege)
+        for (nr, h, t, stand), b in zip(eintraege, bilder))
     schlusstext = "".join(f'<p class="auftritt">{a}</p>' for a in schluss)
     return f"""    <section class="lichtkoerper" aria-labelledby="lk-titel">
       <div class="lichtkoerper__zeile">
@@ -621,11 +662,19 @@ def initiationen(label, titel, absaetze, karten_titel, karten_intro, eintraege, 
 # Buchung
 # ===================================================================
 
-def buchung(label, titel, unterzeile, einleitung, absaetze, wege_titel, wege, mail, stufe=2):
+def buchung(label, titel, unterzeile, einleitung, absaetze, wege_titel, wege, mail, stufe=2,
+            bild=None, gruss=None):
     wege_html = "".join(
         f'<label class="wahl"><input type="radio" name="Begleitung" value="{w}"><span>{w}</span></label>'
         for w in wege)
     text = "".join(f'<p>{a}</p>' for a in absaetze)
+    # Das Wegbild steht neben dem Titel, Agnes' Gruß links neben dem Formular.
+    wegbild = (f'<figure class="buchung__weg auftritt">'
+               f'{bild_tag(bild[0], bild[1], 853, 1066, "", "lazy", "(max-width: 1199px) 92vw, 340px", False)}'
+               f'</figure>' if bild else '')
+    grussbild = (f'\n          <figure class="block buchung__gruss auftritt">'
+                 f'{bild_tag(gruss[0], gruss[1], 1104, 1472, "", "lazy", "(max-width: 1199px) 80vw, 400px", True, 1104)}'
+                 f'</figure>' if gruss else '')
     return f"""    <section class="buchung" aria-labelledby="buchung-titel">
       <div class="bahn buchung__kopf">
         <div class="s8">
@@ -635,7 +684,7 @@ def buchung(label, titel, unterzeile, einleitung, absaetze, wege_titel, wege, ma
             <p class="t-h5 buchung__unterzeile auftritt">{unterzeile}</p>
           </div>
         </div>
-        <div class="s4"></div>
+        <div class="s4{" buchung__bildspalte" if bild else ""}">{wegbild}</div>
       </div>
 
       <div class="bahn buchung__zeile">
@@ -643,7 +692,7 @@ def buchung(label, titel, unterzeile, einleitung, absaetze, wege_titel, wege, ma
           <div class="block buchung__text auftritt">
             <h3 class="t-h5">{einleitung}</h3>
             {text}
-          </div>
+          </div>{grussbild}
         </div>
         <div class="s1"></div>
         <div class="s5">
@@ -664,6 +713,10 @@ def buchung(label, titel, unterzeile, einleitung, absaetze, wege_titel, wege, ma
               <div class="feld">
                 <label for="b-mail">Deine E-Mail-Adresse</label>
                 <input id="b-mail" name="Email" type="email" autocomplete="email" required>
+              </div>
+              <div class="feld">
+                <label for="b-tel">Deine Telefonnummer</label>
+                <input id="b-tel" name="Telefon" type="tel" autocomplete="tel" inputmode="tel">
               </div>
               <div class="feld">
                 <label for="b-text">Erzähle mir von dir</label>
