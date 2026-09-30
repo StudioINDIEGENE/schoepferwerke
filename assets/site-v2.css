@@ -1630,3 +1630,30 @@ body:has(.inhalt > .faq:last-child) .kurve--spaet { background: var(--atem); }
 }
 .buchung .wahl:has(input:focus-visible) { box-shadow: 0 0 0 3px #ffffff, 0 0 0 5px var(--gruen-tief); }
 .buchung .wahl input { accent-color: var(--gruen-tief); }
+
+/* ================================================ Kontakt in der Fußzeile
+   Gegliedert wie die Sitemap daneben: eine kleine Marke, darunter die
+   Adresse groß in weißer Serifenschrift, im Ton von „Bleib in
+   Verbindung.". Eine feine Linie zeigt, dass sie anklickbar ist. */
+.kontaktblock {
+  height: auto;
+  gap: 14px;
+  justify-content: flex-start;
+}
+.kontaktblock__marke { color: var(--weiss-leise); }
+.kontaktblock__mail {
+  align-self: flex-start;
+  font-family: var(--serif);
+  font-size: clamp(24px, 2.5vw, 34px);
+  line-height: 1.2;
+  letter-spacing: .01em;
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: rgba(255, 255, 255, .45);
+  text-underline-offset: 7px;
+  overflow-wrap: anywhere;
+  transition: text-decoration-color .3s ease, opacity .3s ease;
+}
+.kontaktblock__mail:hover,
+.kontaktblock__mail:focus-visible { text-decoration-color: #ffffff; }

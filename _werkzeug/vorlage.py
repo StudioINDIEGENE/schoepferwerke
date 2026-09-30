@@ -363,6 +363,8 @@ def fuss(aktiv):
         f'<a href="{u}" rel="noopener noreferrer" target="_blank" aria-label="{n}">'
         f'<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="{d}"/></svg></a>'
         for u, n, d in SOZIAL)
+    sozial_block = (f'<div class="sozial auftritt">\n            {sozial}\n          </div>'
+                    if SOZIAL else "")
     return f"""  <div class="kurve kurve--fluss kurve--spaet" aria-hidden="true"><svg viewBox="0 0 2880 96" preserveAspectRatio="none"><path d="M0,40 C360,90 1080,10 1440,56 C1800,90 2520,14 2880,40 L2880,96 L0,96 Z" fill="#68b8b0"/></svg></div>
   <footer class="fuss">
     <div class="bahn fuss__a">
@@ -414,10 +416,9 @@ def fuss(aktiv):
     <div class="bahn fuss__b">
       <div class="s6">
         <div class="block kontaktblock">
-          <p class="kontaktblock__zeile auftritt">Kontaktiere mich: <a href="mailto:{MAIL}">{MAIL}</a></p>
-          <div class="sozial auftritt">
-            {sozial}
-          </div>
+          <p class="t-label kontaktblock__marke auftritt">Kontaktiere mich</p>
+          <a class="kontaktblock__mail auftritt" href="mailto:{MAIL}">{MAIL}</a>
+          {sozial_block}
         </div>
       </div>
       <div class="s2"></div>
