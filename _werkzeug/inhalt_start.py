@@ -148,8 +148,12 @@ PREISE = [
   "Für tiefgreifende Transformation in Übereinstimmung mit deiner Seelenmission.", "dunkel"),
 ]
 
-BREITBILD = "natur-nebelmeer"
-BREITBILD_ALT = "Bergkette über einem Nebelmeer im Abendlicht"
+# Aufnahme von Agnes (Panasonic, 9. September 2012), am 30. September
+# 2026 von Benjamin als Grund des Zitats bestimmt und farblich an die
+# anderen Bilder angeglichen. Der Steinturm steht links, das Zitat rechts.
+BREITBILD = "natur-steinturm"
+BREITBILD_HOCH = "natur-steinturm-hoch"   # Hochformat fürs Telefon
+BREITBILD_ALT = "Steinturm mit rot-weißem Wegzeichen vor einem Berggipfel und einem Gletscher"
 BREITBILD_TITEL = ("Eine erste Session ist oft der Beginn einer tiefen verbundenen Freundschaft "
                    "zu dir.")
 BREITBILD_TEXT = [

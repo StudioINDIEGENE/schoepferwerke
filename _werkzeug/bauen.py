@@ -64,10 +64,8 @@ def baue_rechtsseiten():
 
 def baue_ueber_mich():
     inhalt = bausteine.inhaltsseite(
-        bausteine.kopfbereich(um.TITEL, um.UNTERZEILE, bild=um.KOPF_BILD),
+        bausteine.kopfbereich(um.TITEL, um.UNTERZEILE),
         bausteine.leitsatz("Über mich", um.EINSTIEG),
-        # Die Bildreihe bricht die längste Textstrecke der Seite auf.
-        bausteine.bildreihe(um.BILDREIHE),
         bausteine.leitsatz(None, um.WER_ICH_BIN, titel="Wer ich bin",
                            titel_klasse="t-h1"),
         bausteine.bild_zitat(um.BILD, um.BILD_ALT, um.ZITAT, um.ZITAT_QUELLE),
@@ -124,7 +122,8 @@ def baue_startseite():
         # zuerst, dann erst die Beträge. Von Sindri und Bragi unabhängig
         # gefordert, kein Wort ändert sich dabei.
         bausteine.breitbild(st.BREITBILD, st.BREITBILD_ALT, st.BREITBILD_TITEL,
-                            st.BREITBILD_TEXT, zitat=st.ZITAT, quelle=st.ZITAT_QUELLE),
+                            st.BREITBILD_TEXT, zitat=st.ZITAT, quelle=st.ZITAT_QUELLE,
+                            hoch=st.BREITBILD_HOCH),
         bausteine.zahlen(st.ZAHLEN_TITEL, st.ZAHLEN_UNTERZEILE, st.ZAHLEN),
         bausteine.stimmen(st.STIMMEN_LABEL, st.STIMMEN_TITEL, st.STIMMEN),
         bausteine.ornament(),

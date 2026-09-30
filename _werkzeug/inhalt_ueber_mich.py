@@ -143,13 +143,4 @@ AUFRUF_TEXT = [
 AUFRUF_KNOPF = ("Deinen Weg beginnen", "session-buchen.html")
 
 BILD = "ueber-mich-01"
-
-# Kopfbild und Bildreihe, am 30. September 2026 von Benjamin für diese
-# Seite geliefert und beschriftet.
-KOPF_BILD = "natur-dolomitensee"    # Bergsee unter Dolomitenwänden
-BILDREIHE = [
- ("natur-kuhschelle", "Knospe einer Kuhschelle im Gegenlicht"),
- ("natur-frau-am-see", "Eine Frau sitzt auf einem Felsen und schaut über einen Bergsee"),
- ("natur-steinmann", "Steinmann mit Wegzeichen vor einem Berggipfel"),
-]
 BILD_ALT = "Porträt von Agnes Aichholzer"

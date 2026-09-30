@@ -13,7 +13,6 @@ Weiterverkauf der Bilder selbst. Lizenztext: https://unsplash.com/de/lizenz
 | Datei (assets/img/web/) | Motiv | Fotograf | Quelle |
 |---|---|---|---|
 | `startseite-07` | Seebensee, Österreich (Hero) | Daniel Jacob (@dnljcb) | https://unsplash.com/photos/S84pCIjiEC4 |
-| `natur-nebelmeer` | Bergkette über Nebelmeer im Abendlicht (Breitbild) | Radomir Moysia | https://unsplash.com/photos/sWtc-R-fS1A |
 | `natur-sterne` | Drei Zinnen (Dolomiten) unter der Milchstraße (Schöpferwerke), retuschiert | Jan Valečka | https://unsplash.com/photos/SRJkK4rtZvs |
 
 ## Von Benjamin geliefert am 30. September 2026
@@ -48,18 +47,23 @@ Namen.
 | `natur-sonnenaufgang`, `-karte` | Sonnenaufgang mit Strahlenkranz über gestaffelten Bergketten (13 Wochen) | `13 wochen.jpg`, 1920 × 1281 | Pixabay |
 | `natur-bergsee-spiegel` | Bergsee zwischen Felshängen, gespiegelt (Kennenlerngespräch, bisher ohne Bild) | `2. kennenlerngespräch.jpg`, 6960 × 4640 | Pixabay (Originalgröße, ohne Kameradaten) |
 | `natur-wegzeichen` | Wegmarkierung Rot-Weiß-Rot an einem Baum (Kopf der Angebotsseite, „Der Weg in deine Schöpferkraft.“) | `der weg in deine schöpferkraft 1.jpg`, 1920 × 1440 | Pixabay |
-| `natur-dolomitensee` | Bergsee unter Dolomitenwänden (Kopf Über mich) | `über mich 3.jpg`, 1920 × 1440 | Pixabay |
-| `natur-kuhschelle` | Kuhschelle im Gegenlicht (Bildreihe Über mich) | `über mich.jpg`, 1800 × 2700, Photoshop 2016 | Von Agnes. Fotograf **Walter Brunner**, Signatur im Bild, bleibt sichtbar und steht im Impressum. Seine Erlaubnis muss Agnes bestätigen. |
-| `natur-frau-am-see` | Frau in Rot auf einem Felsen am Bergsee, von hinten (Bildreihe Über mich) | `über mich 1.jpg`, 1920 × 1278 | Pixabay. Hinweis: Auf der Über-mich-Seite hält man die Frau für Agnes, die Lizenz verbietet eine irreführende Verwendung. |
-| `natur-steinmann` | Steinmann mit Wegzeichen vor Gipfel und Gletscher (Bildreihe Über mich) | `über mich 4.JPG`, Panasonic DMC-FS45, 9. September 2012 | Von Agnes, Privataufnahme |
 | `natur-waldsee` | Waldsee unter Laubbäumen, Felswand dahinter (Kopf Initiationen) | `initiationen.jpg`, 1920 × 1292 | Pixabay |
 | `natur-heilsteine` | Farbige Steine im Bogen auf einer Baumscheibe (Initiation 01) | `initiationen 7.png`, 1920 × 1280 | Pixabay, wirkt KI-erzeugt |
 | `natur-klangschale` | Klangschale auf Moossteinen an einer Quelle (Initiation 02) | `initiationen 9.jpg`, 1920 × 1247 | Pixabay, wirkt KI-erzeugt |
 | `natur-steinmaenner` | Steinmänner auf einer Hochfläche (Initiation 03) | `initiationen 5.jpg`, 1920 × 1440 | Pixabay |
 | `natur-weg-matterhorn` | Wanderweg auf das Matterhorn zu (Buchungsabschnitt, neben dem Titel „Veränderung beginnt …“) | `veränderung_beginnt_…_loszugehen.jpg`, 853 × 1280 | Pixabay |
 | `agnes-gruss` | Agnes Aichholzer mit Hut am Bergsee (Buchungsabschnitt, links neben dem Formular) | `WhatsApp Image 2026-09-22 at 10.16.54.jpeg` | Von Agnes, Privataufnahme |
+| `natur-steinturm`, `-hoch` | Steinturm mit rot-weißem Wegzeichen vor Gipfel und Gletscher (Startseite, Grund des Zitats) | `über mich 4.JPG`, Panasonic DMC-FS45, 9. September 2012 | Von Agnes, Privataufnahme. Farblich angeglichen, siehe unten. |
 
 Nicht eingebaut, liegen im selben Ordner bereit:
+
+- `über mich 3.jpg` (Dolomitensee, Pixabay), `über mich.jpg` (Kuhschelle,
+  von Agnes, Signatur „Walter Brunner“) und `über mich 1.jpg` (Frau am
+  See, Pixabay). Sie standen am 30. September für kurze Zeit als Kopfbild
+  und Bildreihe auf „Über mich“. Benjamin hat sie am selben Tag wieder
+  herausgenommen: Dort reicht das Porträt von Agnes, wie es war. Die
+  Webfassungen sind gelöscht. Damit entfällt auch die Frage nach Walter
+  Brunners Erlaubnis und der Hinweis auf die fremde Frau.
 
 - `initiationen 6.jpg`, Edelweiß. Fünf Bilder für vier Plätze, dieses
   blieb übrig.
@@ -76,6 +80,30 @@ Nicht eingebaut, liegen im selben Ordner bereit:
   Beschriftung.
 - `Gedichterklärung`, ein Video (MP4, 368 MB), kein Bild.
 
+## Farbangleichung am 30. September 2026
+
+`natur-steinturm` ist Agnes' Aufnahme `über mich 4.JPG`. Benjamin wünschte
+sie dezent gesättigt und passend zu den anderen Bildern, als Grund des
+Zitats auf der Startseite, das Zitat rechts neben dem Steinturm.
+
+Gemessen vorher: Helligkeitsspanne 0,41 (die anderen Startseitenbilder
+0,53 bis 0,76), dunkle Töne erst ab 0,34, mittlere Sättigung 0,30. Das
+Bild lag im Dunst einer Kompaktkamera.
+
+Schritte, in dieser Reihenfolge: Schwarzpunkt auf 6 Prozent, Mitten mit
+Gamma 1,12 tiefer, sanfte S-Kurve (15 Prozent), grober Kontrast auf der
+Helligkeit (9 Prozent), Lebendigkeit 24 Prozent (blasse Farben stärker
+als satte, damit der Himmel nicht kippt), Sättigung plus 3 Prozent, feine
+Tonung: Tiefen eine Spur kühl, Lichter eine Spur warm. Am Motiv ist
+nichts verändert.
+
+Gemessen nachher: Spanne 0,50, dunkle Töne ab 0,23, Sättigung 0,42.
+
+Die angeglichene Vorlage liegt in
+`assets/img/Bilder/Retusche/natur-steinturm-3200-angeglichen.jpg`. Daraus
+sind die Querfassungen (900 und 1800 Pixel) und der Hochformat-Zuschnitt
+fürs Telefon (1080 auf 2304, Fenster um den Turm) erzeugt.
+
 ## Ersetzt am 30. September 2026
 
 Nicht mehr auf der Seite, die Webfassungen liegen noch im Ordner und
@@ -87,14 +115,14 @@ wandern nicht ins Veröffentlichungspaket:
 | `natur-licht` | Goldenes Licht über Bergwald (bisher 6 Wochen) | Mateusz Kamieniarz | https://unsplash.com/photos/tEiz3e6UphQ |
 | `natur-gipfelsonne` | Verschneiter Berggipfel unter der Sonne (bisher 13 Wochen) | Andrea Caramello | https://unsplash.com/photos/heyatskPeMo |
 | `natur-initiation` | Waldweg zum lichtdurchfluteten Tor (bisher Initiationen) | Michael Held | https://unsplash.com/photos/nZLPd3QHsAo |
+| `natur-nebelmeer` | Bergkette über Nebelmeer im Abendlicht (bisher Grund des Zitats) | Radomir Moysia | https://unsplash.com/photos/sWtc-R-fS1A |
 
 Der Bildnachweis im Impressum ist nachgezogen. Er nannte noch Dominik
 Mattern, dessen Bild seit dem 29. August nicht mehr auf der Seite steht,
 und begann mit dem Satz, alle Landschaftsaufnahmen stammten von Unsplash.
-Das stimmt seit heute nicht mehr. Er nennt jetzt die drei verwendeten
+Das stimmt seit heute nicht mehr. Er nennt jetzt die zwei verwendeten
 Unsplash-Bilder mit Namen, Pixabay als Quelle der weiteren Landschafts-
-und Naturaufnahmen, Walter Brunner für die Kuhschelle und die Aufnahmen
-aus Agnes' eigenem Bestand.
+und Naturaufnahmen und die Aufnahmen aus Agnes' eigenem Bestand.
 
 ## Eigene Bilder
 

@@ -139,7 +139,7 @@
   /* Sanftes Schweben der großen Bilder beim Scrollen. */
   if (!ruhig) {
     var schweber = Array.prototype.slice.call(document.querySelectorAll(
-      ".breitbild__bild picture, .angebot__bild picture, .bildkopf__bild picture, .akademie__bild picture, .karte__bild picture"
+      ".breitbild__bild:not(.breitbild__bild--spruch) picture, .angebot__bild picture, .bildkopf__bild picture, .akademie__bild picture, .karte__bild picture"
     ));
     if (schweber.length) {
       var laeuft = false;

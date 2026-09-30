@@ -277,7 +277,6 @@ IMPRESSUM = [
         "Urheber ist nicht verpflichtend, erfolgt hier aber aus Respekt vor ihrer Arbeit."),
   ("ul", [
     "Seebensee (Startseite): Daniel Jacob",
-    "Bergkette über dem Nebelmeer (Startseite): Radomir Moysia",
     "Drei Zinnen unter der Milchstraße (Die Schöpferwerke): Jan Valečka",
   ]),
   ("p", "Lizenztext: <a href=\"https://unsplash.com/de/lizenz\" rel=\"noopener noreferrer\" "
@@ -286,7 +285,6 @@ IMPRESSUM = [
         "Pixabay-Inhaltslizenz, die eine kommerzielle Nutzung ohne Namensnennung erlaubt."),
   ("p", "Lizenztext: <a href=\"https://pixabay.com/de/service/license-summary/\" "
         "rel=\"noopener noreferrer\" target=\"_blank\">pixabay.com/de/service/license-summary</a>"),
-  ("lead", "Kuhschelle (Über mich):", "Walter Brunner."),
   ("lead", "Private Aufnahmen:", "Die Porträts von Agnes Aichholzer und die Aufnahmen aus ihrem "
                                  "eigenen Bestand dürfen nicht ohne schriftliche Zustimmung "
                                  "verwendet werden."),

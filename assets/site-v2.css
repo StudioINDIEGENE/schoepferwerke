@@ -855,9 +855,11 @@ html, body { overflow-x: clip; }
 }
 
 /* ------------------------------------------- Das Zitat liegt im Bild
-   Statt eines eigenen dunklen Blocks trägt die Nebelmeer-Aufnahme den
-   Satz selbst. Ein Schleier von unten nach oben hält ihn lesbar, ohne
-   das Foto zuzudecken. */
+   Der Steinturm steht links im Bild, das Zitat rechts daneben: in den
+   Spalten acht bis zwölf des Rasters, auf derselben Achse wie das
+   Formular im Buchungsabschnitt. Ein Schleier von rechts hält es lesbar
+   und lässt den Turm frei. Das Band schwebt nicht mit, damit Turm und
+   Satz zueinander stehen bleiben. */
 .breitbild__bild--spruch { position: relative; }
 
 .breitbild__bild--spruch::after {
@@ -865,43 +867,105 @@ html, body { overflow-x: clip; }
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background:
-    radial-gradient(ellipse 78% 62% at 50% 56%, rgba(12, 22, 20, .58), transparent 72%),
-    linear-gradient(to top, rgba(12, 22, 20, .60) 0%, rgba(12, 22, 20, .20) 46%, rgba(12, 22, 20, .34) 100%);
+  background: linear-gradient(to left,
+    rgba(12, 22, 20, .62) 0%,
+    rgba(12, 22, 20, .52) 34%,
+    rgba(12, 22, 20, 0) 57%);
 }
 
 .breitbild__spruch {
   position: absolute;
   inset: 0;
   z-index: 1;
-  margin: 0;
-  padding: clamp(28px, 6vw, 90px);
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: clamp(14px, 2vw, 26px);
-  text-align: center;
   color: #fff;
 }
 
-.breitbild__spruch blockquote { margin: 0; max-width: min(92%, 760px); }
+.breitbild__spruchblock {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(14px, 1.6vw, 24px);
+  margin: 0;
+  text-align: left;
+}
+
+.breitbild__spruch blockquote { margin: 0; }
 
 .breitbild__spruch .t-h2 {
   color: #fff;
-  text-wrap: balance;
+  font-size: clamp(26px, 2.5vw, 40px);
+  text-wrap: pretty;
   text-shadow: 0 2px 28px rgba(8, 16, 15, .5);
 }
 
 .breitbild__quelle {
-  color: rgba(255, 255, 255, .88);
+  color: #fff;
   text-shadow: 0 1px 16px rgba(8, 16, 15, .6);
 }
 
-/* Auf schmalen Schirmen wird das Bild hoch und der Satz braucht Luft. */
-@media (max-width: 809px) {
-  .breitbild__spruch blockquote { max-width: 100%; }
-  .breitbild__spruch .t-h2 { font-size: 26px; line-height: 1.25; }
+/* Desktop: breites Band in 2 zu 1 wie die Angebotsbänder. Der Turm steht
+   ganz im Bild, die Gipfelspitze fällt weg. */
+@media (min-width: 1200px) {
+  .breitbild__bild--spruch img { aspect-ratio: 2 / 1; object-position: 50% 60%; }
+}
+
+/* Tablet quer: in 3 zu 2 passt das ganze Bild samt Gipfel. Der Satz
+   steht etwas tiefer, auf Höhe des Turms. */
+@media (min-width: 810px) and (max-width: 1199px) {
+  .breitbild__bild--spruch img { aspect-ratio: 3 / 2; object-position: 50% 36%; }
+  .breitbild__spruch { padding-top: 9%; }
+}
+
+/* Unter 1200 ist der Satz kleiner als 30 Pixel und braucht mehr Kontrast
+   (4,5 zu 1 statt 3 zu 1). Der Schleier ist dort eine Spur dichter. */
+@media (min-width: 600px) and (max-width: 1199px) {
+  .breitbild__bild--spruch::after {
+    background: linear-gradient(to left,
+      rgba(12, 22, 20, .72) 0%,
+      rgba(12, 22, 20, .62) 38%,
+      rgba(12, 22, 20, 0) 60%);
+  }
+}
+
+/* Tablet hoch und große Telefone quer (600 bis 809): das Bild unbeschnitten
+   in 4 zu 3, der Satz bleibt rechts neben dem Turm. Die Rasterzeile steht
+   hier sonst untereinander, für dieses Band bleibt sie nebeneinander. */
+@media (min-width: 600px) and (max-width: 809px) {
+  .breitbild__bild--spruch img { aspect-ratio: 4 / 3; object-position: 50% 50%; }
+  .breitbild__spruch { padding-top: 8%; }
+  .breitbild__spruch .t-h2 { font-size: 22px; line-height: 1.26; }
+}
+
+/* Telefon (bis 599): Neben dem Turm ist kein Platz. Das Bild steht hoch
+   (eigener Zuschnitt), der Satz oben im Himmel, der Turm darunter. Der
+   Himmel nimmt die oberen 30 Prozent ein. Damit der Satz nicht in den
+   weißen Gletscher läuft, geht die Schrift auf schmalen Geräten zurück. */
+@media (max-width: 599px) {
+  .breitbild__bild--spruch img {
+    aspect-ratio: 15 / 32;
+    max-height: 860px;
+    object-position: 50% 40%;
+  }
+  .breitbild__bild--spruch::after {
+    background: linear-gradient(to bottom,
+      rgba(8, 20, 36, .40) 0%,
+      rgba(8, 20, 36, .30) 30%,
+      rgba(8, 20, 36, 0) 46%);
+  }
+  .breitbild__spruch { align-items: flex-start; padding-top: clamp(24px, 8vw, 44px); }
+  .breitbild__spruchzeile .s7 { display: none; }
+  .breitbild__spruchzeile .s5 { flex: 0 0 auto; width: 100%; }
+  .breitbild__spruchblock { align-items: center; gap: 12px; text-align: center; }
+  .breitbild__spruch .t-h2 { font-size: 22px; line-height: 1.26; }
+}
+
+@media (max-width: 389px) {
+  .breitbild__spruch .t-h2 { font-size: 20px; }
+}
+
+@media (max-width: 349px) {
+  .breitbild__spruch .t-h2 { font-size: 18px; }
 }
 
 
@@ -1547,16 +1611,6 @@ body:has(.inhalt > .faq:last-child) .kurve--spaet { background: var(--atem); }
    Papiergrunds durch. Jede Welle überlappt ihre Nachbarn um einen Pixel. */
 .kurve--fluss { margin-top: -1px; margin-bottom: -1px; }
 
-/* Das neue Zitat ist fast viermal so lang wie das alte und reicht höher
-   ins Bild, bis an den hellen Himmel um die Sonne. Die erste Zeile lag
-   dort an den hellsten Stellen bei 2,9 zu 1. Der Schatten sitzt jetzt
-   mittig und ist eine Spur dichter. */
-.breitbild__bild--spruch::after {
-  background:
-    radial-gradient(ellipse 80% 68% at 50% 50%, rgba(12, 22, 20, .66), transparent 74%),
-    linear-gradient(to top, rgba(12, 22, 20, .60) 0%, rgba(12, 22, 20, .22) 46%, rgba(12, 22, 20, .36) 100%);
-}
-
 /* ========================================= Farbstufen der Angebotskarten
    Von Benjamin festgelegt: die Einzelsession weiß, sechs Wochen in hellem
    Türkis, dreizehn Wochen im Grün der Knöpfe. Die Farbe steigt mit dem
@@ -1647,9 +1701,10 @@ body:has(.inhalt > .faq:last-child) .kurve--spaet { background: var(--atem); }
 .kontaktblock__mail:focus-visible { text-decoration-color: #ffffff; }
 
 /* ======================================= Bilder vom 30. September 2026
-   Kopfbilder für Über mich und Angebote, die Bildreihe auf Über mich,
-   Bilder auf den drei Initiationen, im Buchungsabschnitt das Wegbild
-   neben dem Titel und Agnes' Gruß links neben dem Formular. */
+   Kopfbild für Angebote, Bilder auf den drei Initiationen, im
+   Buchungsabschnitt das Wegbild neben dem Titel und Agnes' Gruß links
+   neben dem Formular. Die Bilder auf Über mich sind wieder entfallen,
+   dort bleibt das Porträt. */
 
 /* Seitenkopf mit Bild. Das Bild verhält sich wie der Kopf der
    Initiationen (gleiche Klasse), die große Überschrift steigt in die
@@ -1666,45 +1721,9 @@ body:has(.inhalt > .faq:last-child) .kurve--spaet { background: var(--atem); }
   .seitenkopf--bild { margin-top: -24px; }
 }
 
-/* Das Wegzeichen und der See stehen im klaren Teil des Bildes. */
-.seitenkopf-bild img[src*="natur-wegzeichen"]   { object-position: 50% 92%; }
-.seitenkopf-bild img[src*="natur-dolomitensee"] { object-position: 50% 64%; }
-
-/* Bildreihe: drei Hochformate auf der Randachse, wie die Karten der
-   Startseite. Am Telefon bleibt sie dreispaltig, als schmales Band. */
-.bildreihe { margin-top: var(--luft-eng); }
-
-.bildreihe__gitter {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  width: 100%;
-  padding: 0 var(--block-pad);
-}
-
-.bildreihe__bild {
-  margin: 0;
-  overflow: hidden;
-  border-radius: 22px;
-  background: var(--hellgrau);
-}
-
-.bildreihe__bild img {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 2 / 3;
-  object-fit: cover;
-}
-
-@media (max-width: 1199px) {
-  .bildreihe__gitter { gap: 20px; }
-}
-
-@media (max-width: 809px) {
-  .bildreihe__gitter { gap: 10px; }
-  .bildreihe__bild { border-radius: 14px; }
-}
+/* Das Wegzeichen steht im klaren Teil des Bildes, der Titel auf dem
+   unteren weißen Streifen. */
+.seitenkopf-bild img[src*="natur-wegzeichen"] { object-position: 50% 92%; }
 
 /* Initiationen: das Bild sitzt randlos an der Oberkante der Karte. */
 .initiation__bild {
@@ -1821,3 +1840,44 @@ body:has(.inhalt > .faq:last-child) .kurve--spaet { background: var(--atem); }
 .raeume__gitter { align-items: stretch; }
 .initiation--bild .initiation__stand { margin-top: auto; }
 .initiation--bild .initiation__text { margin-bottom: 8px; }
+
+/* Fußzeile am Telefon: Die neun Verweise standen untereinander, jeder mit
+   44 Pixeln Griffhöhe und 40 Pixeln Lücke, zusammen fast zwei
+   Bildschirmhöhen. Seiten und Rechtliches stehen jetzt nebeneinander, die
+   Griffhöhe bleibt, die Lücke schrumpft auf 8 Pixel. Die linke Spalte ist
+   breiter, damit „Die Schöpferwerke“ auch bei 320 Pixeln einzeilig bleibt. */
+@media (max-width: 809px) {
+  .sitemap__spalten { flex-direction: row; gap: 16px; }
+  .sitemap__spalte { gap: 8px; }
+  .sitemap__spalte:first-child { flex: 3 1 0; }
+  .sitemap__spalte:last-child { flex: 2 1 0; }
+}
+
+@media (max-width: 339px) {
+  .sitemap__link { font-size: 17px; }
+}
+
+/* Tablet: Die drei Angebotskarten und die drei Initiationen standen
+   zwei plus eins, die dritte Karte allein in der zweiten Reihe, bei 1024
+   Pixeln über 700 Pixel hoch. Beide Reihen stehen jetzt dreispaltig, die
+   Kartentitel eine Stufe kleiner, damit sie in die schmalere Spalte
+   passen. */
+@media (min-width: 810px) and (max-width: 1199px) {
+  .karten { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .karte__titel { font-size: 26px; line-height: 1.25; }
+
+  .raeume__gitter { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .initiation { padding: 24px; }
+  .initiation__bild { margin: -24px -24px 8px; }
+  .initiation__titel { font-size: 24px; line-height: 1.25; }
+}
+
+/* Über mich am Tablet: Das Porträt stand in voller Breite über dem
+   Zitat und wurde fast 1000 Pixel hoch. Es steht jetzt wie am Desktop
+   neben dem Zitat, unbeschnitten im eigenen Format. */
+@media (min-width: 810px) and (max-width: 1199px) {
+  .bild-zitat { flex-direction: row; align-items: center; gap: 32px; }
+  .bild-zitat .s5 { flex: 0 0 40%; width: 40%; }
+  .bild-zitat .s6 { flex: 1 1 0; width: auto; }
+  .bild-zitat .t-h4 { font-size: 26px; }
+}

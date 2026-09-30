@@ -98,12 +98,19 @@ def rechtstext(titel, datum, intro, abschnitte, kurz=None):
 # ===================================================================
 
 def bild_tag(name, alt, breite, hoehe, klasse="", laden="lazy", groessen=None,
-             hat_gross=True, gross=1800):
-    """<picture> mit webp und jpg, zwei Breiten."""
+             hat_gross=True, gross=1800, hoch=None):
+    """<picture> mit webp und jpg, zwei Breiten.
+
+    `hoch` nennt einen eigenen Hochformat-Zuschnitt, den das Telefon
+    (bis 599 Pixel) statt des Querformats lädt.
+    """
     sizes = f' sizes="{groessen}"' if groessen else ""
+    hochkant = (f'<source media="(max-width: 599px)" type="image/webp" srcset="assets/img/web/{hoch}.webp">'
+                f'<source media="(max-width: 599px)" srcset="assets/img/web/{hoch}.jpg">'
+                if hoch else "")
     gross_webp = f", assets/img/web/{name}@{gross}.webp {gross}w" if hat_gross else ""
     gross_jpg = f", assets/img/web/{name}@{gross}.jpg {gross}w" if hat_gross else ""
-    return (f'<picture class="{klasse}">'
+    return (f'<picture class="{klasse}">{hochkant}'
             f'<source type="image/webp" srcset="assets/img/web/{name}.webp 900w{gross_webp}"{sizes}>'
             f'<img src="assets/img/web/{name}.jpg" srcset="assets/img/web/{name}.jpg 900w{gross_jpg}"{sizes} '
             f'alt="{alt}" width="{breite}" height="{hoehe}" loading="{laden}" decoding="async">'
@@ -218,20 +225,6 @@ def bild_zitat(bild, alt, zitat, quelle):
         </div>
       </div>
     </section>"""
-
-
-def bildreihe(eintraege):
-    """Drei Bilder im Hochformat nebeneinander, eine ruhige Pause im Text."""
-    bilder = "\n        ".join(
-        f'<figure class="bildreihe__bild auftritt">'
-        f'{bild_tag(b, alt, 900, 1350, "", "lazy", "(max-width: 809px) 31vw, 30vw", False)}'
-        f'</figure>'
-        for b, alt in eintraege)
-    return f"""    <div class="bahn bildreihe">
-      <div class="bildreihe__gitter">
-        {bilder}
-      </div>
-    </div>"""
 
 
 def grosser_satz(absaetze):
@@ -459,20 +452,29 @@ def preise(label, titel, unterzeile, karten_daten, zentriert=False):
     </section>"""
 
 
-def breitbild(bild, alt, titel, absaetze, zitat=None, quelle=None):
+def breitbild(bild, alt, titel, absaetze, zitat=None, quelle=None, hoch=None):
     """Im Original steht die Überschrift über dem Bild, nicht darunter.
 
-    Liegt ein Zitat an, steht es im Bild selbst, auf einem Schleier, der
-    es lesbar hält. Es braucht dann keinen eigenen dunklen Block mehr.
+    Liegt ein Zitat an, steht es im Bild selbst, in den Spalten acht bis
+    zwölf des Rasters, auf einem Schleier, der es lesbar hält. Das Motiv
+    bleibt links frei. `hoch` nennt den Hochformat-Zuschnitt fürs Telefon.
     """
     text = "".join(f'<p>{a}</p>' for a in absaetze)
     spruch = ""
     if zitat:
-        herkunft = (f'\n          <figcaption class="t-label breitbild__quelle">{quelle}</figcaption>'
+        herkunft = (f'\n                <figcaption class="t-label breitbild__quelle">{quelle}</figcaption>'
                     if quelle else "")
-        spruch = (f'\n        <figure class="breitbild__spruch">'
-                  f'\n          <blockquote><p class="t-h2">{zitat}</p></blockquote>'
-                  f'{herkunft}\n        </figure>')
+        spruch = f"""
+        <div class="breitbild__spruch">
+          <div class="bahn breitbild__spruchzeile">
+            <div class="s7"></div>
+            <div class="s5">
+              <figure class="block breitbild__spruchblock">
+                <blockquote><p class="t-h2">{zitat}</p></blockquote>{herkunft}
+              </figure>
+            </div>
+          </div>
+        </div>"""
     return f"""    <section class="breitbild">
       <div class="bahn breitbild__zeile">
         <div class="s2"></div>
@@ -485,7 +487,7 @@ def breitbild(bild, alt, titel, absaetze, zitat=None, quelle=None):
         <div class="s2"></div>
       </div>
       <div class="breitbild__bild auftritt fenster{" breitbild__bild--spruch" if zitat else ""}">
-        {bild_tag(bild, alt, 1440, 1580, "", "lazy", "100vw")}{spruch}
+        {bild_tag(bild, alt, 1440, 1580, "", "lazy", "100vw", hoch=hoch)}{spruch}
       </div>
     </section>"""
 
