@@ -282,9 +282,14 @@ IMPRESSUM = [
   ]),
   ("p", "Lizenztext: <a href=\"https://unsplash.com/de/lizenz\" rel=\"noopener noreferrer\" "
         "target=\"_blank\">unsplash.com/de/lizenz</a>"),
+  ("p", "Weitere Landschafts- und Naturaufnahmen stammen von Pixabay und stehen unter der "
+        "Pixabay-Inhaltslizenz, die eine kommerzielle Nutzung ohne Namensnennung erlaubt."),
+  ("p", "Lizenztext: <a href=\"https://pixabay.com/de/service/license-summary/\" "
+        "rel=\"noopener noreferrer\" target=\"_blank\">pixabay.com/de/service/license-summary</a>"),
   ("lead", "Kuhschelle (Über mich):", "Walter Brunner."),
-  ("lead", "Porträts:", "Die Bilder von Agnes Aichholzer sind private Aufnahmen und dürfen nicht "
-                        "ohne schriftliche Zustimmung verwendet werden."),
+  ("lead", "Private Aufnahmen:", "Die Porträts von Agnes Aichholzer und die Aufnahmen aus ihrem "
+                                 "eigenen Bestand dürfen nicht ohne schriftliche Zustimmung "
+                                 "verwendet werden."),
   ("lead", "Wortmarke und Symbol:", "Die Zeichen der Schöpferwerke sind geschützte "
                                     "Kennzeichen der Anbieterin."),
  ]),

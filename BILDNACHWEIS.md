@@ -1,8 +1,8 @@
 # Bildnachweis
 
 Stand 30. September 2026. Die Seite trägt Bilder aus drei Quellen:
-Unsplash (Lizenz geprüft), von Benjamin gelieferte Bilder (Herkunft zum
-Teil noch zu belegen) und private Aufnahmen von Agnes Aichholzer.
+Unsplash (Lizenz je Bild geprüft), Pixabay (von Benjamin geliefert) und
+Aufnahmen aus dem Bestand von Agnes Aichholzer.
 
 ## Unsplash, auf der Seite verwendet
 
@@ -23,29 +23,41 @@ Git-Bestand, dort liegt auch ein Video von 368 MB). Benjamin hat die
 Dateien nach ihrem Platz auf der Seite benannt. Die Webfassungen sind
 daraus zugeschnitten, das Skript dazu lag im Arbeitsbereich der Sitzung.
 
-Herkunft: Zu belegen. Zwölf der Dateien sind genau 1920 Pixel breit, eine
-1280 Pixel hoch, das sind die Standardgrößen von Pixabay. Belegt ist das
-für keine. Eine Stichprobe auf Pixabay (Suche „Riffelsee“, zehn Treffer)
-fand das Matterhornbild mit dem Zelt nicht. Bis Benjamin die Quellen
-nennt, stehen diese Bilder nicht im Bildnachweis des Impressums.
+Herkunft nach Benjamins Angabe vom 30. September 2026: „Bilder kamen
+von Pixabay zum Teil und zum Teil von Agnes.“ Welche Datei woher kam, hat
+er nicht einzeln genannt. Die Zuordnung in der Tabelle folgt deshalb den
+Dateimerkmalen: Pixabay liefert ohne Kameradaten, in 1920 oder 1280 Pixel
+Kantenlänge oder in Originalgröße. Agnes' Dateien tragen Kameradaten, die
+Spur eines Bildprogramms oder den WhatsApp-Namen. Wo die Zuordnung nicht
+stimmt, hier berichtigen.
+
+Pixabay-Inhaltslizenz: kostenlose und kommerzielle Nutzung erlaubt,
+Bearbeitung erlaubt, Namensnennung nicht nötig. Verboten sind der Verkauf
+unbearbeiteter Kopien, die Nutzung als Marke und eine irreführende
+Verwendung. Lizenztext: https://pixabay.com/de/service/license-summary/
+
+Die einzelnen Pixabay-Seiten und ihre Urheber sind nicht ermittelt. Eine
+Stichprobe (Suche „Riffelsee“, zehn Treffer) fand das Matterhornbild mit
+dem Zelt nicht. Das Impressum nennt Pixabay deshalb als Quelle, ohne
+Namen.
 
 | Datei (assets/img/web/) | Motiv, Platz | Ausgangsdatei | Herkunft |
 |---|---|---|---|
-| `natur-matterhorn`, `-karte` | Matterhorn im Morgenlicht über dem Riffelsee, kleines Zelt am Ufer (1:1 Session: Startseitenkarte und Band) | `session 1 zu 1  2.jpg`, 1920 × 1080 | offen |
-| `natur-alpengluehen`, `-karte` | Gipfelkette im Alpenglühen, gespiegelt im See (6 Wochen) | `6 wochen programm.jpg`, 1920 × 1285 | offen |
-| `natur-sonnenaufgang`, `-karte` | Sonnenaufgang mit Strahlenkranz über gestaffelten Bergketten (13 Wochen) | `13 wochen.jpg`, 1920 × 1281 | offen |
-| `natur-bergsee-spiegel` | Bergsee zwischen Felshängen, gespiegelt (Kennenlerngespräch, bisher ohne Bild) | `2. kennenlerngespräch.jpg`, 6960 × 4640 | offen |
-| `natur-wegzeichen` | Wegmarkierung Rot-Weiß-Rot an einem Baum (Kopf der Angebotsseite, „Der Weg in deine Schöpferkraft.“) | `der weg in deine schöpferkraft 1.jpg`, 1920 × 1440 | offen |
-| `natur-dolomitensee` | Bergsee unter Dolomitenwänden (Kopf Über mich) | `über mich 3.jpg`, 1920 × 1440 | offen |
-| `natur-kuhschelle` | Kuhschelle im Gegenlicht (Bildreihe Über mich) | `über mich.jpg`, 1800 × 2700, Photoshop 2016 | **Walter Brunner**, Signatur im Bild, bleibt sichtbar und steht im Impressum. Nutzungserlaubnis zu bestätigen. |
-| `natur-frau-am-see` | Frau in Rot auf einem Felsen am Bergsee, von hinten (Bildreihe Über mich) | `über mich 1.jpg`, 1920 × 1278 | offen. Hinweis: Auf der Über-mich-Seite hält man die Frau für Agnes. |
-| `natur-steinmann` | Steinmann mit Wegzeichen vor Gipfel und Gletscher (Bildreihe Über mich) | `über mich 4.JPG`, Panasonic DMC-FS45, 9. September 2012 | Privataufnahme, Urheber zu bestätigen |
-| `natur-waldsee` | Waldsee unter Laubbäumen, Felswand dahinter (Kopf Initiationen) | `initiationen.jpg`, 1920 × 1292 | offen |
-| `natur-heilsteine` | Farbige Steine im Bogen auf einer Baumscheibe (Initiation 01) | `initiationen 7.png`, 1920 × 1280 | offen, wirkt KI-erzeugt |
-| `natur-klangschale` | Klangschale auf Moossteinen an einer Quelle (Initiation 02) | `initiationen 9.jpg`, 1920 × 1247 | offen, wirkt KI-erzeugt |
-| `natur-steinmaenner` | Steinmänner auf einer Hochfläche (Initiation 03) | `initiationen 5.jpg`, 1920 × 1440 | offen |
-| `natur-weg-matterhorn` | Wanderweg auf das Matterhorn zu (Buchungsabschnitt, neben dem Titel „Veränderung beginnt …“) | `veränderung_beginnt_…_loszugehen.jpg`, 853 × 1280 | offen |
-| `agnes-gruss` | Agnes Aichholzer mit Hut am Bergsee (Buchungsabschnitt, links neben dem Formular) | `WhatsApp Image 2026-09-22 at 10.16.54.jpeg` | Privataufnahme von Agnes |
+| `natur-matterhorn`, `-karte` | Matterhorn im Morgenlicht über dem Riffelsee, kleines Zelt am Ufer (1:1 Session: Startseitenkarte und Band) | `session 1 zu 1  2.jpg`, 1920 × 1080 | Pixabay |
+| `natur-alpengluehen`, `-karte` | Gipfelkette im Alpenglühen, gespiegelt im See (6 Wochen) | `6 wochen programm.jpg`, 1920 × 1285 | Pixabay |
+| `natur-sonnenaufgang`, `-karte` | Sonnenaufgang mit Strahlenkranz über gestaffelten Bergketten (13 Wochen) | `13 wochen.jpg`, 1920 × 1281 | Pixabay |
+| `natur-bergsee-spiegel` | Bergsee zwischen Felshängen, gespiegelt (Kennenlerngespräch, bisher ohne Bild) | `2. kennenlerngespräch.jpg`, 6960 × 4640 | Pixabay (Originalgröße, ohne Kameradaten) |
+| `natur-wegzeichen` | Wegmarkierung Rot-Weiß-Rot an einem Baum (Kopf der Angebotsseite, „Der Weg in deine Schöpferkraft.“) | `der weg in deine schöpferkraft 1.jpg`, 1920 × 1440 | Pixabay |
+| `natur-dolomitensee` | Bergsee unter Dolomitenwänden (Kopf Über mich) | `über mich 3.jpg`, 1920 × 1440 | Pixabay |
+| `natur-kuhschelle` | Kuhschelle im Gegenlicht (Bildreihe Über mich) | `über mich.jpg`, 1800 × 2700, Photoshop 2016 | Von Agnes. Fotograf **Walter Brunner**, Signatur im Bild, bleibt sichtbar und steht im Impressum. Seine Erlaubnis muss Agnes bestätigen. |
+| `natur-frau-am-see` | Frau in Rot auf einem Felsen am Bergsee, von hinten (Bildreihe Über mich) | `über mich 1.jpg`, 1920 × 1278 | Pixabay. Hinweis: Auf der Über-mich-Seite hält man die Frau für Agnes, die Lizenz verbietet eine irreführende Verwendung. |
+| `natur-steinmann` | Steinmann mit Wegzeichen vor Gipfel und Gletscher (Bildreihe Über mich) | `über mich 4.JPG`, Panasonic DMC-FS45, 9. September 2012 | Von Agnes, Privataufnahme |
+| `natur-waldsee` | Waldsee unter Laubbäumen, Felswand dahinter (Kopf Initiationen) | `initiationen.jpg`, 1920 × 1292 | Pixabay |
+| `natur-heilsteine` | Farbige Steine im Bogen auf einer Baumscheibe (Initiation 01) | `initiationen 7.png`, 1920 × 1280 | Pixabay, wirkt KI-erzeugt |
+| `natur-klangschale` | Klangschale auf Moossteinen an einer Quelle (Initiation 02) | `initiationen 9.jpg`, 1920 × 1247 | Pixabay, wirkt KI-erzeugt |
+| `natur-steinmaenner` | Steinmänner auf einer Hochfläche (Initiation 03) | `initiationen 5.jpg`, 1920 × 1440 | Pixabay |
+| `natur-weg-matterhorn` | Wanderweg auf das Matterhorn zu (Buchungsabschnitt, neben dem Titel „Veränderung beginnt …“) | `veränderung_beginnt_…_loszugehen.jpg`, 853 × 1280 | Pixabay |
+| `agnes-gruss` | Agnes Aichholzer mit Hut am Bergsee (Buchungsabschnitt, links neben dem Formular) | `WhatsApp Image 2026-09-22 at 10.16.54.jpeg` | Von Agnes, Privataufnahme |
 
 Nicht eingebaut, liegen im selben Ordner bereit:
 
@@ -79,9 +91,10 @@ wandern nicht ins Veröffentlichungspaket:
 Der Bildnachweis im Impressum ist nachgezogen. Er nannte noch Dominik
 Mattern, dessen Bild seit dem 29. August nicht mehr auf der Seite steht,
 und begann mit dem Satz, alle Landschaftsaufnahmen stammten von Unsplash.
-Das stimmt seit heute nicht mehr. Er nennt jetzt nur die drei
-verwendeten Unsplash-Bilder, Walter Brunner für die Kuhschelle und die
-privaten Aufnahmen von Agnes.
+Das stimmt seit heute nicht mehr. Er nennt jetzt die drei verwendeten
+Unsplash-Bilder mit Namen, Pixabay als Quelle der weiteren Landschafts-
+und Naturaufnahmen, Walter Brunner für die Kuhschelle und die Aufnahmen
+aus Agnes' eigenem Bestand.
 
 ## Eigene Bilder
 
